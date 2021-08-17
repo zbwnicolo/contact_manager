@@ -8,10 +8,19 @@ namespace contact_manager
 {
     class Person
     {
-        public int Id
+        public void addPerson()
         {
-            get;
-            set;
+            Person p = new Person();
+        }
+
+        public void deletePerson()
+        {
+
+        }
+
+        public void editPerson()
+        {
+
         }
         public string Salutation
         {
