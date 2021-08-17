@@ -7,3 +7,14 @@ C:\Users\joels\Documents\GitHub\contact_manager\contact_manager\bin\Debug\contac
 C:\Users\joels\Documents\GitHub\contact_manager\contact_manager\bin\Debug\contact_manager.pdb
 C:\Users\joels\Documents\GitHub\contact_manager\contact_manager\obj\Debug\contact_manager.exe
 C:\Users\joels\Documents\GitHub\contact_manager\contact_manager\obj\Debug\contact_manager.pdb
+C:\Users\Arlind\OneDrive\Desktop\Projekt\contact_manager\contact_manager\obj\Debug\contact_manager.csprojAssemblyReference.cache
+C:\Users\Arlind\OneDrive\Desktop\Projekt\contact_manager\contact_manager\obj\Debug\contact_manager.Properties.Resources.resources
+C:\Users\Arlind\OneDrive\Desktop\Projekt\contact_manager\contact_manager\obj\Debug\contact_manager.csproj.GenerateResource.cache
+C:\Users\Arlind\OneDrive\Desktop\Projekt\contact_manager\contact_manager\obj\Debug\contact_manager.csproj.CoreCompileInputs.cache
+C:\Users\Arlind\OneDrive\Desktop\Projekt\contact_manager\contact_manager\obj\Debug\contact_manager.exe
+C:\Users\Arlind\OneDrive\Desktop\Projekt\contact_manager\contact_manager\obj\Debug\contact_manager.pdb
+C:\Users\Arlind\OneDrive\Desktop\Projekt\contact_manager\contact_manager\bin\Debug\contact_manager.exe.config
+C:\Users\Arlind\OneDrive\Desktop\Projekt\contact_manager\contact_manager\bin\Debug\contact_manager.exe
+C:\Users\Arlind\OneDrive\Desktop\Projekt\contact_manager\contact_manager\bin\Debug\contact_manager.pdb
+C:\Users\Arlind\OneDrive\Desktop\Projekt\contact_manager\contact_manager\obj\Debug\contact_manager.CreateEmployee.resources
+C:\Users\Arlind\OneDrive\Desktop\Projekt\contact_manager\contact_manager\obj\Debug\contact_manager.Dashboard.resources

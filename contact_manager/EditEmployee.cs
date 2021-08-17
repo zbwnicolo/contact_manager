@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace contact_manager
 {
-    public partial class Test : Form
+    public partial class EditEmployee : Form
     {
-        public Test()
+        public EditEmployee()
         {
             InitializeComponent();
         }

@@ -1,7 +1,6 @@
-﻿
-namespace contact_manager
+﻿namespace contact_manager
 {
-    partial class Test
+    partial class CreateCustomer
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +31,7 @@ namespace contact_manager
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Test";
+            this.Text = "CreateCustomer";
         }
 
         #endregion
