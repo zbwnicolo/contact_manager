@@ -18,3 +18,17 @@ C:\Users\Arlind\OneDrive\Desktop\Projekt\contact_manager\contact_manager\bin\Deb
 C:\Users\Arlind\OneDrive\Desktop\Projekt\contact_manager\contact_manager\bin\Debug\contact_manager.pdb
 C:\Users\Arlind\OneDrive\Desktop\Projekt\contact_manager\contact_manager\obj\Debug\contact_manager.CreateEmployee.resources
 C:\Users\Arlind\OneDrive\Desktop\Projekt\contact_manager\contact_manager\obj\Debug\contact_manager.Dashboard.resources
+C:\Users\NicoloBächler\Documents\GitHub\contact_manager1\contact_manager\bin\Debug\contact_manager.exe.config
+C:\Users\NicoloBächler\Documents\GitHub\contact_manager1\contact_manager\bin\Debug\contact_manager.exe
+C:\Users\NicoloBächler\Documents\GitHub\contact_manager1\contact_manager\bin\Debug\contact_manager.pdb
+C:\Users\NicoloBächler\Documents\GitHub\contact_manager1\contact_manager\obj\Debug\contact_manager.csproj.AssemblyReference.cache
+C:\Users\NicoloBächler\Documents\GitHub\contact_manager1\contact_manager\obj\Debug\contact_manager.CreateCustomer.resources
+C:\Users\NicoloBächler\Documents\GitHub\contact_manager1\contact_manager\obj\Debug\contact_manager.CreateEmployee.resources
+C:\Users\NicoloBächler\Documents\GitHub\contact_manager1\contact_manager\obj\Debug\contact_manager.Dashboard.resources
+C:\Users\NicoloBächler\Documents\GitHub\contact_manager1\contact_manager\obj\Debug\contact_manager.EditCustomer.resources
+C:\Users\NicoloBächler\Documents\GitHub\contact_manager1\contact_manager\obj\Debug\contact_manager.EditEmployee.resources
+C:\Users\NicoloBächler\Documents\GitHub\contact_manager1\contact_manager\obj\Debug\contact_manager.Properties.Resources.resources
+C:\Users\NicoloBächler\Documents\GitHub\contact_manager1\contact_manager\obj\Debug\contact_manager.csproj.GenerateResource.cache
+C:\Users\NicoloBächler\Documents\GitHub\contact_manager1\contact_manager\obj\Debug\contact_manager.csproj.CoreCompileInputs.cache
+C:\Users\NicoloBächler\Documents\GitHub\contact_manager1\contact_manager\obj\Debug\contact_manager.exe
+C:\Users\NicoloBächler\Documents\GitHub\contact_manager1\contact_manager\obj\Debug\contact_manager.pdb

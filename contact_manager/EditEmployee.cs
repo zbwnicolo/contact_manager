@@ -16,5 +16,10 @@ namespace contact_manager
         {
             InitializeComponent();
         }
+
+        private void CmdEmployeeMgmtEmployeeSave_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

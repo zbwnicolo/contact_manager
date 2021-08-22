@@ -16,5 +16,15 @@ namespace contact_manager
         {
             InitializeComponent();
         }
+
+        private void TxtClientMgmtCompExitDate_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CmdClientMgmtEmployeeSave_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
