@@ -19,8 +19,15 @@ namespace contact_manager
 
         private void CmdCreateEmployee_Click(object sender, EventArgs e)
         {
-            CreateEmployee Form = new CreateEmployee();
-            Form.Show();
+            if (DataGridEmployee.Rows != null && DataGridEmployee.Rows.Count > 0)
+            {
+                MessageBox.Show("Es darf kein Mitarbeiter ausgewählt sein!");
+            }
+            else
+            {
+                CreateEmployee Form = new CreateEmployee();
+                Form.Show();
+            }
         }
 
         private void Dashboard_Load(object sender, EventArgs e)
@@ -33,6 +40,19 @@ namespace contact_manager
 
             //DataGridEmployee.DataSource = Employee.Tables[0];
             //DataGridCustomer.DataSource = Customer.Tables[0];
+        }
+
+        private void CmdInfoEmployee_Click(object sender, EventArgs e)
+        {
+            //if (DataGridEmployee.Rows != null && DataGridEmployee.Rows.Count != 0)
+            //{
+            EditEmployee Form = new EditEmployee();
+            Form.Show();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Es muss mindestens 1 Mitarbeiter ausgewählt werden!");
+            //}
         }
     }
 }
