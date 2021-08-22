@@ -16,7 +16,13 @@ namespace contact_manager
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Dashboard());
+            Application.Run(new CreateEmployee());
+
+            //person.Save("Test.xml");
+            //Person person = Person.LoadFromFile("Test.xml");
+
+
+
         }
     }
 }

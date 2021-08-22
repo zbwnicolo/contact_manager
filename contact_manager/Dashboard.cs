@@ -32,14 +32,15 @@ namespace contact_manager
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            DataSet Employee = new DataSet();
-            //Employee.ReadXml(@"C:\Users\joels\Documents\GitHub\contact_manager\contact_manager\Employee.xml");
+            //DataSet Employee = new DataSet();
+            //Employee.ReadXml(@"Test.xml");
 
-            DataSet Customer = new DataSet();
+            //DataSet Customer = new DataSet();
             //Customer.ReadXml(@"C:\Users\joels\Documents\GitHub\contact_manager\contact_manager\Customer.xml");
 
             //DataGridEmployee.DataSource = Employee.Tables[0];
             //DataGridCustomer.DataSource = Customer.Tables[0];
+
         }
 
         private void CmdInfoEmployee_Click(object sender, EventArgs e)

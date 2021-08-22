@@ -52,7 +52,7 @@
             // TxtSearchEmployee
             // 
             this.TxtSearchEmployee.Location = new System.Drawing.Point(422, 15);
-            this.TxtSearchEmployee.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtSearchEmployee.Margin = new System.Windows.Forms.Padding(2);
             this.TxtSearchEmployee.Name = "TxtSearchEmployee";
             this.TxtSearchEmployee.Size = new System.Drawing.Size(140, 20);
             this.TxtSearchEmployee.TabIndex = 0;
@@ -60,7 +60,7 @@
             // CmdSearchEmployee
             // 
             this.CmdSearchEmployee.Location = new System.Drawing.Point(626, 12);
-            this.CmdSearchEmployee.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CmdSearchEmployee.Margin = new System.Windows.Forms.Padding(2);
             this.CmdSearchEmployee.Name = "CmdSearchEmployee";
             this.CmdSearchEmployee.Size = new System.Drawing.Size(50, 24);
             this.CmdSearchEmployee.TabIndex = 1;
@@ -70,7 +70,7 @@
             // CmdDeleteEmployee
             // 
             this.CmdDeleteEmployee.Location = new System.Drawing.Point(831, 8);
-            this.CmdDeleteEmployee.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CmdDeleteEmployee.Margin = new System.Windows.Forms.Padding(2);
             this.CmdDeleteEmployee.Name = "CmdDeleteEmployee";
             this.CmdDeleteEmployee.Size = new System.Drawing.Size(113, 24);
             this.CmdDeleteEmployee.TabIndex = 3;
@@ -80,7 +80,7 @@
             // CmdInfoEmployee
             // 
             this.CmdInfoEmployee.Location = new System.Drawing.Point(957, 8);
-            this.CmdInfoEmployee.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CmdInfoEmployee.Margin = new System.Windows.Forms.Padding(2);
             this.CmdInfoEmployee.Name = "CmdInfoEmployee";
             this.CmdInfoEmployee.Size = new System.Drawing.Size(119, 24);
             this.CmdInfoEmployee.TabIndex = 4;
@@ -91,7 +91,7 @@
             // CmdCreateEmployee
             // 
             this.CmdCreateEmployee.Location = new System.Drawing.Point(1080, 8);
-            this.CmdCreateEmployee.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CmdCreateEmployee.Margin = new System.Windows.Forms.Padding(2);
             this.CmdCreateEmployee.Name = "CmdCreateEmployee";
             this.CmdCreateEmployee.Size = new System.Drawing.Size(109, 24);
             this.CmdCreateEmployee.TabIndex = 5;
@@ -101,9 +101,12 @@
             // 
             // DataGridEmployee
             // 
+            this.DataGridEmployee.AllowUserToAddRows = false;
+            this.DataGridEmployee.AllowUserToDeleteRows = false;
+            this.DataGridEmployee.AllowUserToOrderColumns = true;
             this.DataGridEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridEmployee.Location = new System.Drawing.Point(8, 60);
-            this.DataGridEmployee.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DataGridEmployee.Margin = new System.Windows.Forms.Padding(2);
             this.DataGridEmployee.Name = "DataGridEmployee";
             this.DataGridEmployee.RowHeadersWidth = 62;
             this.DataGridEmployee.RowTemplate.Height = 28;
@@ -114,7 +117,7 @@
             // 
             this.DataGridCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridCustomer.Location = new System.Drawing.Point(8, 512);
-            this.DataGridCustomer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DataGridCustomer.Margin = new System.Windows.Forms.Padding(2);
             this.DataGridCustomer.Name = "DataGridCustomer";
             this.DataGridCustomer.RowHeadersWidth = 62;
             this.DataGridCustomer.RowTemplate.Height = 28;
@@ -125,7 +128,7 @@
             // 
             this.CmbFilterEmployee.FormattingEnabled = true;
             this.CmbFilterEmployee.Location = new System.Drawing.Point(713, 12);
-            this.CmbFilterEmployee.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CmbFilterEmployee.Margin = new System.Windows.Forms.Padding(2);
             this.CmbFilterEmployee.Name = "CmbFilterEmployee";
             this.CmbFilterEmployee.Size = new System.Drawing.Size(82, 21);
             this.CmbFilterEmployee.TabIndex = 8;
@@ -134,7 +137,7 @@
             // 
             this.CmbFilterCustomer.FormattingEnabled = true;
             this.CmbFilterCustomer.Location = new System.Drawing.Point(625, 467);
-            this.CmbFilterCustomer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CmbFilterCustomer.Margin = new System.Windows.Forms.Padding(2);
             this.CmbFilterCustomer.Name = "CmbFilterCustomer";
             this.CmbFilterCustomer.Size = new System.Drawing.Size(82, 21);
             this.CmbFilterCustomer.TabIndex = 14;
@@ -142,7 +145,7 @@
             // CmdCreateCustomer
             // 
             this.CmdCreateCustomer.Location = new System.Drawing.Point(1067, 464);
-            this.CmdCreateCustomer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CmdCreateCustomer.Margin = new System.Windows.Forms.Padding(2);
             this.CmdCreateCustomer.Name = "CmdCreateCustomer";
             this.CmdCreateCustomer.Size = new System.Drawing.Size(109, 24);
             this.CmdCreateCustomer.TabIndex = 13;
@@ -152,7 +155,7 @@
             // CmdInfoCustomer
             // 
             this.CmdInfoCustomer.Location = new System.Drawing.Point(943, 464);
-            this.CmdInfoCustomer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CmdInfoCustomer.Margin = new System.Windows.Forms.Padding(2);
             this.CmdInfoCustomer.Name = "CmdInfoCustomer";
             this.CmdInfoCustomer.Size = new System.Drawing.Size(119, 24);
             this.CmdInfoCustomer.TabIndex = 12;
@@ -162,7 +165,7 @@
             // CmdDeleteCustomer
             // 
             this.CmdDeleteCustomer.Location = new System.Drawing.Point(827, 464);
-            this.CmdDeleteCustomer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CmdDeleteCustomer.Margin = new System.Windows.Forms.Padding(2);
             this.CmdDeleteCustomer.Name = "CmdDeleteCustomer";
             this.CmdDeleteCustomer.Size = new System.Drawing.Size(113, 24);
             this.CmdDeleteCustomer.TabIndex = 11;
@@ -172,7 +175,7 @@
             // CmdSearchCustomer
             // 
             this.CmdSearchCustomer.Location = new System.Drawing.Point(565, 464);
-            this.CmdSearchCustomer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CmdSearchCustomer.Margin = new System.Windows.Forms.Padding(2);
             this.CmdSearchCustomer.Name = "CmdSearchCustomer";
             this.CmdSearchCustomer.Size = new System.Drawing.Size(50, 24);
             this.CmdSearchCustomer.TabIndex = 10;
@@ -182,7 +185,7 @@
             // TxtSearchCustomer
             // 
             this.TxtSearchCustomer.Location = new System.Drawing.Point(423, 469);
-            this.TxtSearchCustomer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtSearchCustomer.Margin = new System.Windows.Forms.Padding(2);
             this.TxtSearchCustomer.Name = "TxtSearchCustomer";
             this.TxtSearchCustomer.Size = new System.Drawing.Size(140, 20);
             this.TxtSearchCustomer.TabIndex = 9;
@@ -190,7 +193,7 @@
             // CmdComCustomer
             // 
             this.CmdComCustomer.Location = new System.Drawing.Point(710, 464);
-            this.CmdComCustomer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CmdComCustomer.Margin = new System.Windows.Forms.Padding(2);
             this.CmdComCustomer.Name = "CmdComCustomer";
             this.CmdComCustomer.Size = new System.Drawing.Size(113, 24);
             this.CmdComCustomer.TabIndex = 15;
@@ -200,7 +203,7 @@
             // CmdSave
             // 
             this.CmdSave.Location = new System.Drawing.Point(957, 683);
-            this.CmdSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CmdSave.Margin = new System.Windows.Forms.Padding(2);
             this.CmdSave.Name = "CmdSave";
             this.CmdSave.Size = new System.Drawing.Size(69, 31);
             this.CmdSave.TabIndex = 16;
@@ -210,7 +213,7 @@
             // CmdSaveExit
             // 
             this.CmdSaveExit.Location = new System.Drawing.Point(1047, 683);
-            this.CmdSaveExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CmdSaveExit.Margin = new System.Windows.Forms.Padding(2);
             this.CmdSaveExit.Name = "CmdSaveExit";
             this.CmdSaveExit.Size = new System.Drawing.Size(129, 31);
             this.CmdSaveExit.TabIndex = 17;
@@ -239,7 +242,7 @@
             this.Controls.Add(this.CmdDeleteEmployee);
             this.Controls.Add(this.CmdSearchEmployee);
             this.Controls.Add(this.TxtSearchEmployee);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Dashboard";
             this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.Dashboard_Load);

@@ -89,6 +89,8 @@
             this.TxtEmployeeCreatTitle = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.LstOutput = new System.Windows.Forms.ListBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -158,6 +160,7 @@
             this.CmdEmployeeCreatEmployeeSave.TabIndex = 188;
             this.CmdEmployeeCreatEmployeeSave.Text = "Speichern";
             this.CmdEmployeeCreatEmployeeSave.UseVisualStyleBackColor = true;
+            this.CmdEmployeeCreatEmployeeSave.Click += new System.EventHandler(this.CmdEmployeeCreatEmployeeSave_Click);
             // 
             // label16
             // 
@@ -606,11 +609,29 @@
             this.label1.TabIndex = 134;
             this.label1.Text = "Personelle Angaben";
             // 
+            // LstOutput
+            // 
+            this.LstOutput.FormattingEnabled = true;
+            this.LstOutput.Location = new System.Drawing.Point(927, 129);
+            this.LstOutput.Name = "LstOutput";
+            this.LstOutput.Size = new System.Drawing.Size(212, 199);
+            this.LstOutput.TabIndex = 193;
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(1159, 149);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(8, 4);
+            this.listBox1.TabIndex = 194;
+            // 
             // CreateEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1319, 768);
+            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.LstOutput);
             this.Controls.Add(this.TxtEmployeeCreatCompProcent);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.CmdEmployeeCreatEmployeeAbort);
@@ -670,9 +691,10 @@
             this.Controls.Add(this.TxtEmployeeCreatTitle);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CreateEmployee";
             this.Text = "CreateEmployee";
+            this.Load += new System.EventHandler(this.CreateEmployee_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -743,5 +765,7 @@
         private System.Windows.Forms.TextBox TxtEmployeeCreatTitle;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListBox LstOutput;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }

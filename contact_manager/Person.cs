@@ -3,14 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Xml.Serialization;
+using System.Xml.Linq;
 
 namespace contact_manager
 {
-    class Person
+    Public class Person
     {
+        private string firstName;
+        private string lastName;
         public void addPerson()
         {
             Person p = new Person();
+
         }
 
         public void deletePerson()
@@ -28,16 +34,16 @@ namespace contact_manager
             set;
         }
 
-        public string Name
+        public string FirstName
         {
-            get;
-            set;
+            get { return firstName; }
+            set { firstName = value; }
         }
 
-        public string Surname
+        public string LastName
         {
-            get;
-            set;
+            get { return lastName; }
+            set { lastName = value; }
         }
 
         public DateTime Birthday
@@ -116,6 +122,93 @@ namespace contact_manager
         {
             get;
             set;
+        }
+
+        /*public void Save(string filename)
+        {
+            using (var stream = new FileStream(filename, FileMode.Create))
+            {
+                var XML = new XmlSerializer(typeof(Person));
+                XML.Serialize(stream, this);
+            }
+        }
+
+        public static Person LoadFromFile(string fileName)
+        {
+            using (var stream = new FileStream(fileName, FileMode.Open))
+            {
+                var XML = new XmlSerializer(typeof(Person));
+                return (Person)XML.Deserialize(stream);
+            }
+        }*/
+
+        public Person()
+        {
+            FirstName = "Testus";
+            LastName = "Test";
+        }
+
+        public Person(string firstName, string lastName)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+        }
+
+        public override string ToString()
+        {
+            string output = string.Empty;
+
+            output += string.Format("{0}, {1}", LastName, FirstName);
+
+            return output;
+        }
+        public static Person[] DataStoreEmployee = new Person[1];
+
+        public static void Write(Person person)
+        {
+            StreamWriter sw = new StreamWriter("Person.txt");
+            sw.WriteLine(DataStoreEmployee.Length + 1);
+            sw.WriteLine(person.FirstName);
+            sw.WriteLine(person.LastName);
+
+            for (int x = 0; x < DataStoreEmployee.Length; x++)
+            {
+                sw.WriteLine(DataStoreEmployee[x].FirstName);
+                sw.WriteLine(DataStoreEmployee[x].LastName);
+            }
+
+            sw.Close();
+        }
+
+        public static void Read()
+        {
+            StreamReader sr = new StreamReader("Person.txt");
+            DataStoreEmployee = new Person[Convert.ToInt32(sr.ReadLine())];
+
+            for (int x = 0; x < DataStoreEmployee.Length; x++)
+            {
+                DataStoreEmployee[x] = new Person();
+                DataStoreEmployee[x].FirstName = sr.ReadLine();
+                DataStoreEmployee[x].LastName = sr.ReadLine();
+            }
+
+            sr.Close();
+        }
+
+        public static void Display()
+        {
+            LstOutput.Items.Clear();
+           
+            for (int x = 0; x < DataStoreEmployee.Length; x++)
+            {
+                LstOutput.Items.Add(DataStoreEmployee[x].ToString());
+            }
+        }
+
+        public static void ClearForm()
+        {
+            TxtEmployeeCreatFirstn.Text = string.Empty;
+            TxtEmployeeCreatLastn.Text = string.Empty;
         }
     }
 }
