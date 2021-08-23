@@ -16,7 +16,7 @@ namespace contact_manager
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CreateEmployee());
+            Application.Run(new Dashboard());
 
             //person.Save("Test.xml");
             //Person person = Person.LoadFromFile("Test.xml");

@@ -757,15 +757,15 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox TxtEmployeeCreatBirth;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox TxtEmployeeCreatLastn;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox TxtEmployeeCreatFirstn;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox CmbDropEmployeeCreatSalut;
         private System.Windows.Forms.TextBox TxtEmployeeCreatTitle;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox LstOutput;
         private System.Windows.Forms.ListBox listBox1;
+        public System.Windows.Forms.TextBox TxtEmployeeCreatFirstn;
+        public System.Windows.Forms.TextBox TxtEmployeeCreatLastn;
+        public System.Windows.Forms.ListBox LstOutput;
     }
 }

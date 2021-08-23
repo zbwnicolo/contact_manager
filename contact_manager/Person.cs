@@ -9,14 +9,16 @@ using System.Xml.Linq;
 
 namespace contact_manager
 {
-    Public class Person
+    public class Person
     {
-        private string firstName;
-        private string lastName;
-        public void addPerson()
-        {
+        public static string firstName;
+        public static string lastName;
+        public static void addPerson(CreateEmployee createEmployee)
+        {          
             Person p = new Person();
-
+            p.FirstName = createEmployee.TxtEmployeeCreatFirstn.Text;
+            p.LastName = createEmployee.TxtEmployeeCreatLastn.Text;
+            createEmployee.LstOutput.Items.Add(p.ToString());
         }
 
         public void deletePerson()
@@ -162,14 +164,15 @@ namespace contact_manager
 
             return output;
         }
+        
         public static Person[] DataStoreEmployee = new Person[1];
 
-        public static void Write(Person person)
+        public static void Write()
         {
             StreamWriter sw = new StreamWriter("Person.txt");
             sw.WriteLine(DataStoreEmployee.Length + 1);
-            sw.WriteLine(person.FirstName);
-            sw.WriteLine(person.LastName);
+            sw.WriteLine(firstName);
+            sw.WriteLine(lastName);
 
             for (int x = 0; x < DataStoreEmployee.Length; x++)
             {
@@ -195,20 +198,20 @@ namespace contact_manager
             sr.Close();
         }
 
-        public static void Display()
+        public static void Display(CreateEmployee createEmployee)
         {
-            LstOutput.Items.Clear();
+            createEmployee.LstOutput.Items.Clear();
            
             for (int x = 0; x < DataStoreEmployee.Length; x++)
             {
-                LstOutput.Items.Add(DataStoreEmployee[x].ToString());
+                createEmployee.LstOutput.Items.Add(DataStoreEmployee[x].ToString());
             }
         }
 
-        public static void ClearForm()
+        public static void ClearForm(CreateEmployee createEmployee)
         {
-            TxtEmployeeCreatFirstn.Text = string.Empty;
-            TxtEmployeeCreatLastn.Text = string.Empty;
+            createEmployee.TxtEmployeeCreatFirstn.Text = string.Empty;
+            createEmployee.TxtEmployeeCreatLastn.Text = string.Empty;
         }
     }
 }
