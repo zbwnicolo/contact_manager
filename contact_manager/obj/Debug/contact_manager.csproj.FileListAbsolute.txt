@@ -1,4 +1,3 @@
-C:\Users\joels\Documents\GitHub\contact_manager\contact_manager\obj\Debug\contact_manager.csprojAssemblyReference.cache
 C:\Users\joels\Documents\GitHub\contact_manager\contact_manager\obj\Debug\contact_manager.Properties.Resources.resources
 C:\Users\joels\Documents\GitHub\contact_manager\contact_manager\obj\Debug\contact_manager.csproj.GenerateResource.cache
 C:\Users\joels\Documents\GitHub\contact_manager\contact_manager\obj\Debug\contact_manager.csproj.CoreCompileInputs.cache
@@ -51,3 +50,4 @@ C:\Users\joel.sutter\OneDrive - Weibel IT AG\Dokumente\GitHub\contact_manager\co
 C:\Users\joel.sutter\OneDrive - Weibel IT AG\Dokumente\GitHub\contact_manager\contact_manager\bin\Debug\contact_manager.exe.config
 C:\Users\joel.sutter\OneDrive - Weibel IT AG\Dokumente\GitHub\contact_manager\contact_manager\bin\Debug\contact_manager.exe
 C:\Users\joel.sutter\OneDrive - Weibel IT AG\Dokumente\GitHub\contact_manager\contact_manager\bin\Debug\contact_manager.pdb
+C:\Users\joels\Documents\GitHub\contact_manager\contact_manager\obj\Debug\contact_manager.csproj.AssemblyReference.cache

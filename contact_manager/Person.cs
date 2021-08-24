@@ -13,6 +13,7 @@ namespace contact_manager
     {
         public static string firstName;
         public static string lastName;
+        public static Person[] DataStoreEmployee = new Person[1];
         public static void addPerson(CreateEmployee createEmployee)
         {          
             Person p = new Person();
@@ -165,14 +166,14 @@ namespace contact_manager
             return output;
         }
         
-        public static Person[] DataStoreEmployee = new Person[1];
+       
 
-        public static void Write()
+        public static void Write(Person p)
         {
             StreamWriter sw = new StreamWriter("Person.txt");
             sw.WriteLine(DataStoreEmployee.Length + 1);
-            sw.WriteLine(firstName);
-            sw.WriteLine(lastName);
+            sw.WriteLine(p.FirstName);
+            sw.WriteLine(p.LastName);
 
             for (int x = 0; x < DataStoreEmployee.Length; x++)
             {
@@ -196,6 +197,23 @@ namespace contact_manager
             }
 
             sr.Close();
+
+            /*
+            string[] lines = File.ReadAllLines(@"C:\Users\1BestCsharp\Desktop\table.txt");
+            string[] values;
+
+
+            for (int i = 0; i < lines.Length; i++)
+            {
+                values = lines[i].ToString().Split('|');
+                string[] row = new string[values.Length];
+
+                for (int j = 0; j < values.Length; j++)
+                {
+                    row[j] = values[j].Trim();
+                }
+                table.Rows.Add(row);
+            }*/
         }
 
         public static void Display(CreateEmployee createEmployee)

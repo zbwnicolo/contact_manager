@@ -27,15 +27,15 @@ namespace contact_manager
             LstOutput.Items.Add(p.ToString());*/
             Person.addPerson(this);
             Person.Write();
-            Person.Read();
-            Person.Display(this);
-            Person.ClearForm(this);
+            //Person.Read();
+            //Person.Display(this);
+            //Person.ClearForm(this);
         }
 
         private void CreateEmployee_Load(object sender, EventArgs e)
         {
-            Person.Read();
-            Person.Display(this);
+            //Person.Read();
+            //Person.Display(this);
         }
     }
 }

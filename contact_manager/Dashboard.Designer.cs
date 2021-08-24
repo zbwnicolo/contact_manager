@@ -51,38 +51,34 @@
             // 
             // TxtSearchEmployee
             // 
-            this.TxtSearchEmployee.Location = new System.Drawing.Point(422, 15);
-            this.TxtSearchEmployee.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtSearchEmployee.Location = new System.Drawing.Point(633, 23);
             this.TxtSearchEmployee.Name = "TxtSearchEmployee";
-            this.TxtSearchEmployee.Size = new System.Drawing.Size(140, 20);
+            this.TxtSearchEmployee.Size = new System.Drawing.Size(208, 26);
             this.TxtSearchEmployee.TabIndex = 0;
             // 
             // CmdSearchEmployee
             // 
-            this.CmdSearchEmployee.Location = new System.Drawing.Point(626, 12);
-            this.CmdSearchEmployee.Margin = new System.Windows.Forms.Padding(2);
+            this.CmdSearchEmployee.Location = new System.Drawing.Point(939, 18);
             this.CmdSearchEmployee.Name = "CmdSearchEmployee";
-            this.CmdSearchEmployee.Size = new System.Drawing.Size(50, 24);
+            this.CmdSearchEmployee.Size = new System.Drawing.Size(75, 37);
             this.CmdSearchEmployee.TabIndex = 1;
             this.CmdSearchEmployee.Text = "Suchen";
             this.CmdSearchEmployee.UseVisualStyleBackColor = true;
             // 
             // CmdDeleteEmployee
             // 
-            this.CmdDeleteEmployee.Location = new System.Drawing.Point(831, 8);
-            this.CmdDeleteEmployee.Margin = new System.Windows.Forms.Padding(2);
+            this.CmdDeleteEmployee.Location = new System.Drawing.Point(1246, 12);
             this.CmdDeleteEmployee.Name = "CmdDeleteEmployee";
-            this.CmdDeleteEmployee.Size = new System.Drawing.Size(113, 24);
+            this.CmdDeleteEmployee.Size = new System.Drawing.Size(170, 37);
             this.CmdDeleteEmployee.TabIndex = 3;
             this.CmdDeleteEmployee.Text = "Mitarbeiter löschen";
             this.CmdDeleteEmployee.UseVisualStyleBackColor = true;
             // 
             // CmdInfoEmployee
             // 
-            this.CmdInfoEmployee.Location = new System.Drawing.Point(957, 8);
-            this.CmdInfoEmployee.Margin = new System.Windows.Forms.Padding(2);
+            this.CmdInfoEmployee.Location = new System.Drawing.Point(1436, 12);
             this.CmdInfoEmployee.Name = "CmdInfoEmployee";
-            this.CmdInfoEmployee.Size = new System.Drawing.Size(119, 24);
+            this.CmdInfoEmployee.Size = new System.Drawing.Size(178, 37);
             this.CmdInfoEmployee.TabIndex = 4;
             this.CmdInfoEmployee.Text = "Mitarbeiterinformation";
             this.CmdInfoEmployee.UseVisualStyleBackColor = true;
@@ -90,10 +86,9 @@
             // 
             // CmdCreateEmployee
             // 
-            this.CmdCreateEmployee.Location = new System.Drawing.Point(1080, 8);
-            this.CmdCreateEmployee.Margin = new System.Windows.Forms.Padding(2);
+            this.CmdCreateEmployee.Location = new System.Drawing.Point(1620, 12);
             this.CmdCreateEmployee.Name = "CmdCreateEmployee";
-            this.CmdCreateEmployee.Size = new System.Drawing.Size(109, 24);
+            this.CmdCreateEmployee.Size = new System.Drawing.Size(164, 37);
             this.CmdCreateEmployee.TabIndex = 5;
             this.CmdCreateEmployee.Text = "Neuer Mitarbeiter";
             this.CmdCreateEmployee.UseVisualStyleBackColor = true;
@@ -105,126 +100,114 @@
             this.DataGridEmployee.AllowUserToDeleteRows = false;
             this.DataGridEmployee.AllowUserToOrderColumns = true;
             this.DataGridEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridEmployee.Location = new System.Drawing.Point(8, 60);
-            this.DataGridEmployee.Margin = new System.Windows.Forms.Padding(2);
+            this.DataGridEmployee.Location = new System.Drawing.Point(21, 86);
             this.DataGridEmployee.Name = "DataGridEmployee";
             this.DataGridEmployee.RowHeadersWidth = 62;
             this.DataGridEmployee.RowTemplate.Height = 28;
-            this.DataGridEmployee.Size = new System.Drawing.Size(1181, 138);
+            this.DataGridEmployee.Size = new System.Drawing.Size(1772, 212);
             this.DataGridEmployee.TabIndex = 6;
             // 
             // DataGridCustomer
             // 
             this.DataGridCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridCustomer.Location = new System.Drawing.Point(8, 512);
-            this.DataGridCustomer.Margin = new System.Windows.Forms.Padding(2);
+            this.DataGridCustomer.Location = new System.Drawing.Point(12, 788);
             this.DataGridCustomer.Name = "DataGridCustomer";
             this.DataGridCustomer.RowHeadersWidth = 62;
             this.DataGridCustomer.RowTemplate.Height = 28;
-            this.DataGridCustomer.Size = new System.Drawing.Size(1181, 138);
+            this.DataGridCustomer.Size = new System.Drawing.Size(1772, 212);
             this.DataGridCustomer.TabIndex = 7;
             // 
             // CmbFilterEmployee
             // 
             this.CmbFilterEmployee.FormattingEnabled = true;
-            this.CmbFilterEmployee.Location = new System.Drawing.Point(713, 12);
-            this.CmbFilterEmployee.Margin = new System.Windows.Forms.Padding(2);
+            this.CmbFilterEmployee.Location = new System.Drawing.Point(1070, 18);
             this.CmbFilterEmployee.Name = "CmbFilterEmployee";
-            this.CmbFilterEmployee.Size = new System.Drawing.Size(82, 21);
+            this.CmbFilterEmployee.Size = new System.Drawing.Size(121, 28);
             this.CmbFilterEmployee.TabIndex = 8;
             // 
             // CmbFilterCustomer
             // 
             this.CmbFilterCustomer.FormattingEnabled = true;
-            this.CmbFilterCustomer.Location = new System.Drawing.Point(625, 467);
-            this.CmbFilterCustomer.Margin = new System.Windows.Forms.Padding(2);
+            this.CmbFilterCustomer.Location = new System.Drawing.Point(938, 718);
             this.CmbFilterCustomer.Name = "CmbFilterCustomer";
-            this.CmbFilterCustomer.Size = new System.Drawing.Size(82, 21);
+            this.CmbFilterCustomer.Size = new System.Drawing.Size(121, 28);
             this.CmbFilterCustomer.TabIndex = 14;
             // 
             // CmdCreateCustomer
             // 
-            this.CmdCreateCustomer.Location = new System.Drawing.Point(1067, 464);
-            this.CmdCreateCustomer.Margin = new System.Windows.Forms.Padding(2);
+            this.CmdCreateCustomer.Location = new System.Drawing.Point(1600, 714);
             this.CmdCreateCustomer.Name = "CmdCreateCustomer";
-            this.CmdCreateCustomer.Size = new System.Drawing.Size(109, 24);
+            this.CmdCreateCustomer.Size = new System.Drawing.Size(164, 37);
             this.CmdCreateCustomer.TabIndex = 13;
             this.CmdCreateCustomer.Text = "Neuer Kunde";
             this.CmdCreateCustomer.UseVisualStyleBackColor = true;
             // 
             // CmdInfoCustomer
             // 
-            this.CmdInfoCustomer.Location = new System.Drawing.Point(943, 464);
-            this.CmdInfoCustomer.Margin = new System.Windows.Forms.Padding(2);
+            this.CmdInfoCustomer.Location = new System.Drawing.Point(1414, 714);
             this.CmdInfoCustomer.Name = "CmdInfoCustomer";
-            this.CmdInfoCustomer.Size = new System.Drawing.Size(119, 24);
+            this.CmdInfoCustomer.Size = new System.Drawing.Size(178, 37);
             this.CmdInfoCustomer.TabIndex = 12;
             this.CmdInfoCustomer.Text = "Kundeninformation";
             this.CmdInfoCustomer.UseVisualStyleBackColor = true;
             // 
             // CmdDeleteCustomer
             // 
-            this.CmdDeleteCustomer.Location = new System.Drawing.Point(827, 464);
-            this.CmdDeleteCustomer.Margin = new System.Windows.Forms.Padding(2);
+            this.CmdDeleteCustomer.Location = new System.Drawing.Point(1240, 714);
             this.CmdDeleteCustomer.Name = "CmdDeleteCustomer";
-            this.CmdDeleteCustomer.Size = new System.Drawing.Size(113, 24);
+            this.CmdDeleteCustomer.Size = new System.Drawing.Size(170, 37);
             this.CmdDeleteCustomer.TabIndex = 11;
             this.CmdDeleteCustomer.Text = "Kunde löschen";
             this.CmdDeleteCustomer.UseVisualStyleBackColor = true;
             // 
             // CmdSearchCustomer
             // 
-            this.CmdSearchCustomer.Location = new System.Drawing.Point(565, 464);
-            this.CmdSearchCustomer.Margin = new System.Windows.Forms.Padding(2);
+            this.CmdSearchCustomer.Location = new System.Drawing.Point(848, 714);
             this.CmdSearchCustomer.Name = "CmdSearchCustomer";
-            this.CmdSearchCustomer.Size = new System.Drawing.Size(50, 24);
+            this.CmdSearchCustomer.Size = new System.Drawing.Size(75, 37);
             this.CmdSearchCustomer.TabIndex = 10;
             this.CmdSearchCustomer.Text = "Suchen";
             this.CmdSearchCustomer.UseVisualStyleBackColor = true;
             // 
             // TxtSearchCustomer
             // 
-            this.TxtSearchCustomer.Location = new System.Drawing.Point(423, 469);
-            this.TxtSearchCustomer.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtSearchCustomer.Location = new System.Drawing.Point(634, 722);
             this.TxtSearchCustomer.Name = "TxtSearchCustomer";
-            this.TxtSearchCustomer.Size = new System.Drawing.Size(140, 20);
+            this.TxtSearchCustomer.Size = new System.Drawing.Size(208, 26);
             this.TxtSearchCustomer.TabIndex = 9;
             // 
             // CmdComCustomer
             // 
-            this.CmdComCustomer.Location = new System.Drawing.Point(710, 464);
-            this.CmdComCustomer.Margin = new System.Windows.Forms.Padding(2);
+            this.CmdComCustomer.Location = new System.Drawing.Point(1065, 714);
             this.CmdComCustomer.Name = "CmdComCustomer";
-            this.CmdComCustomer.Size = new System.Drawing.Size(113, 24);
+            this.CmdComCustomer.Size = new System.Drawing.Size(170, 37);
             this.CmdComCustomer.TabIndex = 15;
             this.CmdComCustomer.Text = "Kommunikation";
             this.CmdComCustomer.UseVisualStyleBackColor = true;
             // 
             // CmdSave
             // 
-            this.CmdSave.Location = new System.Drawing.Point(957, 683);
-            this.CmdSave.Margin = new System.Windows.Forms.Padding(2);
+            this.CmdSave.Location = new System.Drawing.Point(1436, 1051);
             this.CmdSave.Name = "CmdSave";
-            this.CmdSave.Size = new System.Drawing.Size(69, 31);
+            this.CmdSave.Size = new System.Drawing.Size(104, 48);
             this.CmdSave.TabIndex = 16;
             this.CmdSave.Text = "Speichern";
             this.CmdSave.UseVisualStyleBackColor = true;
             // 
             // CmdSaveExit
             // 
-            this.CmdSaveExit.Location = new System.Drawing.Point(1047, 683);
-            this.CmdSaveExit.Margin = new System.Windows.Forms.Padding(2);
+            this.CmdSaveExit.Location = new System.Drawing.Point(1570, 1051);
             this.CmdSaveExit.Name = "CmdSaveExit";
-            this.CmdSaveExit.Size = new System.Drawing.Size(129, 31);
+            this.CmdSaveExit.Size = new System.Drawing.Size(194, 48);
             this.CmdSaveExit.TabIndex = 17;
             this.CmdSaveExit.Text = "Speichern und Beenden";
             this.CmdSaveExit.UseVisualStyleBackColor = true;
             // 
             // Dashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1319, 768);
+            this.ClientSize = new System.Drawing.Size(1978, 1182);
             this.Controls.Add(this.CmdSaveExit);
             this.Controls.Add(this.CmdSave);
             this.Controls.Add(this.CmdComCustomer);
@@ -242,7 +225,6 @@
             this.Controls.Add(this.CmdDeleteEmployee);
             this.Controls.Add(this.CmdSearchEmployee);
             this.Controls.Add(this.TxtSearchEmployee);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Dashboard";
             this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.Dashboard_Load);
