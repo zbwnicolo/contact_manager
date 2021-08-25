@@ -26,7 +26,7 @@ namespace contact_manager
             p.LastName = TxtEmployeeCreatLastn.Text;
             LstOutput.Items.Add(p.ToString());*/
             Person.addPerson(this);
-            Person.Write();
+            //Person.Write();
             //Person.Read();
             //Person.Display(this);
             //Person.ClearForm(this);

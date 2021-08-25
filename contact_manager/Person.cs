@@ -20,6 +20,23 @@ namespace contact_manager
             p.FirstName = createEmployee.TxtEmployeeCreatFirstn.Text;
             p.LastName = createEmployee.TxtEmployeeCreatLastn.Text;
             createEmployee.LstOutput.Items.Add(p.ToString());
+
+            string dir = Convert.ToString(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "ContactManagerData");
+
+            Directory.CreateDirectory(dir);
+            StreamWriter sw = new StreamWriter("Person.txt");
+
+            sw.WriteLine(DataStoreEmployee.Length + 1);
+            sw.WriteLine(p.FirstName);
+            sw.WriteLine(p.LastName);
+
+            for (int x = 0; x < DataStoreEmployee.Length; x++)
+            {
+                //sw.WriteLine(DataStoreEmployee[x]);
+                //sw.WriteLine(DataStoreEmployee[x]);
+            }
+
+            sw.Close();
         }
 
         public void deletePerson()
@@ -164,24 +181,6 @@ namespace contact_manager
             output += string.Format("{0}, {1}", LastName, FirstName);
 
             return output;
-        }
-        
-       
-
-        public static void Write(Person p)
-        {
-            StreamWriter sw = new StreamWriter("Person.txt");
-            sw.WriteLine(DataStoreEmployee.Length + 1);
-            sw.WriteLine(p.FirstName);
-            sw.WriteLine(p.LastName);
-
-            for (int x = 0; x < DataStoreEmployee.Length; x++)
-            {
-                sw.WriteLine(DataStoreEmployee[x].FirstName);
-                sw.WriteLine(DataStoreEmployee[x].LastName);
-            }
-
-            sw.Close();
         }
 
         public static void Read()

@@ -51,3 +51,6 @@ C:\Users\joel.sutter\OneDrive - Weibel IT AG\Dokumente\GitHub\contact_manager\co
 C:\Users\joel.sutter\OneDrive - Weibel IT AG\Dokumente\GitHub\contact_manager\contact_manager\bin\Debug\contact_manager.exe
 C:\Users\joel.sutter\OneDrive - Weibel IT AG\Dokumente\GitHub\contact_manager\contact_manager\bin\Debug\contact_manager.pdb
 C:\Users\joels\Documents\GitHub\contact_manager\contact_manager\obj\Debug\contact_manager.csproj.AssemblyReference.cache
+C:\Users\Arlind\OneDrive\Desktop\Projekt\contact_manager\contact_manager\obj\Debug\contact_manager.CreateCustomer.resources
+C:\Users\Arlind\OneDrive\Desktop\Projekt\contact_manager\contact_manager\obj\Debug\contact_manager.EditCustomer.resources
+C:\Users\Arlind\OneDrive\Desktop\Projekt\contact_manager\contact_manager\obj\Debug\contact_manager.EditEmployee.resources
