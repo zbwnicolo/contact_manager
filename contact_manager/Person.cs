@@ -13,28 +13,27 @@ namespace contact_manager
     {
         public static string firstName;
         public static string lastName;
+        public static int id = 1;
         public static Person[] DataStoreEmployee = new Person[1];
         public static void addPerson(CreateEmployee createEmployee)
-        {          
+        {
+            string dir = Convert.ToString(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\ContactManagerData");
+            Directory.CreateDirectory(dir);
+            StreamWriter sw = new StreamWriter(dir + "\\Person.txt", true);
+
             Person p = new Person();
             p.FirstName = createEmployee.TxtEmployeeCreatFirstn.Text;
             p.LastName = createEmployee.TxtEmployeeCreatLastn.Text;
-            createEmployee.LstOutput.Items.Add(p.ToString());
 
-            string dir = Convert.ToString(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "ContactManagerData");
-
-            Directory.CreateDirectory(dir);
-            StreamWriter sw = new StreamWriter("Person.txt");
-
-            sw.WriteLine(DataStoreEmployee.Length + 1);
-            sw.WriteLine(p.FirstName);
-            sw.WriteLine(p.LastName);
+            sw.WriteLine(p);
 
             for (int x = 0; x < DataStoreEmployee.Length; x++)
             {
                 //sw.WriteLine(DataStoreEmployee[x]);
                 //sw.WriteLine(DataStoreEmployee[x]);
             }
+
+            id++;
 
             sw.Close();
         }
@@ -144,34 +143,16 @@ namespace contact_manager
             set;
         }
 
-        /*public void Save(string filename)
-        {
-            using (var stream = new FileStream(filename, FileMode.Create))
-            {
-                var XML = new XmlSerializer(typeof(Person));
-                XML.Serialize(stream, this);
-            }
-        }
-
-        public static Person LoadFromFile(string fileName)
-        {
-            using (var stream = new FileStream(fileName, FileMode.Open))
-            {
-                var XML = new XmlSerializer(typeof(Person));
-                return (Person)XML.Deserialize(stream);
-            }
-        }*/
-
         public Person()
         {
-            FirstName = "Testus";
-            LastName = "Test";
+
         }
 
         public Person(string firstName, string lastName)
         {
             FirstName = firstName;
             LastName = lastName;
+            Salutation = Salutation;
         }
 
         public override string ToString()
@@ -196,23 +177,6 @@ namespace contact_manager
             }
 
             sr.Close();
-
-            /*
-            string[] lines = File.ReadAllLines(@"C:\Users\1BestCsharp\Desktop\table.txt");
-            string[] values;
-
-
-            for (int i = 0; i < lines.Length; i++)
-            {
-                values = lines[i].ToString().Split('|');
-                string[] row = new string[values.Length];
-
-                for (int j = 0; j < values.Length; j++)
-                {
-                    row[j] = values[j].Trim();
-                }
-                table.Rows.Add(row);
-            }*/
         }
 
         public static void Display(CreateEmployee createEmployee)

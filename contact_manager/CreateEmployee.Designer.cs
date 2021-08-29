@@ -79,7 +79,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.TxtEmployeeCreatTel = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.TxtEmployeeCreatBirth = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.TxtEmployeeCreatLastn = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -90,7 +89,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.LstOutput = new System.Windows.Forms.ListBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.TxtEmployeeCreatBirth = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -524,13 +523,6 @@
             this.label6.TabIndex = 144;
             this.label6.Text = "Geburtstag";
             // 
-            // TxtEmployeeCreatBirth
-            // 
-            this.TxtEmployeeCreatBirth.Location = new System.Drawing.Point(42, 287);
-            this.TxtEmployeeCreatBirth.Name = "TxtEmployeeCreatBirth";
-            this.TxtEmployeeCreatBirth.Size = new System.Drawing.Size(137, 20);
-            this.TxtEmployeeCreatBirth.TabIndex = 143;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -617,20 +609,21 @@
             this.LstOutput.Size = new System.Drawing.Size(212, 199);
             this.LstOutput.TabIndex = 193;
             // 
-            // listBox1
+            // TxtEmployeeCreatBirth
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(1159, 149);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(8, 4);
-            this.listBox1.TabIndex = 194;
+            this.TxtEmployeeCreatBirth.Location = new System.Drawing.Point(42, 287);
+            this.TxtEmployeeCreatBirth.Mask = "00/00/0000";
+            this.TxtEmployeeCreatBirth.Name = "TxtEmployeeCreatBirth";
+            this.TxtEmployeeCreatBirth.Size = new System.Drawing.Size(137, 20);
+            this.TxtEmployeeCreatBirth.TabIndex = 195;
+            this.TxtEmployeeCreatBirth.ValidatingType = typeof(System.DateTime);
             // 
             // CreateEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1319, 768);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.TxtEmployeeCreatBirth);
             this.Controls.Add(this.LstOutput);
             this.Controls.Add(this.TxtEmployeeCreatCompProcent);
             this.Controls.Add(this.groupBox1);
@@ -681,7 +674,6 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.TxtEmployeeCreatTel);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.TxtEmployeeCreatBirth);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.TxtEmployeeCreatLastn);
             this.Controls.Add(this.label4);
@@ -755,7 +747,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox TxtEmployeeCreatTel;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox TxtEmployeeCreatBirth;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -763,9 +754,9 @@
         private System.Windows.Forms.TextBox TxtEmployeeCreatTitle;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox listBox1;
         public System.Windows.Forms.TextBox TxtEmployeeCreatFirstn;
         public System.Windows.Forms.TextBox TxtEmployeeCreatLastn;
         public System.Windows.Forms.ListBox LstOutput;
+        private System.Windows.Forms.MaskedTextBox TxtEmployeeCreatBirth;
     }
 }

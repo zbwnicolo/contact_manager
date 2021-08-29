@@ -21,10 +21,6 @@ namespace contact_manager
 
         private void CmdEmployeeCreatEmployeeSave_Click(object sender, EventArgs e)
         {
-            /*Person p = new Person();
-            p.FirstName = TxtEmployeeCreatFirstn.Text;
-            p.LastName = TxtEmployeeCreatLastn.Text;
-            LstOutput.Items.Add(p.ToString());*/
             Person.addPerson(this);
             //Person.Write();
             //Person.Read();
