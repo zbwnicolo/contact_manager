@@ -13,7 +13,7 @@ namespace contact_manager
 {
     public partial class CreateEmployee : Form
     {
-        public CreateEmployee()
+        public CreateEmployee( )
         {
             InitializeComponent();
 
