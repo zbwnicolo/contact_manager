@@ -17,12 +17,13 @@ namespace contact_manager
         {
             InitializeComponent();
         }
-
         private void CmdCreateEmployee_Click(object sender, EventArgs e)
         {
             if (DataGridEmployee.Rows != null && DataGridEmployee.Rows.Count > 0)
             {
-                MessageBox.Show("Es darf kein Mitarbeiter ausgewählt sein!");
+                //MessageBox.Show("Es darf kein Mitarbeiter ausgewählt sein!");
+                CreateEmployee Form = new CreateEmployee();
+                Form.Show();
             }
             else
             {
@@ -33,13 +34,17 @@ namespace contact_manager
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            DataSet ds = new DataSet();
-            DataTable dt = ds.Tables.Add();
-            DataRow dr;
-            dt.Columns.Add("name");
-            dt.Columns.Add("vorname");
+            // add columns to datatable
+            //Person.tbl.Columns.Add("Id", typeof(string));
+            //Person.tbl.Columns.Add("First Name", typeof(string));
+            //Person.tbl.Columns.Add("Last Name", typeof(string));
+            DataGridEmployee.DataSource = Person.tbl;
+            Person.ConvertToDataTable("Person.Txt", 3);
+            DataGridEmployee.ClearSelection();
+            
 
-            using (StreamReader sr = new StreamReader("Person.txt"))
+
+            /*using (StreamReader sr = new StreamReader("Person.txt"))
             {
                 string line;
                 while ((line = sr.ReadLine()) != null)
@@ -51,24 +56,14 @@ namespace contact_manager
                         fields = sr.ReadLine().Split(',');
                         if (fields.Count() == 2)
                         {
-                            //dr = dt.NewRow();
-                            //dr["name"] = fields[0];
-                            //dr["vorname"] = fields[1];
+                            dr = dt.NewRow();
+                            dr["name"] = fields[0];
+                            dr["vorname"] = fields[1];
 
                         }
                     }
                 }
-            }
-
-            //DataSet Employee = new DataSet();
-            //Employee.ReadXml(@"Test.xml");
-
-                //DataSet Customer = new DataSet();
-                //Customer.ReadXml(@"C:\Users\joels\Documents\GitHub\contact_manager\contact_manager\Customer.xml");
-
-                //DataGridEmployee.DataSource = Employee.Tables[0];
-                //DataGridCustomer.DataSource = Customer.Tables[0];
-
+            }*/
         }
 
         private void CmdInfoEmployee_Click(object sender, EventArgs e)

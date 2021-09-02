@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Xml.Serialization;
 using System.Xml.Linq;
+using System.Data;
 
 namespace contact_manager
 {
@@ -30,6 +31,7 @@ namespace contact_manager
         public string postcode;
         public static int id = 1;
         public static Person[] DataStoreEmployee = new Person[1];
+        public static DataTable tbl = new DataTable();
 
         //Constructor class Person
         public Person(CreateEmployee ce)
@@ -257,6 +259,31 @@ namespace contact_manager
         {
             ce.TxtEmployeeCreatFirstn.Text = string.Empty;
             ce.TxtEmployeeCreatLastn.Text = string.Empty;
+        }
+
+        public static DataTable ConvertToDataTable(string filePath, int numberOfColumns)
+        {
+            //DataTable tbl = new DataTable();
+
+            for (int col = 0; col < numberOfColumns; col++)
+                tbl.Columns.Add(new DataColumn("Column" + (col + 1).ToString()));
+
+
+            string[] lines = System.IO.File.ReadAllLines(filePath);
+
+            foreach (string line in lines)
+            {
+                var cols = line.Split(',');
+
+                DataRow dr = tbl.NewRow();
+                for (int cIndex = 0; cIndex < numberOfColumns; cIndex++)
+                {
+                    dr[cIndex] = cols[cIndex];
+                }
+                tbl.Rows.Add(dr);
+            }
+
+            return tbl;
         }
     }
 }

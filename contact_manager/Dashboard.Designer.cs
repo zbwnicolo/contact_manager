@@ -100,7 +100,7 @@
             this.DataGridEmployee.AllowUserToDeleteRows = false;
             this.DataGridEmployee.AllowUserToOrderColumns = true;
             this.DataGridEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridEmployee.Location = new System.Drawing.Point(21, 86);
+            this.DataGridEmployee.Location = new System.Drawing.Point(12, 75);
             this.DataGridEmployee.Name = "DataGridEmployee";
             this.DataGridEmployee.RowHeadersWidth = 62;
             this.DataGridEmployee.RowTemplate.Height = 28;
