@@ -78,5 +78,10 @@ namespace contact_manager
             //    MessageBox.Show("Es muss mindestens 1 Mitarbeiter ausgewählt werden!");
             //}
         }
+
+        private void DataGridEmployee_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

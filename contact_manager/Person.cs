@@ -96,16 +96,8 @@ namespace contact_manager
 
             Person p = new Person(createEmployee);
             Console.WriteLine(createEmployee.CmbDropEmployeeCreatSalut.Text);
-            //p.FirstName = createEmployee.TxtEmployeeCreatFirstn.Text;
-            //p.LastName = createEmployee.TxtEmployeeCreatLastn.Text;
 
             sw.WriteLine(p);
-
-            for (int x = 0; x < DataStoreEmployee.Length; x++)
-            {
-                //sw.WriteLine(DataStoreEmployee[x]);
-                //sw.WriteLine(DataStoreEmployee[x]);
-            }
 
             id++;
 
@@ -210,15 +202,6 @@ namespace contact_manager
             set { postcode = value; }
         }
 
-        /*
-        public Person(string firstName, string lastName)
-        {
-            FirstName = firstName;
-            LastName = lastName;
-            Salutation = Salutation;
-        }
-        */
-
         public override string ToString()
         {
             string output = string.Empty;
@@ -243,22 +226,6 @@ namespace contact_manager
             */
 
             sr.Close();
-        }
-
-        public static void Display(CreateEmployee createEmployee)
-        {
-            createEmployee.LstOutput.Items.Clear();
-           
-            for (int x = 0; x < DataStoreEmployee.Length; x++)
-            {
-                createEmployee.LstOutput.Items.Add(DataStoreEmployee[x].ToString());
-            }
-        }
-
-        public static void ClearForm(CreateEmployee ce)
-        {
-            ce.TxtEmployeeCreatFirstn.Text = string.Empty;
-            ce.TxtEmployeeCreatLastn.Text = string.Empty;
         }
 
         public static DataTable ConvertToDataTable(string filePath, int numberOfColumns)
