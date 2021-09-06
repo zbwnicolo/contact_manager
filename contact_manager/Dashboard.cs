@@ -16,6 +16,27 @@ namespace contact_manager
         public Dashboard()
         {
             InitializeComponent();
+
+            List<Person> people = new List<Person>();
+            string line;
+
+            // Read the file and display it line by line.
+            System.IO.StreamReader file =
+                new System.IO.StreamReader("Person.txt");
+            while ((line = file.ReadLine()) != null)
+            {
+                string[] words = line.Split(',');
+                people.Add(new Person
+                {
+                    FirstName = words[0],
+                    LastName = words[1],
+                    Salutation = words[2],
+                });
+            }
+
+            file.Close();
+            Console.WriteLine(people);
+
         }
         private void CmdCreateEmployee_Click(object sender, EventArgs e)
         {
@@ -41,29 +62,6 @@ namespace contact_manager
             DataGridEmployee.DataSource = Person.tbl;
             Person.ConvertToDataTable("Person.Txt", 3);
             DataGridEmployee.ClearSelection();
-            
-
-
-            /*using (StreamReader sr = new StreamReader("Person.txt"))
-            {
-                string line;
-                while ((line = sr.ReadLine()) != null)
-                {
-                    while (sr.Peek() > 0)
-                    {
-
-                        string[] fields;
-                        fields = sr.ReadLine().Split(',');
-                        if (fields.Count() == 2)
-                        {
-                            dr = dt.NewRow();
-                            dr["name"] = fields[0];
-                            dr["vorname"] = fields[1];
-
-                        }
-                    }
-                }
-            }*/
         }
 
         private void CmdInfoEmployee_Click(object sender, EventArgs e)
