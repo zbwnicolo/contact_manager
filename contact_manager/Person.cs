@@ -30,9 +30,6 @@ namespace contact_manager
         public string street;
         public string postcode;
         public static int id = 1;
-        public static Person[] DataStoreEmployee = new Person[1];
-        public static DataTable tbl = new DataTable();
-        public static List<Person> people = new List<Person>();
 
         //Constructor class Person
         public Person(CreateEmployee ce)
@@ -94,7 +91,6 @@ namespace contact_manager
             Directory.CreateDirectory(dir);
             //StreamWriter sw = new StreamWriter(dir + "\\Person.txt", true);
             StreamWriter sw = new StreamWriter("Person.txt", append: true);
-
             Person p = new Person(createEmployee);
             Console.WriteLine(createEmployee.CmbDropEmployeeCreatSalut.Text);
 
@@ -210,39 +206,6 @@ namespace contact_manager
             output += string.Format("{0}, {1}, {2}, {3}", Salutation, Title, FirstName, LastName);
 
             return output;
-        }
-
-        public static DataTable LoadPeople()
-        {
-            foreach (Person person in people)
-            {
-                tbl.Rows.Add(new object[] { person.salutation, person.title, person.firstName, person.lastName});
-            }
-
-            return tbl;
-        }
-        
-        public static void LoadFromTxt()
-        {
-            string line;
-
-            // Read the file and display it line by line.
-            System.IO.StreamReader file =
-                new System.IO.StreamReader("Person.txt");
-            while ((line = file.ReadLine()) != null)
-            {
-                string[] words = line.Split(',');
-                Person.people.Add(new Person
-                {
-                    Salutation = words[0],
-                    Title = words[1],
-                    FirstName = words[2],
-                    LastName = words[3],
-                });
-            }
-
-            file.Close();
-            Console.WriteLine(Person.people);
         }
     }
 }
