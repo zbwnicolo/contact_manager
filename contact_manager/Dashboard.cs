@@ -51,16 +51,14 @@ namespace contact_manager
                 EditEmployee ep = new EditEmployee();
                 ep.Show();
 
-                string salut = DataGridEmployee.SelectedRows[0].Cells[0].Value + string.Empty;
-                string title = DataGridEmployee.SelectedRows[0].Cells[1].Value + string.Empty;
-                string firstn = DataGridEmployee.SelectedRows[0].Cells[2].Value + string.Empty;
-                string lastn = DataGridEmployee.SelectedRows[0].Cells[3].Value + string.Empty;
+                string id = DataGridEmployee.SelectedRows[0].Cells[0].Value + string.Empty;
 
-
-                ep.CmbDropEmployeeMgmtSalut.Text = salut;
-                ep.TxtEmployeeMgmtTitle.Text = title;
-                ep.TxtEmployeeMgmtFirstn.Text = firstn;
-                ep.TxtEmployeeMgmtLastn.Text = lastn;
+                var item = Person.people.FirstOrDefault(o => Convert.ToString(o.InstanceID) == id);
+                Console.WriteLine(item);
+                ep.CmbDropEmployeeMgmtSalut.Text = item.salutation;
+                ep.TxtEmployeeMgmtTitle.Text = item.title;
+                ep.TxtEmployeeMgmtFirstn.Text = item.firstName;
+                ep.TxtEmployeeMgmtLastn.Text = item.lastName;
             }
             else
             {
@@ -69,7 +67,7 @@ namespace contact_manager
 
             
         }
-
+   
         public static DataTable LoadPeople()
         {
             foreach (Person person in Person.people)
