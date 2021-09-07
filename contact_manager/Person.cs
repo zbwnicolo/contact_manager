@@ -32,6 +32,7 @@ namespace contact_manager
         public static int id = 1;
         public static Person[] DataStoreEmployee = new Person[1];
         public static DataTable tbl = new DataTable();
+        public static List<Person> people = new List<Person>();
 
         //Constructor class Person
         public Person(CreateEmployee ce)
@@ -92,7 +93,7 @@ namespace contact_manager
             string dir = Convert.ToString(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\ContactManagerData");
             Directory.CreateDirectory(dir);
             //StreamWriter sw = new StreamWriter(dir + "\\Person.txt", true);
-            StreamWriter sw = new StreamWriter("Person.txt", true);
+            StreamWriter sw = new StreamWriter("Person.txt", append: true);
 
             Person p = new Person(createEmployee);
             Console.WriteLine(createEmployee.CmbDropEmployeeCreatSalut.Text);
@@ -206,51 +207,42 @@ namespace contact_manager
         {
             string output = string.Empty;
 
-            output += string.Format("{0}, {1}, {2}", LastName, FirstName, Salutation);
+            output += string.Format("{0}, {1}, {2}, {3}", Salutation, Title, FirstName, LastName);
 
             return output;
         }
 
-        public static void Read()
+        public static DataTable LoadPeople()
         {
-            StreamReader sr = new StreamReader("Person.txt");
-            DataStoreEmployee = new Person[Convert.ToInt32(sr.ReadLine())];
-
-            /*
-            for (int x = 0; x < DataStoreEmployee.Length; x++)
+            foreach (Person person in people)
             {
-                DataStoreEmployee[x] = new Person(CreateEmployee);
-                DataStoreEmployee[x].FirstName = sr.ReadLine();
-                DataStoreEmployee[x].LastName = sr.ReadLine();
-            }
-            */
-
-            sr.Close();
-        }
-
-        public static DataTable ConvertToDataTable(string filePath, int numberOfColumns)
-        {
-            //DataTable tbl = new DataTable();
-
-            for (int col = 0; col < numberOfColumns; col++)
-                tbl.Columns.Add(new DataColumn("Column" + (col + 1).ToString()));
-
-
-            string[] lines = System.IO.File.ReadAllLines(filePath);
-
-            foreach (string line in lines)
-            {
-                var cols = line.Split(',');
-
-                DataRow dr = tbl.NewRow();
-                for (int cIndex = 0; cIndex < numberOfColumns; cIndex++)
-                {
-                    dr[cIndex] = cols[cIndex];
-                }
-                tbl.Rows.Add(dr);
+                tbl.Rows.Add(new object[] { person.salutation, person.title, person.firstName, person.lastName});
             }
 
             return tbl;
+        }
+        
+        public static void LoadFromTxt()
+        {
+            string line;
+
+            // Read the file and display it line by line.
+            System.IO.StreamReader file =
+                new System.IO.StreamReader("Person.txt");
+            while ((line = file.ReadLine()) != null)
+            {
+                string[] words = line.Split(',');
+                Person.people.Add(new Person
+                {
+                    Salutation = words[0],
+                    Title = words[1],
+                    FirstName = words[2],
+                    LastName = words[3],
+                });
+            }
+
+            file.Close();
+            Console.WriteLine(Person.people);
         }
     }
 }

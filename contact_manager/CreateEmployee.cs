@@ -26,7 +26,9 @@ namespace contact_manager
             //Person.Read();
             //Person.Display(this);
             //Person.ClearForm(this);
-            Person.ConvertToDataTable("Person.Txt", 3);
+            Person.LoadFromTxt();
+            Person.LoadPeople();
+            
         }
 
         private void CreateEmployee_Load(object sender, EventArgs e)
