@@ -27,7 +27,7 @@ namespace contact_manager
             //Person.Display(this);
             //Person.ClearForm(this);
             Person.LoadFromTxt();
-            Person.LoadPeople();
+            Dashboard.LoadPeople();
             
         }
 

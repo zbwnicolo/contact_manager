@@ -8,6 +8,34 @@ namespace contact_manager
 {
     class Employee : Person
     {
+        public Employee()
+        {
+            /*p.Street = TxtClientCreatAddr.Text;
+            p.AhvNumber = TxtClientCreatAhv.Text;
+            p.Birthday = Convert.ToDateTime(TxtClientCreatBirth.Text);
+            p.CompanyStreet = TxtClientCreatCompAddr.Text;
+            TxtClientCreatCompDepart.Text;
+            TxtClientCreatCompEmplLvl.Text;
+            TxtClientCreatCompEmployNr.Text;
+            p.EntryDate = Convert.ToDateTime(TxtClientCreatCompEntryDate.Text);
+            p.ExitDate = Convert.ToDateTime(TxtClientCreatCompExitDate.Text);
+            p.FaxNumber = TxtClientCreatCompFax.Text;
+            p.CompanyName = TxtClientCreatCompName.Text;
+            p.TxtClientCreatCompProcent.Text;
+            TxtClientCreatCompRes.Text;
+            TxtClientCreatCompRole.Text;
+            p TxtClientCreatCompTel.Text;
+            p.TxtClientCreatCompZipCode.Text;
+            p.FirstName = TxtClientCreatFirstn.Text;
+            p.LastName = TxtClientCreatLastn.Text;
+            p.Email = TxtClientCreatMailPriv.Text;
+            p.PhoneNumberMobile = TxtClientCreatMobile.Text;
+            p.Nationality = TxtClientCreatNation.Text;
+            p.TxtClientCreatResid.Text;
+            p.TxtClientCreatTel.Text;
+            p.Title = TxtClientCreatTitle.Text;
+            p.TxtClientCreatZipcode.Text; */
+        }
         public string Department
         {
             get;

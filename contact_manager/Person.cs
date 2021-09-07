@@ -29,9 +29,6 @@ namespace contact_manager
         public string nationality;
         public string street;
         public string postcode;
-        public static int id = 1;
-        public static Person[] DataStoreEmployee = new Person[1];
-        public static DataTable tbl = new DataTable();
         public static List<Person> people = new List<Person>();
 
         //Constructor class Person
@@ -54,33 +51,7 @@ namespace contact_manager
             this.Nationality = ce.TxtEmployeeCreatNation.Text;
             this.Street = ce.TxtEmployeeCreatAddr.Text;
             this.Postcode = ce.TxtEmployeeCreatZipcode.Text;
-
-            /*Employee p = new Employee();
-            p.Street = TxtClientCreatAddr.Text;
-            p.AhvNumber = TxtClientCreatAhv.Text;
-            p.Birthday = Convert.ToDateTime(TxtClientCreatBirth.Text);
-            p.CompanyStreet = TxtClientCreatCompAddr.Text;
-            TxtClientCreatCompDepart.Text;
-            TxtClientCreatCompEmplLvl.Text;
-            TxtClientCreatCompEmployNr.Text;
-            p.EntryDate = Convert.ToDateTime(TxtClientCreatCompEntryDate.Text);
-            p.ExitDate = Convert.ToDateTime(TxtClientCreatCompExitDate.Text);
-            p.FaxNumber = TxtClientCreatCompFax.Text;
-            p.CompanyName = TxtClientCreatCompName.Text;
-            p.TxtClientCreatCompProcent.Text;
-            TxtClientCreatCompRes.Text;
-            TxtClientCreatCompRole.Text;
-            p TxtClientCreatCompTel.Text;
-            p.TxtClientCreatCompZipCode.Text;
-            p.FirstName = TxtClientCreatFirstn.Text;
-            p.LastName = TxtClientCreatLastn.Text;
-            p.Email = TxtClientCreatMailPriv.Text;
-            p.PhoneNumberMobile = TxtClientCreatMobile.Text;
-            p.Nationality = TxtClientCreatNation.Text;
-            p.TxtClientCreatResid.Text;
-            p.TxtClientCreatTel.Text;
-            p.Title = TxtClientCreatTitle.Text;
-            p.TxtClientCreatZipcode.Text; */
+            this.InstanceID = Guid.NewGuid();
         }
 
         public Person()
@@ -88,11 +59,12 @@ namespace contact_manager
 
         }
 
+        public Guid InstanceID { get; private set; }
+
         public static void addPerson(CreateEmployee createEmployee)
         {
             string dir = Convert.ToString(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\ContactManagerData");
             Directory.CreateDirectory(dir);
-            //StreamWriter sw = new StreamWriter(dir + "\\Person.txt", true);
             StreamWriter sw = new StreamWriter("Person.txt", append: true);
 
             Person p = new Person(createEmployee);
@@ -100,19 +72,17 @@ namespace contact_manager
 
             sw.WriteLine(p);
 
-            id++;
-
             sw.Close();
         }
 
         public void deletePerson()
         {
-
+            //DELETE PERSON CODE
         }
 
         public void editPerson()
         {
-
+            //DELETE PERSON CODE
         }
 
         public string FirstName
@@ -207,42 +177,35 @@ namespace contact_manager
         {
             string output = string.Empty;
 
-            output += string.Format("{0}, {1}, {2}, {3}", Salutation, Title, FirstName, LastName);
+            output += string.Format("{0}, {1}, {2}, {3}", InstanceID, Salutation, FirstName, LastName);
 
             return output;
-        }
-
-        public static DataTable LoadPeople()
-        {
-            foreach (Person person in people)
-            {
-                tbl.Rows.Add(new object[] { person.salutation, person.title, person.firstName, person.lastName});
-            }
-
-            return tbl;
         }
         
         public static void LoadFromTxt()
         {
             string line;
 
-            // Read the file and display it line by line.
-            System.IO.StreamReader file =
-                new System.IO.StreamReader("Person.txt");
-            while ((line = file.ReadLine()) != null)
+            //Check if file is empty
+            if (new FileInfo("Person.txt").Length != 0)
             {
-                string[] words = line.Split(',');
-                Person.people.Add(new Person
+                // Read the file and display it line by line.
+                System.IO.StreamReader file =
+                    new System.IO.StreamReader("Person.txt");
+                while ((line = file.ReadLine()) != null)
                 {
-                    Salutation = words[0],
-                    Title = words[1],
-                    FirstName = words[2],
-                    LastName = words[3],
-                });
-            }
+                    string[] words = line.Split(',');
+                    Person.people.Add(new Person
+                    {
+                        Salutation = words[0],
+                        Title = words[1],
+                        FirstName = words[2],
+                        LastName = words[3],
+                    });
+                }
 
-            file.Close();
-            Console.WriteLine(Person.people);
+                file.Close();
+            }
         }
     }
 }
