@@ -1,10 +1,2 @@
-f483cef1-fbc7-4091-8e19-705eca3f8ba1, Frau, test1, test1, test1
-c9ab15ac-c493-4c21-97e3-54198497d013, Herr, test2, test2, test2
-f3899a1b-f4b8-42a1-bcc9-26b4d929ac67, Frau, test3, test3, test3
-2515991f-8eda-4a8b-aea3-3179ac871aa6, Herr, test4, test4, test4
-7adc885a-b651-465f-8f77-7bd5b526d879, Herr, test5, test5, test5
-367a9c62-4fbd-4a1a-8e68-b2cdcf068aa6, Frau, test6, test6, test6
-bb73c259-b3bb-4211-87d1-f3902e896ea3, Herr, test7, test7, test7
-9d8861d4-d55f-4d2e-83f8-771a8bedf05c, Frau, test8, test8, test8
-b1054be6-7939-4327-bf5a-4946a456b32b, Herr, test9, test9, test9
 7becfa00-f150-449a-a840-d118acea879b,vorname,nachname,Herr,0764388362,07.09.2021 15:30:03,,titel,,,,0717444251,lindi97hani@gmail.com,True,st. margrethen,,sonnenweg 4,9430,
+

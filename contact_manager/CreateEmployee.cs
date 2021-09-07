@@ -22,15 +22,11 @@ namespace contact_manager
         private void CmdEmployeeCreatEmployeeSave_Click(object sender, EventArgs e)
         {
             Person.addPerson(this);
+            Person.people.Clear();
             Person.TxtToObject();
             Dashboard.tbl.Clear();
             Dashboard.LoadPeople();
             
-        }
-
-        private void CreateEmployee_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

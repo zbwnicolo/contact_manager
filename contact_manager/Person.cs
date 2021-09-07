@@ -4,8 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
-using System.Xml.Serialization;
-using System.Xml.Linq;
 using System.Data;
 using System.Reflection;
 
@@ -13,46 +11,61 @@ namespace contact_manager
 {
     public class Person
     {
+        public string salutation;
+        public string title;
         public string firstName;
         public string lastName;
-        public string salutation;
-        public string phoneNumber;
         public DateTime birthday;
-        public string gender;
-        public string title;
         public string phoneNumberPriv;
+        public string phoneNumberMobile;
+        public string nationality;
+        public string gender;
+        public string street;
+        public string place;
+        public string postcode;
+        public string email;
+        public string ahvNumber;
+        
         public string phoneNumberWork;
         public string faxNumer;
-        public string phoneNumberMobile;
-        public string email;
+        
+        
         public Boolean status;
-        public string place;
-        public string nationality;
-        public string street;
-        public string postcode;
+        
+        
+        
+        
         public static List<Person> people = new List<Person>();
 
         //Constructor class Person
         public Person(CreateEmployee ce)
         {
+            this.InstanceID = Guid.NewGuid();
+            this.Salutation = Convert.ToString(ce.CmbDropEmployeeCreatSalut.Text);
+            this.Title = ce.TxtEmployeeCreatTitle.Text;
             this.FirstName = ce.TxtEmployeeCreatFirstn.Text;
             this.LastName = ce.TxtEmployeeCreatLastn.Text;
-            this.Salutation = Convert.ToString(ce.CmbDropEmployeeCreatSalut.Text);
-            this.PhoneNumber = ce.TxtEmployeeCreatTel.Text;
             this.Birthday = DateTime.Now;
+            this.PhoneNumberPriv = ce.TxtEmployeeCreatTel.Text;
+            this.PhoneNumberMobile = ce.TxtEmployeeCreatMobile.Text;
+            this.Nationality = ce.TxtEmployeeCreatNation.Text;
             this.Gender = ce.CmbEmployeeCreatGend.Text;
-            this.Title = ce.TxtEmployeeCreatTitle.Text;
-            this.PhoneNumberPriv = ce.TxtEmployeeCreatCompTel.Text;
+            this.Street = ce.TxtEmployeeCreatAddr.Text;
+            this.Place = ce.TxtEmployeeCreatResid.Text;
+            this.Postcode = ce.TxtEmployeeCreatZipcode.Text;
+            this.Email = ce.TxtEmployeeCreatMailPriv.Text;
+            this.AHVNumber = ce.TxtEmployeeCreatAhv.Text;
+
+
             this.PhoneNumberWork = ce.TxtEmployeeCreatCompTel.Text;
             this.FaxNumber = ce.TxtEmployeeCreatCompFax.Text;
-            this.PhoneNumberMobile = ce.TxtEmployeeCreatMobile.Text;
-            this.Email = ce.TxtEmployeeCreatMailPriv.Text;
+            
+            
             this.Status = ce.GrbEmployeeStatus.Enabled;
-            this.Place = ce.TxtEmployeeCreatResid.Text;
-            this.Nationality = ce.TxtEmployeeCreatNation.Text;
-            this.Street = ce.TxtEmployeeCreatAddr.Text;
-            this.Postcode = ce.TxtEmployeeCreatZipcode.Text;
-            this.InstanceID = Guid.NewGuid();
+            
+            
+            
+            
         }
 
         public Person()
@@ -61,17 +74,14 @@ namespace contact_manager
         }
 
         public Guid InstanceID { get; private set; }
-
+  
         public static void addPerson(CreateEmployee createEmployee)
         {
             string dir = Convert.ToString(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\ContactManagerData");
             Directory.CreateDirectory(dir);
             StreamWriter sw = new StreamWriter("Person.txt", append: true);
-
             Person p = new Person(createEmployee);
-
             sw.WriteLine(p);
-
             sw.Close();
         }
 
@@ -101,11 +111,6 @@ namespace contact_manager
         {
             get { return salutation; }
             set { salutation = value; } 
-        }
-        public string PhoneNumber
-        {
-            get { return phoneNumber; }
-            set { phoneNumber = value; }
         }
         public DateTime Birthday
         {
@@ -171,6 +176,12 @@ namespace contact_manager
         {
             get { return postcode; }
             set { postcode = value; }
+        }
+
+        public string AHVNumber
+        {
+            get { return ahvNumber; }
+            set { ahvNumber = value; }
         }
 
         /*public override string ToString()

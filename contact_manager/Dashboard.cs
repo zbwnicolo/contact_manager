@@ -27,12 +27,17 @@ namespace contact_manager
         }
 
         private void Dashboard_Load(object sender, EventArgs e)
-        { 
+        {
             //add columns to datatable
+            tbl.Columns.Add("ID", typeof(string));
             tbl.Columns.Add("Anrede", typeof(string));
             tbl.Columns.Add("Titel", typeof(string));
             tbl.Columns.Add("Vorname", typeof(string));
             tbl.Columns.Add("Nachname", typeof(string));
+            tbl.Columns.Add("Adresse", typeof(string));
+            tbl.Columns.Add("Postleitzahl", typeof(string));
+            tbl.Columns.Add("Wohnort", typeof(string));
+            tbl.Columns.Add("Telefonnummer", typeof(string));
 
             DataGridEmployee.DataSource = tbl;
             LoadPeople();
@@ -41,15 +46,35 @@ namespace contact_manager
 
         private void CmdInfoEmployee_Click(object sender, EventArgs e)
         {
-            EditEmployee Form = new EditEmployee();
-            Form.Show();
+            if (DataGridEmployee.SelectedRows.Count > 0) // make sure user select at least 1 row 
+            {
+                EditEmployee ep = new EditEmployee();
+                ep.Show();
+
+                string salut = DataGridEmployee.SelectedRows[0].Cells[0].Value + string.Empty;
+                string title = DataGridEmployee.SelectedRows[0].Cells[1].Value + string.Empty;
+                string firstn = DataGridEmployee.SelectedRows[0].Cells[2].Value + string.Empty;
+                string lastn = DataGridEmployee.SelectedRows[0].Cells[3].Value + string.Empty;
+
+
+                ep.CmbDropEmployeeMgmtSalut.Text = salut;
+                ep.TxtEmployeeMgmtTitle.Text = title;
+                ep.TxtEmployeeMgmtFirstn.Text = firstn;
+                ep.TxtEmployeeMgmtLastn.Text = lastn;
+            }
+            else
+            {
+                MessageBox.Show("Es muss mindestens eine Person ausgewählt werden!");
+            }
+
+            
         }
 
         public static DataTable LoadPeople()
         {
             foreach (Person person in Person.people)
             {
-                tbl.Rows.Add(new object[] { person.salutation, person.title, person.firstName, person.lastName });
+                tbl.Rows.Add(new object[] { person.InstanceID, person.salutation, person.title, person.firstName, person.lastName });
             }
 
             return tbl;
