@@ -7,6 +7,7 @@ using System.IO;
 using System.Xml.Serialization;
 using System.Xml.Linq;
 using System.Data;
+using System.Reflection;
 
 namespace contact_manager
 {
@@ -68,7 +69,6 @@ namespace contact_manager
             StreamWriter sw = new StreamWriter("Person.txt", append: true);
 
             Person p = new Person(createEmployee);
-            Console.WriteLine(createEmployee.CmbDropEmployeeCreatSalut.Text);
 
             sw.WriteLine(p);
 
@@ -173,16 +173,35 @@ namespace contact_manager
             set { postcode = value; }
         }
 
-        public override string ToString()
+        /*public override string ToString()
         {
             string output = string.Empty;
 
-            output += string.Format("{0}, {1}, {2}, {3}", InstanceID, Salutation, FirstName, LastName);
+            output += string.Format("{0}, {1}, {2}, {3}, {4}", InstanceID, Salutation, Title, FirstName, LastName);
 
             return output;
+        }*/
+
+        private PropertyInfo[] _PropertyInfos = null;
+
+        //turn Properties into Strings to write them into the file
+        public override string ToString()
+        {
+            if (_PropertyInfos == null)
+                _PropertyInfos = this.GetType().GetProperties();
+
+            var sb = new StringBuilder();
+
+            foreach (var info in _PropertyInfos)
+            {
+                var value = info.GetValue(this, null) ?? "(null)";
+                sb.Append(value.ToString() + ",");
+            }
+
+            return sb.ToString();
         }
-        
-        public static void LoadFromTxt()
+
+        public static void TxtToObject()
         {
             string line;
 
@@ -197,10 +216,11 @@ namespace contact_manager
                     string[] words = line.Split(',');
                     Person.people.Add(new Person
                     {
-                        Salutation = words[0],
-                        Title = words[1],
-                        FirstName = words[2],
-                        LastName = words[3],
+                        InstanceID = Guid.Parse(words[0]),
+                        Salutation = words[1],
+                        Title = words[2],
+                        FirstName = words[3],
+                        LastName = words[4],
                     });
                 }
 
