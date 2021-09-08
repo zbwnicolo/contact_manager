@@ -14,6 +14,8 @@ namespace contact_manager
     public partial class Dashboard : Form
     {
         public static DataTable tbl = new DataTable();
+
+        //Dashboard constructor
         public Dashboard()
         {
             InitializeComponent();
@@ -26,9 +28,9 @@ namespace contact_manager
             Form.Show();
         }
 
+        //On Dashboard Load create Columns for table and load people from TXT file into table
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            //add columns to datatable
             tbl.Columns.Add("ID", typeof(string));
             tbl.Columns.Add("Anrede", typeof(string));
             tbl.Columns.Add("Titel", typeof(string));
@@ -61,6 +63,7 @@ namespace contact_manager
             
         }
    
+        //Load specified data of Persons into table
         public static DataTable LoadPeople()
         {
             foreach (Person person in Person.people)

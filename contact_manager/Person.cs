@@ -25,17 +25,11 @@ namespace contact_manager
         public string postcode;
         public string email;
         public string ahvNumber;
-        
         public string phoneNumberWork;
-        public string faxNumer;
-        
-        
+        public string faxNumer;      
         public Boolean status;
-        
-        
-        
-        
         public static List<Person> people = new List<Person>();
+        private PropertyInfo[] _PropertyInfos = null;
 
         //Constructor class Person
         public Person(CreateEmployee ce)
@@ -55,40 +49,31 @@ namespace contact_manager
             this.Postcode = ce.TxtEmployeeCreatZipcode.Text;
             this.Email = ce.TxtEmployeeCreatMailPriv.Text;
             this.AHVNumber = ce.TxtEmployeeCreatAhv.Text;
-
-
             this.PhoneNumberWork = ce.TxtEmployeeCreatCompTel.Text;
             this.FaxNumber = ce.TxtEmployeeCreatCompFax.Text;
-            
-            
             this.Status = ce.GrbEmployeeStatus.Enabled;
-            
-            
-            
-            
         }
 
         public Person()
         {
 
         }
-
-        public Guid InstanceID { get; private set; }
   
+        //Method create new Person and add to file
         public static void addPerson(CreateEmployee createEmployee)
         {
-            string dir = Convert.ToString(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\ContactManagerData");
-            Directory.CreateDirectory(dir);
             StreamWriter sw = new StreamWriter("Person.txt", append: true);
             Person p = new Person(createEmployee);
             sw.WriteLine(p);
             sw.Close();
         }
 
+        //Method delete Person and remove from file and table
         public static void deletePerson(Dashboard db)
         {
             string id = db.DataGridEmployee.SelectedRows[0].Cells[0].Value.ToString();
 
+            //Loop through all Persons and compare IDs with selected ID
             for (int i = people.Count - 1; i >= 0; i--)
             {
                 if (Convert.ToString(people[i].InstanceID) == id)
@@ -97,6 +82,7 @@ namespace contact_manager
                 }
             }
 
+            //write remaining Persons into file
             StreamWriter sw = new StreamWriter("Person.txt");
             foreach (var person in people)
             {
@@ -106,9 +92,12 @@ namespace contact_manager
 
         }
 
+        //Method edit person and write new values into file
         public static void editPerson(EditEmployee ep)
         {
             string id = ep.TxtInstanceID.Text;
+
+            //Find person with selected ID and assign new values to object
             var obj = people.FirstOrDefault(x => Convert.ToString(x.InstanceID) == id);
 
             if (obj != null)
@@ -119,6 +108,7 @@ namespace contact_manager
                 obj.lastName = ep.TxtEmployeeMgmtLastn.Text;
             }
 
+            //write new list of Persons into file
             StreamWriter sw = new StreamWriter("Person.txt");
             foreach (var person in people)
             {
@@ -128,6 +118,7 @@ namespace contact_manager
 
         }
 
+        public Guid InstanceID { get; private set; }
         public string FirstName 
         {
             get { return firstName; }
@@ -217,18 +208,7 @@ namespace contact_manager
             set { ahvNumber = value; }
         }
 
-        /*public override string ToString()
-        {
-            string output = string.Empty;
-
-            output += string.Format("{0}, {1}, {2}, {3}, {4}", InstanceID, Salutation, Title, FirstName, LastName);
-
-            return output;
-        }*/
-
-        private PropertyInfo[] _PropertyInfos = null;
-
-        //turn Properties into Strings to write them into the file
+        //loop through all Properties and turn them into Strings to write them into the file
         public override string ToString()
         {
             if (_PropertyInfos == null)
@@ -245,6 +225,7 @@ namespace contact_manager
             return sb.ToString();
         }
 
+        //Method to read TXT file and turn data into Objects 
         public static void TxtToObject()
         {
             string line;
@@ -253,8 +234,7 @@ namespace contact_manager
             if (new FileInfo("Person.txt").Length != 0)
             {
                 // Read the file and display it line by line.
-                System.IO.StreamReader file =
-                    new System.IO.StreamReader("Person.txt");
+                System.IO.StreamReader file = new System.IO.StreamReader("Person.txt");
                 while ((line = file.ReadLine()) != null)
                 {
                     string[] words = line.Split(',');
