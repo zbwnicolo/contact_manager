@@ -51,7 +51,7 @@
             // 
             // TxtSearchEmployee
             // 
-            this.TxtSearchEmployee.Location = new System.Drawing.Point(633, 23);
+            this.TxtSearchEmployee.Location = new System.Drawing.Point(715, 23);
             this.TxtSearchEmployee.Name = "TxtSearchEmployee";
             this.TxtSearchEmployee.Size = new System.Drawing.Size(208, 26);
             this.TxtSearchEmployee.TabIndex = 0;
@@ -64,6 +64,7 @@
             this.CmdSearchEmployee.TabIndex = 1;
             this.CmdSearchEmployee.Text = "Suchen";
             this.CmdSearchEmployee.UseVisualStyleBackColor = true;
+            this.CmdSearchEmployee.Click += new System.EventHandler(this.CmdSearchEmployee_Click);
             // 
             // CmdDeleteEmployee
             // 
@@ -73,6 +74,7 @@
             this.CmdDeleteEmployee.TabIndex = 3;
             this.CmdDeleteEmployee.Text = "Mitarbeiter löschen";
             this.CmdDeleteEmployee.UseVisualStyleBackColor = true;
+            this.CmdDeleteEmployee.Click += new System.EventHandler(this.CmdDeleteEmployee_Click);
             // 
             // CmdInfoEmployee
             // 
@@ -200,8 +202,9 @@
             this.CmdSaveExit.Name = "CmdSaveExit";
             this.CmdSaveExit.Size = new System.Drawing.Size(194, 48);
             this.CmdSaveExit.TabIndex = 17;
-            this.CmdSaveExit.Text = "Speichern und Beenden";
+            this.CmdSaveExit.Text = "Beenden";
             this.CmdSaveExit.UseVisualStyleBackColor = true;
+            this.CmdSaveExit.Click += new System.EventHandler(this.CmdSaveExit_Click);
             // 
             // Dashboard
             // 

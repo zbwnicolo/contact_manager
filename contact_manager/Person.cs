@@ -85,17 +85,50 @@ namespace contact_manager
             sw.Close();
         }
 
-        public void deletePerson()
+        public static void deletePerson(Dashboard db)
         {
-            //DELETE PERSON CODE
+            string id = db.DataGridEmployee.SelectedRows[0].Cells[0].Value.ToString();
+
+            for (int i = people.Count - 1; i >= 0; i--)
+            {
+                if (Convert.ToString(people[i].InstanceID) == id)
+                {
+                    people.RemoveAt(i);
+                }
+            }
+
+            StreamWriter sw = new StreamWriter("Person.txt");
+            foreach (var person in people)
+            {
+                sw.WriteLine(person);
+            }
+            sw.Close();
+
         }
 
-        public void editPerson()
+        public static void editPerson(EditEmployee ep)
         {
-            //DELETE PERSON CODE
+            string id = ep.TxtInstanceID.Text;
+            var obj = people.FirstOrDefault(x => Convert.ToString(x.InstanceID) == id);
+
+            if (obj != null)
+            {
+                obj.salutation = ep.CmbDropEmployeeMgmtSalut.Text;
+                obj.title = ep.TxtEmployeeMgmtTitle.Text;
+                obj.firstName = ep.TxtEmployeeMgmtFirstn.Text;
+                obj.lastName = ep.TxtEmployeeMgmtLastn.Text;
+            }
+
+            StreamWriter sw = new StreamWriter("Person.txt");
+            foreach (var person in people)
+            {
+                sw.WriteLine(person);
+            }
+            sw.Close();
+
         }
 
-        public string FirstName
+        public string FirstName 
         {
             get { return firstName; }
             set { firstName = value; }

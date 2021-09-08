@@ -48,17 +48,10 @@ namespace contact_manager
         {
             if (DataGridEmployee.SelectedRows.Count > 0) // make sure user select at least 1 row 
             {
-                EditEmployee ep = new EditEmployee();
+                EditEmployee ep = new EditEmployee(this);
                 ep.Show();
 
-                string id = DataGridEmployee.SelectedRows[0].Cells[0].Value + string.Empty;
-
-                var item = Person.people.FirstOrDefault(o => Convert.ToString(o.InstanceID) == id);
-                Console.WriteLine(item);
-                ep.CmbDropEmployeeMgmtSalut.Text = item.salutation;
-                ep.TxtEmployeeMgmtTitle.Text = item.title;
-                ep.TxtEmployeeMgmtFirstn.Text = item.firstName;
-                ep.TxtEmployeeMgmtLastn.Text = item.lastName;
+                
             }
             else
             {
@@ -72,10 +65,43 @@ namespace contact_manager
         {
             foreach (Person person in Person.people)
             {
-                tbl.Rows.Add(new object[] { person.InstanceID, person.salutation, person.title, person.firstName, person.lastName });
+                tbl.Rows.Add(new object[] { person.InstanceID, person.salutation, person.title, person.firstName, person.lastName});
             }
 
             return tbl;
+        }
+
+        private void CmdDeleteEmployee_Click(object sender, EventArgs e)
+        {
+            Person.deletePerson(this);
+            Dashboard.tbl.Clear();
+            Dashboard.LoadPeople();
+        }
+
+        private void CmdSaveExit_Click(object sender, EventArgs e)
+        {
+            this.Close();        }
+
+        private void CmdSearchEmployee_Click(object sender, EventArgs e)
+        {
+            string searchValue = TxtSearchEmployee.Text;
+
+            DataGridEmployee.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            try
+            {
+                foreach (DataGridViewRow row in DataGridEmployee.Rows)
+                {
+                    if (row.Cells[2].Value.ToString().Equals(searchValue))
+                    {
+                        row.Selected = true;
+                        break;
+                    }
+                }
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
         }
     }
 }
