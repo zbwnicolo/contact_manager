@@ -87,6 +87,7 @@ namespace contact_manager
 
         private void CmdSearchEmployee_Click(object sender, EventArgs e)
         {
+            /*
             string searchValue = TxtSearchEmployee.Text;
 
             DataGridEmployee.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -105,6 +106,15 @@ namespace contact_manager
             {
                 MessageBox.Show(exc.Message);
             }
+            */
+
+
+        }
+
+        private void TxtSearchEmployee_TextChanged(object sender, EventArgs e)
+        {
+            (DataGridEmployee.DataSource as DataTable).DefaultView.RowFilter = string.Format("Vorname LIKE '%{0}%'", TxtSearchEmployee.Text);
+            (DataGridEmployee.DataSource as DataTable).DefaultView.RowFilter = string.Format("Nachname LIKE '%{0}%'", TxtSearchEmployee.Text);
         }
     }
 }

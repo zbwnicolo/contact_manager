@@ -55,6 +55,7 @@
             this.TxtSearchEmployee.Name = "TxtSearchEmployee";
             this.TxtSearchEmployee.Size = new System.Drawing.Size(208, 26);
             this.TxtSearchEmployee.TabIndex = 0;
+            this.TxtSearchEmployee.TextChanged += new System.EventHandler(this.TxtSearchEmployee_TextChanged);
             // 
             // CmdSearchEmployee
             // 
