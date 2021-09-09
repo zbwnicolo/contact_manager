@@ -6,41 +6,21 @@ using System.Threading.Tasks;
 
 namespace contact_manager
 {
-    class Employee : Person
+    public class Employee : Person
     {
-        public Employee()
+        public string phoneNumberWork;
+        public string faxNumer;
+        public Employee(CreateEmployee ce)
         {
-            /*p.Street = TxtClientCreatAddr.Text;
-            p.AhvNumber = TxtClientCreatAhv.Text;
-            p.Birthday = Convert.ToDateTime(TxtClientCreatBirth.Text);
-            p.CompanyStreet = TxtClientCreatCompAddr.Text;
-            TxtClientCreatCompDepart.Text;
-            TxtClientCreatCompEmplLvl.Text;
-            TxtClientCreatCompEmployNr.Text;
-            p.EntryDate = Convert.ToDateTime(TxtClientCreatCompEntryDate.Text);
-            p.ExitDate = Convert.ToDateTime(TxtClientCreatCompExitDate.Text);
-            p.FaxNumber = TxtClientCreatCompFax.Text;
-            p.CompanyName = TxtClientCreatCompName.Text;
-            p.TxtClientCreatCompProcent.Text;
-            TxtClientCreatCompRes.Text;
-            TxtClientCreatCompRole.Text;
-            p TxtClientCreatCompTel.Text;
-            p.TxtClientCreatCompZipCode.Text;
-            p.FirstName = TxtClientCreatFirstn.Text;
-            p.LastName = TxtClientCreatLastn.Text;
-            p.Email = TxtClientCreatMailPriv.Text;
-            p.PhoneNumberMobile = TxtClientCreatMobile.Text;
-            p.Nationality = TxtClientCreatNation.Text;
-            p.TxtClientCreatResid.Text;
-            p.TxtClientCreatTel.Text;
-            p.Title = TxtClientCreatTitle.Text;
-            p.TxtClientCreatZipcode.Text; */
+            this.PhoneNumberWork = ce.TxtEmployeeCreatCompTel.Text;
+            this.FaxNumber = ce.TxtEmployeeCreatCompFax.Text;
         }
         public string Department
         {
             get;
             set;
         }
+
 
         public string Role
         {
@@ -100,6 +80,16 @@ namespace contact_manager
         {
             get;
             set;
+        }
+        public string PhoneNumberWork
+        {
+            get { return phoneNumberWork; }
+            set { phoneNumberWork = value; }
+        }
+        public string FaxNumber
+        {
+            get { return faxNumer; }
+            set { faxNumer = value; }
         }
     }
 }

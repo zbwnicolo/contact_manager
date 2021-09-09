@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 
 namespace contact_manager
 {
-    class Apprentice : Employee
+    
+    public class Apprentice
     {
+        public Apprentice()
+        {
+            
+        }
         public int YearsApprenticeship
         {
             get;

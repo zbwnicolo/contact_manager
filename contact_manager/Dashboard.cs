@@ -68,7 +68,17 @@ namespace contact_manager
         {
             foreach (Person person in Person.people)
             {
-                tbl.Rows.Add(new object[] { person.InstanceID, person.salutation, person.title, person.firstName, person.lastName});
+                tbl.Rows.Add(new object[] { 
+                    person.InstanceID,
+                    person.salutation,
+                    person.title,
+                    person.firstName,
+                    person.lastName,
+                    person.street,
+                    person.postcode,
+                    person.place,
+                    person.phoneNumberPriv
+                });
             }
 
             return tbl;
@@ -85,36 +95,9 @@ namespace contact_manager
         {
             this.Close();        }
 
-        private void CmdSearchEmployee_Click(object sender, EventArgs e)
-        {
-            /*
-            string searchValue = TxtSearchEmployee.Text;
-
-            DataGridEmployee.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            try
-            {
-                foreach (DataGridViewRow row in DataGridEmployee.Rows)
-                {
-                    if (row.Cells[2].Value.ToString().Equals(searchValue))
-                    {
-                        row.Selected = true;
-                        break;
-                    }
-                }
-            }
-            catch (Exception exc)
-            {
-                MessageBox.Show(exc.Message);
-            }
-            */
-
-
-        }
-
         private void TxtSearchEmployee_TextChanged(object sender, EventArgs e)
         {
-            (DataGridEmployee.DataSource as DataTable).DefaultView.RowFilter = string.Format("Vorname LIKE '%{0}%'", TxtSearchEmployee.Text);
-            (DataGridEmployee.DataSource as DataTable).DefaultView.RowFilter = string.Format("Nachname LIKE '%{0}%'", TxtSearchEmployee.Text);
+            (DataGridEmployee.DataSource as DataTable).DefaultView.RowFilter = string.Format("Vorname LIKE '%{0}%' OR Nachname LIKE '%{0}%'", TxtSearchEmployee.Text);
         }
     }
 }

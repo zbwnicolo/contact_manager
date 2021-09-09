@@ -25,8 +25,6 @@ namespace contact_manager
         public string postcode;
         public string email;
         public string ahvNumber;
-        public string phoneNumberWork;
-        public string faxNumer;      
         public Boolean status;
         public static List<Person> people = new List<Person>();
         private PropertyInfo[] _PropertyInfos = null;
@@ -49,8 +47,6 @@ namespace contact_manager
             this.Postcode = ce.TxtEmployeeCreatZipcode.Text;
             this.Email = ce.TxtEmployeeCreatMailPriv.Text;
             this.AHVNumber = ce.TxtEmployeeCreatAhv.Text;
-            this.PhoneNumberWork = ce.TxtEmployeeCreatCompTel.Text;
-            this.FaxNumber = ce.TxtEmployeeCreatCompFax.Text;
             this.Status = ce.GrbEmployeeStatus.Enabled;
         }
 
@@ -106,6 +102,16 @@ namespace contact_manager
                 obj.title = ep.TxtEmployeeMgmtTitle.Text;
                 obj.firstName = ep.TxtEmployeeMgmtFirstn.Text;
                 obj.lastName = ep.TxtEmployeeMgmtLastn.Text;
+                obj.birthday = Convert.ToDateTime(ep.TxtEmployeeMgmtBirth.Text);
+                obj.phoneNumberPriv = ep.TxtEmployeeMgmtTel.Text;
+                obj.phoneNumberMobile = ep.TxtEmployeeMgmtMobile.Text;
+                obj.nationality = ep.TxtEmployeeMgmtNation.Text;
+                obj.gender = ep.CmbEmployeeMgmtGend.Text;
+                obj.street = ep.TxtEmployeeMgmtAddr.Text;
+                obj.place = ep.TxtEmployeeMgmtResid.Text;
+                obj.postcode = ep.TxtEmployeeMgmtZipcode.Text;
+                obj.email = ep.TxtEmployeeMgmtMailPriv.Text;
+                obj.ahvNumber = ep.TxtEmployeeMgmtAhv.Text;
             }
 
             //write new list of Persons into file
@@ -119,77 +125,25 @@ namespace contact_manager
         }
 
         public Guid InstanceID { get; private set; }
-        public string FirstName 
-        {
-            get { return firstName; }
-            set { firstName = value; }
-        }
-
-        public string LastName
-        {
-            get { return lastName; }
-            set { lastName = value; }
-        }
-
         public string Salutation
         {
             get { return salutation; }
-            set { salutation = value; } 
-        }
-        public DateTime Birthday
-        {
-            get { return birthday; }
-            set { birthday = value; }
-        }
-        public string Gender
-        {
-            get { return gender; }
-            set { gender = value; }
+            set { salutation = value; }
         }
         public string Title
         {
             get { return title; }
             set { title = value; }
         }
-        public string PhoneNumberPriv
+        public string FirstName 
         {
-            get { return phoneNumberPriv; }
-            set { phoneNumberPriv = value; }
+            get { return firstName; }
+            set { firstName = value; }
         }
-        public string PhoneNumberWork
+        public string LastName
         {
-            get { return phoneNumberWork ; }
-            set { phoneNumberWork = value; }
-        }
-        public string FaxNumber
-        {
-            get { return faxNumer; }
-            set { faxNumer = value; }
-        }
-        public string PhoneNumberMobile
-        {
-            get { return phoneNumberMobile; }
-            set { phoneNumberMobile = value; }
-        }
-        public string Email
-        {
-            get { return email; }
-            set { email = value; }
-        }
-        public Boolean Status
-        {
-            get { return status; }
-            set { status = value; }
-        }
-        public string Place
-        {
-            get { return place; }
-            set { place = value; }
-        }
-        public string Nationality
-        {
-            get { return nationality; }
-            set { nationality = value; }
+            get { return lastName; }
+            set { lastName = value; }
         }
         public string Street
         {
@@ -201,12 +155,53 @@ namespace contact_manager
             get { return postcode; }
             set { postcode = value; }
         }
-
+        public string Place
+        {
+            get { return place; }
+            set { place = value; }
+        }
+        public string PhoneNumberPriv
+        {
+            get { return phoneNumberPriv; }
+            set { phoneNumberPriv = value; }
+        }
+        public string PhoneNumberMobile
+        {
+            get { return phoneNumberMobile; }
+            set { phoneNumberMobile = value; }
+        }
+        public DateTime Birthday
+        {
+            get { return birthday; }
+            set { birthday = value; }
+        }
+        public string Gender
+        {
+            get { return gender; }
+            set { gender = value; }
+        }
+        public string Email
+        {
+            get { return email; }
+            set { email = value; }
+        }
+        public string Nationality
+        {
+            get { return nationality; }
+            set { nationality = value; }
+        }
         public string AHVNumber
         {
             get { return ahvNumber; }
             set { ahvNumber = value; }
         }
+        public Boolean Status
+        {
+            get { return status; }
+            set { status = value; }
+        }
+        
+        
 
         //loop through all Properties and turn them into Strings to write them into the file
         public override string ToString()
@@ -245,8 +240,11 @@ namespace contact_manager
                         Title = words[2],
                         FirstName = words[3],
                         LastName = words[4],
-
-                    });
+                        Street = words[5],
+                        Postcode = words[6],
+                        Place = words[7],
+                        PhoneNumberPriv = words[8],
+                });
                 }
 
                 file.Close();

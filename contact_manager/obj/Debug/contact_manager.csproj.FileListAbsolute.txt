@@ -67,4 +67,4 @@ C:\Users\Arlind\Desktop\school\ContactManager\contact_manager\contact_manager\ob
 C:\Users\Arlind\Desktop\school\ContactManager\contact_manager\contact_manager\obj\Debug\contact_manager.csproj.CoreCompileInputs.cache
 C:\Users\Arlind\Desktop\school\ContactManager\contact_manager\contact_manager\obj\Debug\contact_manager.exe
 C:\Users\Arlind\Desktop\school\ContactManager\contact_manager\contact_manager\obj\Debug\contact_manager.pdb
-C:\Users\joels\Documents\GitHub\contact_manager\contact_manager\obj\Debug\contact_manager.csproj.AssemblyReference.cache
+C:\Users\joels\Documents\GitHub\contact_manager\contact_manager\obj\Debug\contact_manager.csprojAssemblyReference.cache

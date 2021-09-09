@@ -65,7 +65,6 @@
             this.CmdSearchEmployee.TabIndex = 1;
             this.CmdSearchEmployee.Text = "Suchen";
             this.CmdSearchEmployee.UseVisualStyleBackColor = true;
-            this.CmdSearchEmployee.Click += new System.EventHandler(this.CmdSearchEmployee_Click);
             // 
             // CmdDeleteEmployee
             // 
