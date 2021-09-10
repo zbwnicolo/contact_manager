@@ -1,2 +1,1 @@
-42272324-1c8b-445f-a0ca-25d4371bd468,Herr,Dr.,Joel,Sutter,Sidwaldstrasse 32,9652,Neu St.Johann,0719139900,0788001067,09.09.2021 21:08:17,Männlich,joel.sutter@outlook.com,CH,756.555.555.555,True,
-f246f85b-f70f-4dc8-a736-1d79804e2f03,Frau,Dr.,Anna,Bolika,Teststrasse 1,1111,Test,101111111,1111111,09.09.2021 21:10:36,Männlich,test@test.ch,Schweiz,756.444.444.44,True,
+(null),40d11e9e-79d1-47a4-9eb9-b5502974b8d7,Herr,Dr,Joel,Sutter,Sidwaldstrasse 32,9652,Neu St.JOhann,0719139900,0788001067,30.01.2000 00:00:00,Männlich,joel.sutter@outlook.com,CH,756.555.555,True,

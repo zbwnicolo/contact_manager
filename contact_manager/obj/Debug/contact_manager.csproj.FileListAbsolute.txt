@@ -68,3 +68,4 @@ C:\Users\Arlind\Desktop\school\ContactManager\contact_manager\contact_manager\ob
 C:\Users\Arlind\Desktop\school\ContactManager\contact_manager\contact_manager\obj\Debug\contact_manager.exe
 C:\Users\Arlind\Desktop\school\ContactManager\contact_manager\contact_manager\obj\Debug\contact_manager.pdb
 C:\Users\joels\Documents\GitHub\contact_manager\contact_manager\obj\Debug\contact_manager.csprojAssemblyReference.cache
+C:\Users\joel.sutter\OneDrive - Weibel IT AG\Dokumente\GitHub\contact_manager\contact_manager\obj\Debug\contact_manager.CreatePerson.resources

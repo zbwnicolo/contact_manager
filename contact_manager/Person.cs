@@ -11,6 +11,7 @@ namespace contact_manager
 {
     public class Person
     {
+        public string type;
         public string salutation;
         public string title;
         public string firstName;
@@ -30,24 +31,24 @@ namespace contact_manager
         private PropertyInfo[] _PropertyInfos = null;
 
         //Constructor class Person
-        public Person(CreateEmployee ce)
+        public Person(CreatePerson cp)
         {
             this.InstanceID = Guid.NewGuid();
-            this.Salutation = Convert.ToString(ce.CmbDropEmployeeCreatSalut.Text);
-            this.Title = ce.TxtEmployeeCreatTitle.Text;
-            this.FirstName = ce.TxtEmployeeCreatFirstn.Text;
-            this.LastName = ce.TxtEmployeeCreatLastn.Text;
-            this.Birthday = DateTime.Now;
-            this.PhoneNumberPriv = ce.TxtEmployeeCreatTel.Text;
-            this.PhoneNumberMobile = ce.TxtEmployeeCreatMobile.Text;
-            this.Nationality = ce.TxtEmployeeCreatNation.Text;
-            this.Gender = ce.CmbEmployeeCreatGend.Text;
-            this.Street = ce.TxtEmployeeCreatAddr.Text;
-            this.Place = ce.TxtEmployeeCreatResid.Text;
-            this.Postcode = ce.TxtEmployeeCreatZipcode.Text;
-            this.Email = ce.TxtEmployeeCreatMailPriv.Text;
-            this.AHVNumber = ce.TxtEmployeeCreatAhv.Text;
-            this.Status = ce.GrbEmployeeStatus.Enabled;
+            this.Salutation = Convert.ToString(cp.CmbPersonCreatSalut.Text);
+            this.Title = cp.TxtPersonCreatTitle.Text;
+            this.FirstName = cp.TxtPersonCreatFirstn.Text;
+            this.LastName = cp.TxtPersonCreatLastn.Text;
+            this.Birthday = Convert.ToDateTime(cp.TxtPersonCreatBirth.Text);
+            this.PhoneNumberPriv = cp.TxtPersonCreatTel.Text;
+            this.PhoneNumberMobile = cp.TxtPersonCreatMobile.Text;
+            this.Nationality = cp.TxtPersonCreatNation.Text;
+            this.Gender = cp.CmbPersonCreatGend.Text;
+            this.Street = cp.TxtPersonCreatAddr.Text;
+            this.Place = cp.TxtPersonCreatResid.Text;
+            this.Postcode = cp.TxtPersonCreatZipcode.Text;
+            this.Email = cp.TxtPersonCreatMailPriv.Text;
+            this.AHVNumber = cp.TxtPersonCreatAhv.Text;
+            this.Status = cp.RadCreatPersonActive;
         }
 
         public Person()
@@ -56,10 +57,10 @@ namespace contact_manager
         }
   
         //Method create new Person and add to file
-        public static void addPerson(CreateEmployee createEmployee)
+        public static void addPerson(CreatePerson cp)
         {
             StreamWriter sw = new StreamWriter("Person.txt", append: true);
-            Person p = new Person(createEmployee);
+            Person p = new Person(cp);
             sw.WriteLine(p);
             sw.Close();
         }
@@ -123,7 +124,11 @@ namespace contact_manager
             sw.Close();
 
         }
-
+        public string Type
+        {
+            get { return type; }
+            set { type = value; }
+        }
         public Guid InstanceID { get; private set; }
         public string Salutation
         {
@@ -235,15 +240,17 @@ namespace contact_manager
                     string[] words = line.Split(',');
                     Person.people.Add(new Person
                     {
-                        InstanceID = Guid.Parse(words[0]),
-                        Salutation = words[1],
-                        Title = words[2],
-                        FirstName = words[3],
-                        LastName = words[4],
-                        Street = words[5],
-                        Postcode = words[6],
-                        Place = words[7],
-                        PhoneNumberPriv = words[8],
+                        Type = (words[0]),
+                        InstanceID = Guid.Parse(words[1]),
+                        Salutation = words[2],
+                        Title = words[3],
+                        FirstName = words[4],
+                        LastName = words[5],
+                        Street = words[6],
+                        Postcode = words[7],
+                        Place = words[8],
+                        PhoneNumberPriv = words[9],
+                        Status = Convert.ToBoolean(words[10]),
                 });
                 }
 

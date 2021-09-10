@@ -24,13 +24,14 @@ namespace contact_manager
 
         private void CmdCreateEmployee_Click(object sender, EventArgs e)
         {
-            CreateEmployee Form = new CreateEmployee();
+            CreatePerson Form = new CreatePerson();
             Form.Show();
         }
 
         //On Dashboard Load create Columns for table and load people from TXT file into table
         private void Dashboard_Load(object sender, EventArgs e)
         {
+            tbl.Columns.Add("Typ", typeof(string));
             tbl.Columns.Add("ID", typeof(string));
             tbl.Columns.Add("Anrede", typeof(string));
             tbl.Columns.Add("Titel", typeof(string));
@@ -40,6 +41,7 @@ namespace contact_manager
             tbl.Columns.Add("Postleitzahl", typeof(string));
             tbl.Columns.Add("Wohnort", typeof(string));
             tbl.Columns.Add("Telefonnummer", typeof(string));
+            tbl.Columns.Add("Status", typeof(string));
 
             DataGridEmployee.DataSource = tbl;
             LoadPeople();

@@ -22,7 +22,7 @@ namespace contact_manager
 
         private void CmdEmployeeCreatEmployeeSave_Click(object sender, EventArgs e)
         {
-            Person.addPerson(this);
+            //Person.addPerson(this);
             Person.people.Clear();
             Person.TxtToObject();
             Dashboard.tbl.Clear();
@@ -46,7 +46,7 @@ namespace contact_manager
         {
             if (e.KeyCode == Keys.Enter)
             {
-                Person.addPerson(this);
+                //Person.addPerson(this);
                 Person.people.Clear();
                 Person.TxtToObject();
                 Dashboard.tbl.Clear();
