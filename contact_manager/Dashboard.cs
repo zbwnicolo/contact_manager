@@ -31,8 +31,8 @@ namespace contact_manager
         //On Dashboard Load create Columns for table and load people from TXT file into table
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            tbl.Columns.Add("Typ", typeof(string));
             tbl.Columns.Add("ID", typeof(string));
+            tbl.Columns.Add("Typ", typeof(string));
             tbl.Columns.Add("Anrede", typeof(string));
             tbl.Columns.Add("Titel", typeof(string));
             tbl.Columns.Add("Vorname", typeof(string));
@@ -52,7 +52,7 @@ namespace contact_manager
         {
             if (DataGridEmployee.SelectedRows.Count > 0) // make sure user select at least 1 row 
             {
-                EditEmployee ep = new EditEmployee(this);
+                EditPerson ep = new EditPerson(this);
                 ep.Show();
 
                 
@@ -72,6 +72,7 @@ namespace contact_manager
             {
                 tbl.Rows.Add(new object[] { 
                     person.InstanceID,
+                    person.type,
                     person.salutation,
                     person.title,
                     person.firstName,
@@ -79,7 +80,8 @@ namespace contact_manager
                     person.street,
                     person.postcode,
                     person.place,
-                    person.phoneNumberPriv
+                    person.phoneNumberPriv,
+                    person.status
                 });
             }
 

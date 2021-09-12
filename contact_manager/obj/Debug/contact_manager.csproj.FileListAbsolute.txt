@@ -85,3 +85,6 @@ C:\Users\NicoloBächler\Documents\GitHub\contact_manager\contact_manager\obj\Deb
 C:\Users\NicoloBächler\Documents\GitHub\contact_manager\contact_manager\bin\Debug\contact_manager.exe.config
 C:\Users\NicoloBächler\Documents\GitHub\contact_manager\contact_manager\bin\Debug\contact_manager.exe
 C:\Users\NicoloBächler\Documents\GitHub\contact_manager\contact_manager\bin\Debug\contact_manager.pdb
+C:\Users\joels\Documents\GitHub\contact_manager\contact_manager\obj\Debug\contact_manager.CommunicationLog.resources
+C:\Users\joels\Documents\GitHub\contact_manager\contact_manager\obj\Debug\contact_manager.CreatePerson.resources
+C:\Users\joels\Documents\GitHub\contact_manager\contact_manager\obj\Debug\contact_manager.EditPerson.resources

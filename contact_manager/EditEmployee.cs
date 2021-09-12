@@ -28,10 +28,15 @@ namespace contact_manager
 
         private void CmdEmployeeMgmtEmployeeSave_Click(object sender, EventArgs e)
         {
-            Person.editPerson(this);
+            //Person.editPerson(this);
             Dashboard.tbl.Clear();
             Dashboard.LoadPeople();
             this.Close();
+        }
+
+        private void EditEmployee_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

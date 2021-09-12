@@ -8,7 +8,7 @@ namespace contact_manager
 {
     class ComLog
     {
-        public DtpLog Datepicker { get; set; }
+        public ComLog Datepicker { get; set; }
 
 
         //Aktueller Timestamp

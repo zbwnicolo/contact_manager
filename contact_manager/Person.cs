@@ -34,6 +34,7 @@ namespace contact_manager
         public Person(CreatePerson cp)
         {
             this.InstanceID = Guid.NewGuid();
+            this.Type = cp.CmbPersonCreatType.Text; 
             this.Salutation = Convert.ToString(cp.CmbPersonCreatSalut.Text);
             this.Title = cp.TxtPersonCreatTitle.Text;
             this.FirstName = cp.TxtPersonCreatFirstn.Text;
@@ -48,7 +49,7 @@ namespace contact_manager
             this.Postcode = cp.TxtPersonCreatZipcode.Text;
             this.Email = cp.TxtPersonCreatMailPriv.Text;
             this.AHVNumber = cp.TxtPersonCreatAhv.Text;
-            this.Status = Convert.ToBoolean(cp.RadCreatPersonActive);
+            this.Status = Convert.ToBoolean(cp.RadCreatPersonActive.Checked);
         }
 
         public Person()
@@ -90,7 +91,7 @@ namespace contact_manager
         }
 
         //Method edit person and write new values into file
-        public static void editPerson(EditEmployee ep)
+        public static void editPerson(EditPerson ep)
         {
             string id = ep.TxtInstanceID.Text;
 
@@ -99,20 +100,21 @@ namespace contact_manager
 
             if (obj != null)
             {
-                obj.salutation = ep.CmbDropEmployeeMgmtSalut.Text;
-                obj.title = ep.TxtEmployeeMgmtTitle.Text;
-                obj.firstName = ep.TxtEmployeeMgmtFirstn.Text;
-                obj.lastName = ep.TxtEmployeeMgmtLastn.Text;
-                obj.birthday = Convert.ToDateTime(ep.TxtEmployeeMgmtBirth.Text);
-                obj.phoneNumberPriv = ep.TxtEmployeeMgmtTel.Text;
-                obj.phoneNumberMobile = ep.TxtEmployeeMgmtMobile.Text;
-                obj.nationality = ep.TxtEmployeeMgmtNation.Text;
-                obj.gender = ep.CmbEmployeeMgmtGend.Text;
-                obj.street = ep.TxtEmployeeMgmtAddr.Text;
-                obj.place = ep.TxtEmployeeMgmtResid.Text;
-                obj.postcode = ep.TxtEmployeeMgmtZipcode.Text;
-                obj.email = ep.TxtEmployeeMgmtMailPriv.Text;
-                obj.ahvNumber = ep.TxtEmployeeMgmtAhv.Text;
+                obj.salutation = ep.CmbDropPersonMgmtSalut.Text;
+                obj.title = ep.TxtPersonMgmtTitle.Text;
+                obj.firstName = ep.TxtPersonMgmtFirstn.Text;
+                obj.lastName = ep.TxtPersonMgmtLastn.Text;
+                obj.birthday = Convert.ToDateTime(ep.TxtPersonMgmtBirth.Text);
+                obj.phoneNumberPriv = ep.TxtPersonMgmtTel.Text;
+                obj.phoneNumberMobile = ep.TxtPersonMgmtMobile.Text;
+                obj.nationality = ep.TxtPersonMgmtNation.Text;
+                obj.gender = ep.CmbPersonMgmtGend.Text;
+                obj.street = ep.TxtPersonMgmtAddr.Text;
+                obj.place = ep.TxtPersonMgmtResid.Text;
+                obj.postcode = ep.TxtPersonMgmtZipcode.Text;
+                obj.email = ep.TxtPersonMgmtMailPriv.Text;
+                obj.ahvNumber = ep.TxtPersonMgmtAhv.Text;
+                obj.status = ep.RadPersonMgmtActive.Checked;
             }
 
             //write new list of Persons into file
@@ -124,12 +126,12 @@ namespace contact_manager
             sw.Close();
 
         }
+        public Guid InstanceID { get; private set; }
         public string Type
         {
             get { return type; }
             set { type = value; }
         }
-        public Guid InstanceID { get; private set; }
         public string Salutation
         {
             get { return salutation; }
@@ -240,8 +242,8 @@ namespace contact_manager
                     string[] words = line.Split(',');
                     Person.people.Add(new Person
                     {
-                        Type = (words[0]),
-                        InstanceID = Guid.Parse(words[1]),
+                        InstanceID = Guid.Parse(words[0]),
+                        Type = (words[1]),
                         Salutation = words[2],
                         Title = words[3],
                         FirstName = words[4],
@@ -250,7 +252,13 @@ namespace contact_manager
                         Postcode = words[7],
                         Place = words[8],
                         PhoneNumberPriv = words[9],
-                        Status = Convert.ToBoolean(words[10]),
+                        PhoneNumberMobile = words[10],
+                        Birthday = Convert.ToDateTime(words[11]),
+                        Gender = words[12],
+                        Email = words[13],
+                        Nationality = words[14],
+                        AHVNumber = words[15],
+                        Status = Convert.ToBoolean(words[16]),
                 });
                 }
 
