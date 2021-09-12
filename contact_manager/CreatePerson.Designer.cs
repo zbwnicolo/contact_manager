@@ -33,7 +33,6 @@ namespace contact_manager
             this.TxtPersonCreatTitle = new System.Windows.Forms.TextBox();
             this.TxtPersonCreatFirstn = new System.Windows.Forms.TextBox();
             this.TxtPersonCreatLastn = new System.Windows.Forms.TextBox();
-            this.TxtPersonCreatBirth = new System.Windows.Forms.TextBox();
             this.TxtPersonCreatTel = new System.Windows.Forms.TextBox();
             this.TxtPersonCreatMobile = new System.Windows.Forms.TextBox();
             this.TxtPersonCreatNation = new System.Windows.Forms.TextBox();
@@ -90,8 +89,9 @@ namespace contact_manager
             this.CmdCreatPersonAbort = new System.Windows.Forms.Button();
             this.CmdCreatPersonSave = new System.Windows.Forms.Button();
             this.GrbPersonStatus = new System.Windows.Forms.GroupBox();
-            this.RadCreatPersonActive = new System.Windows.Forms.RadioButton();
             this.RadCreatPersonDeactiv = new System.Windows.Forms.RadioButton();
+            this.RadCreatPersonActive = new System.Windows.Forms.RadioButton();
+            this.TxtPersonCreatBirth = new System.Windows.Forms.DateTimePicker();
             this.GrbPersonStatus.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -126,13 +126,6 @@ namespace contact_manager
             this.TxtPersonCreatLastn.Name = "TxtPersonCreatLastn";
             this.TxtPersonCreatLastn.Size = new System.Drawing.Size(100, 20);
             this.TxtPersonCreatLastn.TabIndex = 3;
-            // 
-            // TxtPersonCreatBirth
-            // 
-            this.TxtPersonCreatBirth.Location = new System.Drawing.Point(35, 269);
-            this.TxtPersonCreatBirth.Name = "TxtPersonCreatBirth";
-            this.TxtPersonCreatBirth.Size = new System.Drawing.Size(100, 20);
-            this.TxtPersonCreatBirth.TabIndex = 4;
             // 
             // TxtPersonCreatTel
             // 
@@ -607,6 +600,16 @@ namespace contact_manager
             this.GrbPersonStatus.TabIndex = 218;
             this.GrbPersonStatus.TabStop = false;
             // 
+            // RadCreatPersonDeactiv
+            // 
+            this.RadCreatPersonDeactiv.AutoSize = true;
+            this.RadCreatPersonDeactiv.Location = new System.Drawing.Point(109, 49);
+            this.RadCreatPersonDeactiv.Name = "RadCreatPersonDeactiv";
+            this.RadCreatPersonDeactiv.Size = new System.Drawing.Size(57, 17);
+            this.RadCreatPersonDeactiv.TabIndex = 1;
+            this.RadCreatPersonDeactiv.Text = "Inaktiv";
+            this.RadCreatPersonDeactiv.UseVisualStyleBackColor = true;
+            // 
             // RadCreatPersonActive
             // 
             this.RadCreatPersonActive.AutoSize = true;
@@ -619,21 +622,22 @@ namespace contact_manager
             this.RadCreatPersonActive.Text = "Aktiv";
             this.RadCreatPersonActive.UseVisualStyleBackColor = true;
             // 
-            // RadCreatPersonDeactiv
+            // TxtPersonCreatBirth
             // 
-            this.RadCreatPersonDeactiv.AutoSize = true;
-            this.RadCreatPersonDeactiv.Location = new System.Drawing.Point(109, 49);
-            this.RadCreatPersonDeactiv.Name = "RadCreatPersonDeactiv";
-            this.RadCreatPersonDeactiv.Size = new System.Drawing.Size(57, 17);
-            this.RadCreatPersonDeactiv.TabIndex = 1;
-            this.RadCreatPersonDeactiv.Text = "Inaktiv";
-            this.RadCreatPersonDeactiv.UseVisualStyleBackColor = true;
+            this.TxtPersonCreatBirth.CustomFormat = "dd/MM/yyyy";
+            this.TxtPersonCreatBirth.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TxtPersonCreatBirth.Location = new System.Drawing.Point(32, 269);
+            this.TxtPersonCreatBirth.Name = "TxtPersonCreatBirth";
+            this.TxtPersonCreatBirth.Size = new System.Drawing.Size(103, 20);
+            this.TxtPersonCreatBirth.TabIndex = 219;
+            this.TxtPersonCreatBirth.Value = new System.DateTime(2021, 9, 12, 0, 0, 0, 0);
             // 
             // CreatePerson
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(949, 561);
+            this.Controls.Add(this.TxtPersonCreatBirth);
             this.Controls.Add(this.GrbPersonStatus);
             this.Controls.Add(this.CmdCreatPersonAbort);
             this.Controls.Add(this.CmdCreatPersonSave);
@@ -690,7 +694,6 @@ namespace contact_manager
             this.Controls.Add(this.TxtPersonCreatNation);
             this.Controls.Add(this.TxtPersonCreatMobile);
             this.Controls.Add(this.TxtPersonCreatTel);
-            this.Controls.Add(this.TxtPersonCreatBirth);
             this.Controls.Add(this.TxtPersonCreatLastn);
             this.Controls.Add(this.TxtPersonCreatFirstn);
             this.Controls.Add(this.TxtPersonCreatTitle);
@@ -754,7 +757,6 @@ namespace contact_manager
         public System.Windows.Forms.TextBox TxtPersonCreatTitle;
         public System.Windows.Forms.TextBox TxtPersonCreatFirstn;
         public System.Windows.Forms.TextBox TxtPersonCreatLastn;
-        public System.Windows.Forms.TextBox TxtPersonCreatBirth;
         public System.Windows.Forms.TextBox TxtPersonCreatTel;
         public System.Windows.Forms.TextBox TxtPersonCreatMobile;
         public System.Windows.Forms.TextBox TxtPersonCreatNation;
@@ -768,5 +770,6 @@ namespace contact_manager
         public System.Windows.Forms.GroupBox GrbPersonStatus;
         public System.Windows.Forms.RadioButton RadCreatPersonDeactiv;
         public System.Windows.Forms.RadioButton RadCreatPersonActive;
+        public System.Windows.Forms.DateTimePicker TxtPersonCreatBirth;
     }
 }

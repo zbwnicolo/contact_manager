@@ -46,16 +46,24 @@ namespace contact_manager
             DataGridEmployee.DataSource = tbl;
             LoadPeople();
             DataGridEmployee.ClearSelection();
+
+            //If status is inactive change row color to grey
+            foreach (DataGridViewRow row in DataGridEmployee.Rows)
+            {
+                if (row.Cells[10].Value.ToString() == "False")
+                {
+                    row.DefaultCellStyle.BackColor = Color.Gray;
+                }
+            }
         }
 
         private void CmdInfoEmployee_Click(object sender, EventArgs e)
         {
-            if (DataGridEmployee.SelectedRows.Count > 0) // make sure user select at least 1 row 
+            // make sure user select at least 1 row 
+            if (DataGridEmployee.SelectedRows.Count > 0)
             {
                 EditPerson ep = new EditPerson(this);
                 ep.Show();
-
-                
             }
             else
             {
@@ -64,7 +72,7 @@ namespace contact_manager
 
             
         }
-   
+ 
         //Load specified data of Persons into table
         public static DataTable LoadPeople()
         {
@@ -97,7 +105,8 @@ namespace contact_manager
 
         private void CmdSaveExit_Click(object sender, EventArgs e)
         {
-            this.Close();        }
+            this.Close();        
+        }
 
         private void TxtSearchEmployee_TextChanged(object sender, EventArgs e)
         {

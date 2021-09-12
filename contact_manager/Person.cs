@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Data;
 using System.Reflection;
+using System.Windows.Forms;
 
 namespace contact_manager
 {

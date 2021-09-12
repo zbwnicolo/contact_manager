@@ -28,18 +28,7 @@ namespace contact_manager
             Dashboard.tbl.Clear();
             Dashboard.LoadPeople();
 
-            TxtPersonCreatTitle.Clear();
-            TxtPersonCreatFirstn.Clear();
-            TxtPersonCreatLastn.Clear();
-            TxtPersonCreatBirth.Clear();
-            TxtPersonCreatTel.Clear();
-            TxtPersonCreatMobile.Clear();
-            TxtPersonCreatNation.Clear();
-            TxtPersonCreatAddr.Clear();
-            TxtPersonCreatResid.Clear();
-            TxtPersonCreatZipcode.Clear();
-            TxtPersonCreatMailPriv.Clear();
-            TxtPersonCreatAhv.Clear();
+            this.Close();
         }
 
         private void CmdCreatPersonAbort_Click(object sender, EventArgs e)

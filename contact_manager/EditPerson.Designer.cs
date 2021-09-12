@@ -81,7 +81,6 @@ namespace contact_manager
             this.label7 = new System.Windows.Forms.Label();
             this.TxtPersonMgmtTel = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.TxtPersonMgmtBirth = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.TxtPersonMgmtLastn = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -93,6 +92,7 @@ namespace contact_manager
             this.label1 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.CmbPersonMgmtType = new System.Windows.Forms.ComboBox();
+            this.TxtPersonMgmtBirth = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -538,13 +538,6 @@ namespace contact_manager
             this.label6.TabIndex = 145;
             this.label6.Text = "Geburtstag";
             // 
-            // TxtPersonMgmtBirth
-            // 
-            this.TxtPersonMgmtBirth.Location = new System.Drawing.Point(13, 275);
-            this.TxtPersonMgmtBirth.Name = "TxtPersonMgmtBirth";
-            this.TxtPersonMgmtBirth.Size = new System.Drawing.Size(137, 20);
-            this.TxtPersonMgmtBirth.TabIndex = 9;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -646,11 +639,21 @@ namespace contact_manager
             this.CmbPersonMgmtType.Size = new System.Drawing.Size(121, 21);
             this.CmbPersonMgmtType.TabIndex = 195;
             // 
+            // TxtPersonMgmtBirth
+            // 
+            this.TxtPersonMgmtBirth.CustomFormat = "dd/MM/yyy";
+            this.TxtPersonMgmtBirth.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TxtPersonMgmtBirth.Location = new System.Drawing.Point(12, 275);
+            this.TxtPersonMgmtBirth.Name = "TxtPersonMgmtBirth";
+            this.TxtPersonMgmtBirth.Size = new System.Drawing.Size(138, 20);
+            this.TxtPersonMgmtBirth.TabIndex = 197;
+            // 
             // EditPerson
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1158, 650);
+            this.Controls.Add(this.TxtPersonMgmtBirth);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.CmbPersonMgmtType);
             this.Controls.Add(this.TxtInstanceID);
@@ -703,7 +706,6 @@ namespace contact_manager
             this.Controls.Add(this.label7);
             this.Controls.Add(this.TxtPersonMgmtTel);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.TxtPersonMgmtBirth);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.TxtPersonMgmtLastn);
             this.Controls.Add(this.label4);
@@ -774,7 +776,6 @@ namespace contact_manager
         public System.Windows.Forms.Label label7;
         public System.Windows.Forms.TextBox TxtPersonMgmtTel;
         public System.Windows.Forms.Label label6;
-        public System.Windows.Forms.TextBox TxtPersonMgmtBirth;
         public System.Windows.Forms.Label label5;
         public System.Windows.Forms.TextBox TxtPersonMgmtLastn;
         public System.Windows.Forms.Label label4;
@@ -788,5 +789,6 @@ namespace contact_manager
         public System.Windows.Forms.ComboBox CmbPersonMgmtType;
         public System.Windows.Forms.RadioButton RadPersonMgmtDeactiv;
         public System.Windows.Forms.RadioButton RadPersonMgmtActive;
+        public System.Windows.Forms.DateTimePicker TxtPersonMgmtBirth;
     }
 }
