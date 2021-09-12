@@ -677,6 +677,7 @@
             this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.Name = "CreateEmployee";
             this.Text = "CreateEmployee";
+            this.Load += new System.EventHandler(this.CreateEmployee_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CreateEmployee_KeyDown);
             this.GrbEmployeeStatus.ResumeLayout(false);
             this.GrbEmployeeStatus.PerformLayout();

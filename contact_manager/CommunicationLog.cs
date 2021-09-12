@@ -16,5 +16,26 @@ namespace contact_manager
         {
             InitializeComponent();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void CmdLogSend_Click(object sender, EventArgs e)
+        {
+            string data = null;
+            string datepicker = DtpLog.ToString();
+
+            if (TxtLogInput.TextLength > 0)
+            {
+                data += "[" + datepicker + "]" + TxtLogInput.Text;
+
+            }
+            else
+            {
+                MessageBox.Show("Das Input Feld dar nicht leer sein");
+            }
+        }
     }
 }

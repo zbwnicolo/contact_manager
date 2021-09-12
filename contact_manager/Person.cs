@@ -48,7 +48,7 @@ namespace contact_manager
             this.Postcode = cp.TxtPersonCreatZipcode.Text;
             this.Email = cp.TxtPersonCreatMailPriv.Text;
             this.AHVNumber = cp.TxtPersonCreatAhv.Text;
-            this.Status = cp.RadCreatPersonActive;
+            this.Status = Convert.ToBoolean(cp.RadCreatPersonActive);
         }
 
         public Person()

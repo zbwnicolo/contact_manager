@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Apprentice.cs" />
+    <Compile Include="ComLog.cs" />
     <Compile Include="CommunicationLog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +95,9 @@
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CommunicationLog.resx">
+      <DependentUpon>CommunicationLog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateCustomer.resx">
       <DependentUpon>CreateCustomer.cs</DependentUpon>
     </EmbeddedResource>

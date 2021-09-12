@@ -72,5 +72,10 @@ namespace contact_manager
         {
             this.Close();
         }
+
+        private void CreateEmployee_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
