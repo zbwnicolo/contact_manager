@@ -97,6 +97,7 @@ namespace contact_manager
             // 
             // CmbPersonCreatSalut
             // 
+            this.CmbPersonCreatSalut.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbPersonCreatSalut.FormattingEnabled = true;
             this.CmbPersonCreatSalut.Items.AddRange(new object[] {
             "Herr",
@@ -150,6 +151,7 @@ namespace contact_manager
             // 
             // CmbPersonCreatGend
             // 
+            this.CmbPersonCreatGend.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbPersonCreatGend.FormattingEnabled = true;
             this.CmbPersonCreatGend.Items.AddRange(new object[] {
             "Weiblich",
@@ -197,6 +199,7 @@ namespace contact_manager
             // 
             // CmbPersonCreatType
             // 
+            this.CmbPersonCreatType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbPersonCreatType.FormattingEnabled = true;
             this.CmbPersonCreatType.Items.AddRange(new object[] {
             "Mitarbeiter",

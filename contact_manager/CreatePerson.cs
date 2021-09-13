@@ -15,9 +15,11 @@ namespace contact_manager
         public CreatePerson()
         {
             InitializeComponent();
-            CmbPersonCreatSalut.DropDownStyle = ComboBoxStyle.DropDownList;
-            CmbPersonCreatType.DropDownStyle = ComboBoxStyle.DropDownList;
-            CmbPersonCreatGend.DropDownStyle = ComboBoxStyle.DropDownList;
+
+            //Set default Value for Dropdown options
+            CmbPersonCreatSalut.SelectedIndex = 1;
+            CmbPersonCreatType.SelectedIndex = 1;
+            CmbPersonCreatGend.SelectedIndex = 1;
         }
 
         private void CmdCreatPersonSave_Click(object sender, EventArgs e)
@@ -40,7 +42,6 @@ namespace contact_manager
                     break;
             }
 
-            //Person.addPerson(this);
             Person.people.Clear();
             Person.TxtToObject();
             Dashboard.tbl.Clear();

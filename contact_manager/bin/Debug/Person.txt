@@ -1,1 +1,0 @@
-(null),(null),0,(null),01/01/0001 00:00:00,01/01/0001 00:00:00,(null),(null),(null),(null),(null),16,17,00000000-0000-0000-0000-000000000000,(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),01/01/0001 00:00:00,(null),(null),(null),(null),False,
