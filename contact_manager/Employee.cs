@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,17 +11,30 @@ namespace contact_manager
     {
         public string phoneNumberWork;
         public string faxNumer;
-        public Employee(CreateEmployee ce)
+
+        public Employee(CreatePerson cp) : base()
         {
-            this.PhoneNumberWork = ce.TxtEmployeeCreatCompTel.Text;
-            this.FaxNumber = ce.TxtEmployeeCreatCompFax.Text;
+            this.PhoneNumberWork = cp.TxtEmployeeCreatCompTel.Text;
+            this.FaxNumber = cp.TxtEmployeeCreatCompFax.Text;
         }
+        public Employee()
+        {
+
+        }
+
+        public override void addPerson(CreatePerson cp)
+        {
+            StreamWriter sw = new StreamWriter("Person.txt", append: true);
+            Employee e = new Employee(cp);
+            sw.WriteLine(e);
+            sw.Close();
+        }
+
         public string Department
         {
             get;
             set;
         }
-
 
         public string Role
         {

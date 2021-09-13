@@ -22,7 +22,25 @@ namespace contact_manager
 
         private void CmdCreatPersonSave_Click(object sender, EventArgs e)
         {
-            Person.addPerson(this);
+            switch(this.CmbPersonCreatType.Text)
+            {
+                case ("Mitarbeiter"):
+                    Employee emp = new Employee(this);
+                    emp.addPerson(this);
+                    break;
+
+                case ("Kunde"):
+                    Customer c = new Customer(this);
+                    c.addPerson(this);
+                    break;
+
+                case ("Lernender"):
+                    Apprentice a = new Apprentice(this);
+                    a.addPerson(this);
+                    break;
+            }
+
+            //Person.addPerson(this);
             Person.people.Clear();
             Person.TxtToObject();
             Dashboard.tbl.Clear();

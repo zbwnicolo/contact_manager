@@ -59,7 +59,7 @@ namespace contact_manager
         }
   
         //Method create new Person and add to file
-        public static void addPerson(CreatePerson cp)
+        virtual public void addPerson(CreatePerson cp)
         {
             StreamWriter sw = new StreamWriter("Person.txt", append: true);
             Person p = new Person(cp);
@@ -208,8 +208,6 @@ namespace contact_manager
             get { return status; }
             set { status = value; }
         }
-        
-        
 
         //loop through all Properties and turn them into Strings to write them into the file
         public override string ToString()

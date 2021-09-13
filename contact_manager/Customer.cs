@@ -8,6 +8,11 @@ namespace contact_manager
 {
     class Customer : Person
     {
+
+        public Customer(CreatePerson cp)
+        {
+            this.CustomerType = cp.TxtEmployeeCreatCompAddr.Text;
+        }
         public string CustomerType
         {
             get;
