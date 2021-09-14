@@ -29,43 +29,76 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CommunicationLog));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.TxtLogInput = new System.Windows.Forms.TextBox();
-            this.CmdLogSend = new System.Windows.Forms.Button();
-            this.DtpLog = new System.Windows.Forms.DateTimePicker();
-            this.DgvLogOutput = new System.Windows.Forms.DataGridView();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.DgvLogOutput = new System.Windows.Forms.DataGridView();
             this.DgvTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DgvInput = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DtpLog = new System.Windows.Forms.DateTimePicker();
+            this.CmdLogSend = new System.Windows.Forms.Button();
+            this.TxtLogInput = new System.Windows.Forms.TextBox();
+            this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvLogOutput)).BeginInit();
             this.SuspendLayout();
             // 
-            // TxtLogInput
+            // panel1
             // 
-            this.TxtLogInput.Location = new System.Drawing.Point(12, 457);
-            this.TxtLogInput.Multiline = true;
-            this.TxtLogInput.Name = "TxtLogInput";
-            this.TxtLogInput.Size = new System.Drawing.Size(940, 75);
-            this.TxtLogInput.TabIndex = 1;
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(181, 639);
+            this.panel1.TabIndex = 15;
             // 
-            // CmdLogSend
+            // button3
             // 
-            this.CmdLogSend.Location = new System.Drawing.Point(877, 538);
-            this.CmdLogSend.Name = "CmdLogSend";
-            this.CmdLogSend.Size = new System.Drawing.Size(75, 23);
-            this.CmdLogSend.TabIndex = 2;
-            this.CmdLogSend.Text = "Speichern";
-            this.CmdLogSend.UseVisualStyleBackColor = true;
-            this.CmdLogSend.Click += new System.EventHandler(this.CmdLogSend_Click);
+            this.button3.Location = new System.Drawing.Point(13, 188);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(154, 33);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "Neuer Mitarbeiter";
+            this.button3.UseVisualStyleBackColor = true;
             // 
-            // DtpLog
+            // button2
             // 
-            this.DtpLog.Location = new System.Drawing.Point(12, 431);
-            this.DtpLog.Name = "DtpLog";
-            this.DtpLog.Size = new System.Drawing.Size(200, 20);
-            this.DtpLog.TabIndex = 3;
+            this.button2.Location = new System.Drawing.Point(13, 149);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(154, 33);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Neuer Kunde";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(13, 110);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(154, 33);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Dashboard";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel2.Location = new System.Drawing.Point(12, 12);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(155, 59);
+            this.panel2.TabIndex = 0;
             // 
             // DgvLogOutput
             // 
@@ -92,7 +125,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DgvLogOutput.DefaultCellStyle = dataGridViewCellStyle2;
-            this.DgvLogOutput.Location = new System.Drawing.Point(12, 12);
+            this.DgvLogOutput.Location = new System.Drawing.Point(187, 0);
             this.DgvLogOutput.Name = "DgvLogOutput";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
@@ -102,9 +135,8 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DgvLogOutput.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.DgvLogOutput.Size = new System.Drawing.Size(940, 354);
-            this.DgvLogOutput.TabIndex = 4;
-            this.DgvLogOutput.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.DgvLogOutput.Size = new System.Drawing.Size(966, 497);
+            this.DgvLogOutput.TabIndex = 14;
             // 
             // DgvTime
             // 
@@ -117,17 +149,43 @@
             this.DgvInput.HeaderText = "Input";
             this.DgvInput.Name = "DgvInput";
             // 
+            // DtpLog
+            // 
+            this.DtpLog.Location = new System.Drawing.Point(187, 503);
+            this.DtpLog.Name = "DtpLog";
+            this.DtpLog.Size = new System.Drawing.Size(200, 20);
+            this.DtpLog.TabIndex = 13;
+            // 
+            // CmdLogSend
+            // 
+            this.CmdLogSend.Location = new System.Drawing.Point(1054, 529);
+            this.CmdLogSend.Name = "CmdLogSend";
+            this.CmdLogSend.Size = new System.Drawing.Size(99, 95);
+            this.CmdLogSend.TabIndex = 12;
+            this.CmdLogSend.Text = "Senden";
+            this.CmdLogSend.UseVisualStyleBackColor = true;
+            // 
+            // TxtLogInput
+            // 
+            this.TxtLogInput.Location = new System.Drawing.Point(187, 529);
+            this.TxtLogInput.Multiline = true;
+            this.TxtLogInput.Name = "TxtLogInput";
+            this.TxtLogInput.Size = new System.Drawing.Size(861, 95);
+            this.TxtLogInput.TabIndex = 11;
+            // 
             // CommunicationLog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(964, 576);
+            this.ClientSize = new System.Drawing.Size(1166, 639);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.DgvLogOutput);
             this.Controls.Add(this.DtpLog);
             this.Controls.Add(this.CmdLogSend);
             this.Controls.Add(this.TxtLogInput);
             this.Name = "CommunicationLog";
             this.Text = "CommunicationLog";
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DgvLogOutput)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -135,13 +193,19 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox TxtLogInput;
-        private System.Windows.Forms.Button CmdLogSend;
-        private System.Windows.Forms.DateTimePicker DtpLog;
-        private System.Windows.Forms.DataGridView DgvLogOutput;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.DataGridView DgvLogOutput;
         private System.Windows.Forms.DataGridViewTextBoxColumn DgvTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn DgvInput;
+        private System.Windows.Forms.DateTimePicker DtpLog;
+        private System.Windows.Forms.Button CmdLogSend;
+        private System.Windows.Forms.TextBox TxtLogInput;
+        private System.Windows.Forms.Timer timer3;
     }
 }
