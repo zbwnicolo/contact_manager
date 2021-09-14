@@ -13,11 +13,11 @@ namespace contact_manager
         public int yearApprenticeship;
         public int currentYear;
         public static List<Apprentice> apprentice = new List<Apprentice>();
-        public Apprentice(CreatePerson cp)
+        public Apprentice(CreatePerson cp) :base(cp)
         {
             
-            this.YearsApprenticeship = Convert.ToInt32(cp.TxtPersonCreatCompAddr.Text);
-            this.CurrentYear = Convert.ToInt32(cp.TxtPersonCreatCompAddr.Text);
+            this.YearsApprenticeship = Convert.ToInt32(cp.TxtPersonCreatYearsApprenticeship.Text);
+            this.CurrentYear = Convert.ToInt32(cp.TxtPersonCreaCurrentYear.Text);
         }
 
         public Apprentice()
@@ -46,7 +46,7 @@ namespace contact_manager
             string line;
 
             //Check if file is empty
-            if (new FileInfo("Person.txt").Length != 0)
+            if (new FileInfo("Apprentice.txt").Length != 0)
             {
                 // Read the file and display it line by line.
                 System.IO.StreamReader file = new System.IO.StreamReader("Apprentice.txt");
@@ -57,23 +57,35 @@ namespace contact_manager
                     {
                         YearsApprenticeship = Convert.ToInt32((words[0])),
                         CurrentYear = Convert.ToInt32((words[1])),
-                        InstanceID = Guid.Parse(words[2]),
-                        Type = (words[3]),
-                        Salutation = words[4],
-                        Title = words[5],
-                        FirstName = words[6],
-                        LastName = words[7],
-                        Street = words[8],
-                        Postcode = words[9],
-                        Place = words[10],
-                        PhoneNumberPriv = words[11],
-                        PhoneNumberMobile = words[12],
-                        Birthday = Convert.ToDateTime(words[13]),
-                        Gender = words[14],
-                        Email = words[15],
-                        Nationality = words[16],
-                        AHVNumber = words[17],
-                        Status = Convert.ToBoolean(words[18]),
+                        Department = (words[2]),
+                        Role = (words[3]),
+                        EmploymentLevel = Convert.ToInt32((words[4])),
+                        ManagementLevel = (words[5]),
+                        EntryDate = Convert.ToDateTime((words[6])),
+                        ExitDate = Convert.ToDateTime((words[7])),
+                        CompanyName = (words[8]),
+                        CompanyStreet = (words[9]),
+                        CompanyPlace = (words[10]),
+                        CompanyPostcode = (words[11]),
+                        PhoneNumberWork = (words[12]),
+                        FaxNumber = (words[13]),
+                        InstanceID = Guid.Parse(words[14]),
+                        Type = (words[15]),
+                        Salutation = words[16],
+                        Title = words[17],
+                        FirstName = words[18],
+                        LastName = words[19],
+                        Street = words[20],
+                        Postcode = words[21],
+                        Place = words[22],
+                        PhoneNumberPriv = words[23],
+                        PhoneNumberMobile = words[24],
+                        Birthday = Convert.ToDateTime(words[25]),
+                        Gender = words[26],
+                        Email = words[27],
+                        Nationality = words[28],
+                        AHVNumber = words[29],
+                        Status = Convert.ToBoolean(words[30]),
                     });
                 }
 

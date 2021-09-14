@@ -31,11 +31,7 @@ C:\Users\NicoloBächler\Documents\GitHub\contact_manager1\contact_manager\obj\De
 C:\Users\NicoloBächler\Documents\GitHub\contact_manager1\contact_manager\obj\Debug\contact_manager.csproj.CoreCompileInputs.cache
 C:\Users\NicoloBächler\Documents\GitHub\contact_manager1\contact_manager\obj\Debug\contact_manager.exe
 C:\Users\NicoloBächler\Documents\GitHub\contact_manager1\contact_manager\obj\Debug\contact_manager.pdb
-C:\Users\joels\Documents\GitHub\contact_manager\contact_manager\obj\Debug\contact_manager.CreateCustomer.resources
-C:\Users\joels\Documents\GitHub\contact_manager\contact_manager\obj\Debug\contact_manager.CreateEmployee.resources
 C:\Users\joels\Documents\GitHub\contact_manager\contact_manager\obj\Debug\contact_manager.Dashboard.resources
-C:\Users\joels\Documents\GitHub\contact_manager\contact_manager\obj\Debug\contact_manager.EditCustomer.resources
-C:\Users\joels\Documents\GitHub\contact_manager\contact_manager\obj\Debug\contact_manager.EditEmployee.resources
 C:\Users\joel.sutter\OneDrive - Weibel IT AG\Dokumente\GitHub\contact_manager\contact_manager\obj\Debug\contact_manager.csproj.AssemblyReference.cache
 C:\Users\joel.sutter\OneDrive - Weibel IT AG\Dokumente\GitHub\contact_manager\contact_manager\obj\Debug\contact_manager.CreateCustomer.resources
 C:\Users\joel.sutter\OneDrive - Weibel IT AG\Dokumente\GitHub\contact_manager\contact_manager\obj\Debug\contact_manager.CreateEmployee.resources

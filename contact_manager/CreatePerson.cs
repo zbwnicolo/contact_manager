@@ -59,5 +59,26 @@ namespace contact_manager
         {
             this.Close();
         }
+
+        private void CmbPersonCreatType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (this.CmbPersonCreatType.Text)
+            {
+                case ("Mitarbeiter"):
+                    TxtPersonCreatYearsApprenticeship.Visible = false;
+                    TxtPersonCreaCurrentYear.Visible = false;
+                    break;
+
+                case ("Kunde"):
+                    TxtPersonCreatYearsApprenticeship.Visible = false;
+                    TxtPersonCreaCurrentYear.Visible = false;
+                    break;
+
+                case ("Lernender"):
+                    TxtPersonCreatYearsApprenticeship.Visible = true;
+                    TxtPersonCreaCurrentYear.Visible = true;
+                    break;
+            }
+        }
     }
 }

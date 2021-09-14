@@ -137,7 +137,7 @@ namespace contact_manager
 
         private void CmdDeleteEmployee_Click(object sender, EventArgs e)
         {
-            Person.deletePerson(this);
+            //Person.deletePerson(this);
             Dashboard.tbl.Clear();
             Dashboard.LoadPeople();
         }

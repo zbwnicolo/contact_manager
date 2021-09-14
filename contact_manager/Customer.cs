@@ -33,6 +33,7 @@ namespace contact_manager
             sw.WriteLine(c);
             sw.Close();
         }
+
         public override void TxtToObject()
         {
             string line;

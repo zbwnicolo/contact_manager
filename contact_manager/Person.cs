@@ -68,7 +68,7 @@ namespace contact_manager
         }
 
         //Method delete Person and remove from file and table
-        public static void deletePerson(Dashboard db)
+        virtual public void deletePerson(Dashboard db)
         {
             string id = db.DataGridEmployee.SelectedRows[0].Cells[0].Value.ToString();
 
@@ -92,7 +92,7 @@ namespace contact_manager
         }
 
         //Method edit person and write new values into file
-        public static void editPerson(EditPerson ep)
+        virtual public void editPerson(EditPerson ep)
         {
             string id = ep.TxtInstanceID.Text;
 

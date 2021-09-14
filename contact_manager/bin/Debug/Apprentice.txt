@@ -1,2 +1,1 @@
-,8f91e345-ff0e-4800-b0b2-bf32b11f3c16,Kunde,Frau,,,,,,,,,12/09/2021 00:00:00,Männlich,,,,True,
-9087,9087,00000000-0000-0000-0000-000000000000,(null),(null),0,(null),01/01/0001 00:00:00,01/01/0001 00:00:00,(null),(null),(null),(null),(null),(null),00000000-0000-0000-0000-000000000000,(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),01/01/0001 00:00:00,(null),(null),(null),(null),False,
+1,1,,,1,,14.09.2021 00:00:00,14.09.2021 00:00:00,,,,,,,fb280aee-ffb1-4040-b6bf-fbb51a98bab8,Lernender,Frau,,,,,,,,,12.09.2021 00:00:00,Männlich,,,,True,
