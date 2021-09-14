@@ -19,7 +19,8 @@ namespace contact_manager
         public Dashboard()
         {
             InitializeComponent();
-            Person.TxtToObject();
+            Person p = new Person();
+            p.TxtToObject();
         }
 
         private void CmdCreateEmployee_Click(object sender, EventArgs e)

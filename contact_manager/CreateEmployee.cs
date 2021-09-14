@@ -24,7 +24,7 @@ namespace contact_manager
         {
             //Person.addPerson(this);
             Person.people.Clear();
-            Person.TxtToObject();
+            //Person.TxtToObject();
             Dashboard.tbl.Clear();
             Dashboard.LoadPeople();
 
@@ -48,7 +48,7 @@ namespace contact_manager
             {
                 //Person.addPerson(this);
                 Person.people.Clear();
-                Person.TxtToObject();
+                //Person.TxtToObject();
                 Dashboard.tbl.Clear();
                 Dashboard.LoadPeople();
 

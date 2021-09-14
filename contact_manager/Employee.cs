@@ -9,13 +9,35 @@ namespace contact_manager
 {
     public class Employee : Person
     {
+        public string department;
+        public string role;
+        public int employmentLevel;
+        public string managementLevel;
+        public DateTime entryDate;
+        public DateTime exitDate;
+        public string companyName;
+        public string companyStreet;
+        public string companyPlace;
+        public string companyPostcode;
         public string phoneNumberWork;
         public string faxNumer;
 
         public Employee(CreatePerson cp) : base()
         {
-            this.PhoneNumberWork = cp.TxtEmployeeCreatCompTel.Text;
-            this.FaxNumber = cp.TxtEmployeeCreatCompFax.Text;
+            this.EmployeeID = Guid.NewGuid();
+            this.Department = cp.TxtPersonCreatCompDepart.Text;
+            this.Role = cp.TxtPersonCreatCompRole.Text;
+            this.EmploymentLevel = Convert.ToInt32(cp.TxtPersonCreatCompEmplLvl.Text);
+            this.ManagementLevel = cp.TxtPersonCreatCompProcent.Text;
+            this.EntryDate = Convert.ToDateTime(cp.TxtPersonCreatCompEntryDate.Text);
+            this.ExitDate = Convert.ToDateTime(cp.TxtPersonCreatCompExitDate.Text);
+            this.AHVNumber = cp.TxtPersonCreatAhv.Text;
+            this.CompanyName = cp.TxtPersonCreatCompName.Text;
+            this.CompanyStreet = cp.TxtPersonCreatCompAddr.Text;
+            this.CompanyPlace = cp.TxtPersonCreatCompRes.Text;
+            this.CompanyPostcode = cp.TxtPersonCreatCompZipCode.Text;
+            this.PhoneNumberWork = cp.TxtPersonCreatCompTel.Text;
+            this.FaxNumber = cp.TxtPersonCreatCompFax.Text;
         }
         public Employee()
         {
@@ -29,71 +51,98 @@ namespace contact_manager
             sw.WriteLine(e);
             sw.Close();
         }
+        public override void TxtToObject()
+        {
+            string line;
 
+            //Check if file is empty
+            if (new FileInfo("Person.txt").Length != 0)
+            {
+                // Read the file and display it line by line.
+                System.IO.StreamReader file = new System.IO.StreamReader("Person.txt");
+                while ((line = file.ReadLine()) != null)
+                {
+                    string[] words = line.Split(',');
+                    Employee.people.Add(new Employee
+                    {
+                        EmployeeID = Guid.Parse(words[0]),
+                        Department = (words[17]),
+                        Role = (words[18]),
+                        EmploymentLevel = Convert.ToInt32((words[19])),
+                        ManagementLevel = (words[20]),
+                        EntryDate = Convert.ToDateTime((words[21])),
+                        ExitDate = Convert.ToDateTime((words[22])),
+                        CompanyName = (words[23]),
+                        CompanyStreet = (words[24]),
+                        CompanyPlace = (words[25]),
+                        CompanyPostcode = (words[26]),
+                        PhoneNumberWork = (words[27]),
+                        FaxNumber = (words[28]),
+                    });
+                }
+
+                file.Close();
+            }
+        }
+        public Guid EmployeeID { get; private set; }
         public string Department
         {
-            get;
-            set;
+            get { return department; }
+            set { department = value; }
         }
 
         public string Role
         {
-            get;
-            set;
+            get { return role; }
+            set { role = value; }
         }
 
         public int EmploymentLevel
         {
-            get;
-            set;
+            get { return employmentLevel; }
+            set { employmentLevel = value; }
         }
 
         public string ManagementLevel
         {
-            get;
-            set;
+            get { return managementLevel; }
+            set { managementLevel = value; }
         }
 
         public DateTime EntryDate
         {
-            get;
-            set;
+            get { return entryDate; }
+            set { entryDate = value; }
         }
 
         public DateTime ExitDate
         {
-            get;
-            set;
-        }
-
-        public string AhvNumber
-        {
-            get;
-            set;
+            get { return exitDate; }
+            set { exitDate = value; }
         }
 
         public string CompanyName
         {
-            get;
-            set;
+            get { return companyName; }
+            set { companyName = value; }
         }
 
         public string CompanyStreet
         {
-            get;
-            set;
+            get { return companyStreet; }
+            set { companyStreet = value; }
         }
 
         public string CompanyPlace
         {
-            get;
-            set;
+            get { return companyPlace; }
+            set { companyPlace = value; }
         }
 
         public string CompanyPostcode
         {
-            get;
-            set;
+            get { return companyPostcode; }
+            set { companyPostcode = value; }
         }
         public string PhoneNumberWork
         {

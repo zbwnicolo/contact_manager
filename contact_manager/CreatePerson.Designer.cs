@@ -59,31 +59,31 @@ namespace contact_manager
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.TxtEmployeeCreatCompProcent = new System.Windows.Forms.TextBox();
+            this.TxtPersonCreatCompProcent = new System.Windows.Forms.TextBox();
             this.TxtPersonCreatCompName = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.TxtEmployeeCreatCompDepart = new System.Windows.Forms.TextBox();
+            this.TxtPersonCreatCompDepart = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.TxtEmployeeCreatCompExitDate = new System.Windows.Forms.TextBox();
+            this.TxtPersonCreatCompExitDate = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.TxtEmployeeCreatCompEntryDate = new System.Windows.Forms.TextBox();
+            this.TxtPersonCreatCompEntryDate = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.TxtEmployeeCreatCompEmployNr = new System.Windows.Forms.TextBox();
+            this.TxtPersonCreatCompEmployNr = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.TxtEmployeeCreatCompEmplLvl = new System.Windows.Forms.TextBox();
+            this.TxtPersonCreatCompEmplLvl = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.TxtEmployeeCreatCompRole = new System.Windows.Forms.TextBox();
+            this.TxtPersonCreatCompRole = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.TxtEmployeeCreatCompFax = new System.Windows.Forms.TextBox();
+            this.TxtPersonCreatCompFax = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.TxtEmployeeCreatCompTel = new System.Windows.Forms.TextBox();
+            this.TxtPersonCreatCompTel = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
-            this.TxtEmployeeCreatCompZipCode = new System.Windows.Forms.TextBox();
+            this.TxtPersonCreatCompZipCode = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
-            this.TxtEmployeeCreatCompRes = new System.Windows.Forms.TextBox();
+            this.TxtPersonCreatCompRes = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
-            this.TxtEmployeeCreatCompAddr = new System.Windows.Forms.TextBox();
+            this.TxtPersonCreatCompAddr = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.CmdCreatPersonAbort = new System.Windows.Forms.Button();
@@ -354,12 +354,12 @@ namespace contact_manager
             this.label16.TabIndex = 167;
             this.label16.Text = "AHV-Nummer";
             // 
-            // TxtEmployeeCreatCompProcent
+            // TxtPersonCreatCompProcent
             // 
-            this.TxtEmployeeCreatCompProcent.Location = new System.Drawing.Point(757, 112);
-            this.TxtEmployeeCreatCompProcent.Name = "TxtEmployeeCreatCompProcent";
-            this.TxtEmployeeCreatCompProcent.Size = new System.Drawing.Size(137, 20);
-            this.TxtEmployeeCreatCompProcent.TabIndex = 22;
+            this.TxtPersonCreatCompProcent.Location = new System.Drawing.Point(757, 112);
+            this.TxtPersonCreatCompProcent.Name = "TxtPersonCreatCompProcent";
+            this.TxtPersonCreatCompProcent.Size = new System.Drawing.Size(137, 20);
+            this.TxtPersonCreatCompProcent.TabIndex = 22;
             // 
             // TxtPersonCreatCompName
             // 
@@ -386,12 +386,12 @@ namespace contact_manager
             this.label18.TabIndex = 216;
             this.label18.Text = "Abteilung";
             // 
-            // TxtEmployeeCreatCompDepart
+            // TxtPersonCreatCompDepart
             // 
-            this.TxtEmployeeCreatCompDepart.Location = new System.Drawing.Point(757, 61);
-            this.TxtEmployeeCreatCompDepart.Name = "TxtEmployeeCreatCompDepart";
-            this.TxtEmployeeCreatCompDepart.Size = new System.Drawing.Size(137, 20);
-            this.TxtEmployeeCreatCompDepart.TabIndex = 21;
+            this.TxtPersonCreatCompDepart.Location = new System.Drawing.Point(757, 61);
+            this.TxtPersonCreatCompDepart.Name = "TxtPersonCreatCompDepart";
+            this.TxtPersonCreatCompDepart.Size = new System.Drawing.Size(137, 20);
+            this.TxtPersonCreatCompDepart.TabIndex = 21;
             // 
             // label19
             // 
@@ -402,12 +402,12 @@ namespace contact_manager
             this.label19.TabIndex = 215;
             this.label19.Text = "Austrittsdatum";
             // 
-            // TxtEmployeeCreatCompExitDate
+            // TxtPersonCreatCompExitDate
             // 
-            this.TxtEmployeeCreatCompExitDate.Location = new System.Drawing.Point(757, 386);
-            this.TxtEmployeeCreatCompExitDate.Name = "TxtEmployeeCreatCompExitDate";
-            this.TxtEmployeeCreatCompExitDate.Size = new System.Drawing.Size(137, 20);
-            this.TxtEmployeeCreatCompExitDate.TabIndex = 27;
+            this.TxtPersonCreatCompExitDate.Location = new System.Drawing.Point(757, 386);
+            this.TxtPersonCreatCompExitDate.Name = "TxtPersonCreatCompExitDate";
+            this.TxtPersonCreatCompExitDate.Size = new System.Drawing.Size(137, 20);
+            this.TxtPersonCreatCompExitDate.TabIndex = 27;
             // 
             // label20
             // 
@@ -418,12 +418,12 @@ namespace contact_manager
             this.label20.TabIndex = 214;
             this.label20.Text = "Eintrittsdatum";
             // 
-            // TxtEmployeeCreatCompEntryDate
+            // TxtPersonCreatCompEntryDate
             // 
-            this.TxtEmployeeCreatCompEntryDate.Location = new System.Drawing.Point(757, 327);
-            this.TxtEmployeeCreatCompEntryDate.Name = "TxtEmployeeCreatCompEntryDate";
-            this.TxtEmployeeCreatCompEntryDate.Size = new System.Drawing.Size(137, 20);
-            this.TxtEmployeeCreatCompEntryDate.TabIndex = 26;
+            this.TxtPersonCreatCompEntryDate.Location = new System.Drawing.Point(757, 327);
+            this.TxtPersonCreatCompEntryDate.Name = "TxtPersonCreatCompEntryDate";
+            this.TxtPersonCreatCompEntryDate.Size = new System.Drawing.Size(137, 20);
+            this.TxtPersonCreatCompEntryDate.TabIndex = 26;
             // 
             // label21
             // 
@@ -434,12 +434,12 @@ namespace contact_manager
             this.label21.TabIndex = 213;
             this.label21.Text = "Mitarbeiternummer";
             // 
-            // TxtEmployeeCreatCompEmployNr
+            // TxtPersonCreatCompEmployNr
             // 
-            this.TxtEmployeeCreatCompEmployNr.Location = new System.Drawing.Point(757, 269);
-            this.TxtEmployeeCreatCompEmployNr.Name = "TxtEmployeeCreatCompEmployNr";
-            this.TxtEmployeeCreatCompEmployNr.Size = new System.Drawing.Size(137, 20);
-            this.TxtEmployeeCreatCompEmployNr.TabIndex = 25;
+            this.TxtPersonCreatCompEmployNr.Location = new System.Drawing.Point(757, 269);
+            this.TxtPersonCreatCompEmployNr.Name = "TxtPersonCreatCompEmployNr";
+            this.TxtPersonCreatCompEmployNr.Size = new System.Drawing.Size(137, 20);
+            this.TxtPersonCreatCompEmployNr.TabIndex = 25;
             // 
             // label22
             // 
@@ -450,12 +450,12 @@ namespace contact_manager
             this.label22.TabIndex = 212;
             this.label22.Text = "Kaderstufe";
             // 
-            // TxtEmployeeCreatCompEmplLvl
+            // TxtPersonCreatCompEmplLvl
             // 
-            this.TxtEmployeeCreatCompEmplLvl.Location = new System.Drawing.Point(757, 213);
-            this.TxtEmployeeCreatCompEmplLvl.Name = "TxtEmployeeCreatCompEmplLvl";
-            this.TxtEmployeeCreatCompEmplLvl.Size = new System.Drawing.Size(137, 20);
-            this.TxtEmployeeCreatCompEmplLvl.TabIndex = 24;
+            this.TxtPersonCreatCompEmplLvl.Location = new System.Drawing.Point(757, 213);
+            this.TxtPersonCreatCompEmplLvl.Name = "TxtPersonCreatCompEmplLvl";
+            this.TxtPersonCreatCompEmplLvl.Size = new System.Drawing.Size(137, 20);
+            this.TxtPersonCreatCompEmplLvl.TabIndex = 24;
             // 
             // label23
             // 
@@ -466,12 +466,12 @@ namespace contact_manager
             this.label23.TabIndex = 211;
             this.label23.Text = "Rolle (Tätigkeitsbezeichnung";
             // 
-            // TxtEmployeeCreatCompRole
+            // TxtPersonCreatCompRole
             // 
-            this.TxtEmployeeCreatCompRole.Location = new System.Drawing.Point(757, 159);
-            this.TxtEmployeeCreatCompRole.Name = "TxtEmployeeCreatCompRole";
-            this.TxtEmployeeCreatCompRole.Size = new System.Drawing.Size(137, 20);
-            this.TxtEmployeeCreatCompRole.TabIndex = 23;
+            this.TxtPersonCreatCompRole.Location = new System.Drawing.Point(757, 159);
+            this.TxtPersonCreatCompRole.Name = "TxtPersonCreatCompRole";
+            this.TxtPersonCreatCompRole.Size = new System.Drawing.Size(137, 20);
+            this.TxtPersonCreatCompRole.TabIndex = 23;
             // 
             // label24
             // 
@@ -482,12 +482,12 @@ namespace contact_manager
             this.label24.TabIndex = 210;
             this.label24.Text = "Fax-Nummer (Unternehmen)";
             // 
-            // TxtEmployeeCreatCompFax
+            // TxtPersonCreatCompFax
             // 
-            this.TxtEmployeeCreatCompFax.Location = new System.Drawing.Point(582, 327);
-            this.TxtEmployeeCreatCompFax.Name = "TxtEmployeeCreatCompFax";
-            this.TxtEmployeeCreatCompFax.Size = new System.Drawing.Size(137, 20);
-            this.TxtEmployeeCreatCompFax.TabIndex = 20;
+            this.TxtPersonCreatCompFax.Location = new System.Drawing.Point(582, 327);
+            this.TxtPersonCreatCompFax.Name = "TxtPersonCreatCompFax";
+            this.TxtPersonCreatCompFax.Size = new System.Drawing.Size(137, 20);
+            this.TxtPersonCreatCompFax.TabIndex = 20;
             // 
             // label25
             // 
@@ -498,12 +498,12 @@ namespace contact_manager
             this.label25.TabIndex = 209;
             this.label25.Text = "Telefonnummer (Unternehmen)";
             // 
-            // TxtEmployeeCreatCompTel
+            // TxtPersonCreatCompTel
             // 
-            this.TxtEmployeeCreatCompTel.Location = new System.Drawing.Point(582, 269);
-            this.TxtEmployeeCreatCompTel.Name = "TxtEmployeeCreatCompTel";
-            this.TxtEmployeeCreatCompTel.Size = new System.Drawing.Size(137, 20);
-            this.TxtEmployeeCreatCompTel.TabIndex = 19;
+            this.TxtPersonCreatCompTel.Location = new System.Drawing.Point(582, 269);
+            this.TxtPersonCreatCompTel.Name = "TxtPersonCreatCompTel";
+            this.TxtPersonCreatCompTel.Size = new System.Drawing.Size(137, 20);
+            this.TxtPersonCreatCompTel.TabIndex = 19;
             // 
             // label26
             // 
@@ -514,12 +514,12 @@ namespace contact_manager
             this.label26.TabIndex = 208;
             this.label26.Text = "PLZ (Unternehmen)";
             // 
-            // TxtEmployeeCreatCompZipCode
+            // TxtPersonCreatCompZipCode
             // 
-            this.TxtEmployeeCreatCompZipCode.Location = new System.Drawing.Point(582, 213);
-            this.TxtEmployeeCreatCompZipCode.Name = "TxtEmployeeCreatCompZipCode";
-            this.TxtEmployeeCreatCompZipCode.Size = new System.Drawing.Size(137, 20);
-            this.TxtEmployeeCreatCompZipCode.TabIndex = 18;
+            this.TxtPersonCreatCompZipCode.Location = new System.Drawing.Point(582, 213);
+            this.TxtPersonCreatCompZipCode.Name = "TxtPersonCreatCompZipCode";
+            this.TxtPersonCreatCompZipCode.Size = new System.Drawing.Size(137, 20);
+            this.TxtPersonCreatCompZipCode.TabIndex = 18;
             // 
             // label27
             // 
@@ -530,12 +530,12 @@ namespace contact_manager
             this.label27.TabIndex = 207;
             this.label27.Text = "Ort (Unternehmen)";
             // 
-            // TxtEmployeeCreatCompRes
+            // TxtPersonCreatCompRes
             // 
-            this.TxtEmployeeCreatCompRes.Location = new System.Drawing.Point(582, 159);
-            this.TxtEmployeeCreatCompRes.Name = "TxtEmployeeCreatCompRes";
-            this.TxtEmployeeCreatCompRes.Size = new System.Drawing.Size(137, 20);
-            this.TxtEmployeeCreatCompRes.TabIndex = 17;
+            this.TxtPersonCreatCompRes.Location = new System.Drawing.Point(582, 159);
+            this.TxtPersonCreatCompRes.Name = "TxtPersonCreatCompRes";
+            this.TxtPersonCreatCompRes.Size = new System.Drawing.Size(137, 20);
+            this.TxtPersonCreatCompRes.TabIndex = 17;
             // 
             // label28
             // 
@@ -546,12 +546,12 @@ namespace contact_manager
             this.label28.TabIndex = 206;
             this.label28.Text = "Adresse (Unternehmen)";
             // 
-            // TxtEmployeeCreatCompAddr
+            // TxtPersonCreatCompAddr
             // 
-            this.TxtEmployeeCreatCompAddr.Location = new System.Drawing.Point(582, 112);
-            this.TxtEmployeeCreatCompAddr.Name = "TxtEmployeeCreatCompAddr";
-            this.TxtEmployeeCreatCompAddr.Size = new System.Drawing.Size(137, 20);
-            this.TxtEmployeeCreatCompAddr.TabIndex = 16;
+            this.TxtPersonCreatCompAddr.Location = new System.Drawing.Point(582, 112);
+            this.TxtPersonCreatCompAddr.Name = "TxtPersonCreatCompAddr";
+            this.TxtPersonCreatCompAddr.Size = new System.Drawing.Size(137, 20);
+            this.TxtPersonCreatCompAddr.TabIndex = 16;
             // 
             // label29
             // 
@@ -608,7 +608,7 @@ namespace contact_manager
             this.RadCreatPersonDeactiv.AutoSize = true;
             this.RadCreatPersonDeactiv.Location = new System.Drawing.Point(109, 49);
             this.RadCreatPersonDeactiv.Name = "RadCreatPersonDeactiv";
-            this.RadCreatPersonDeactiv.Size = new System.Drawing.Size(57, 17);
+            this.RadCreatPersonDeactiv.Size = new System.Drawing.Size(64, 20);
             this.RadCreatPersonDeactiv.TabIndex = 1;
             this.RadCreatPersonDeactiv.Text = "Inaktiv";
             this.RadCreatPersonDeactiv.UseVisualStyleBackColor = true;
@@ -619,7 +619,7 @@ namespace contact_manager
             this.RadCreatPersonActive.Checked = true;
             this.RadCreatPersonActive.Location = new System.Drawing.Point(6, 49);
             this.RadCreatPersonActive.Name = "RadCreatPersonActive";
-            this.RadCreatPersonActive.Size = new System.Drawing.Size(49, 17);
+            this.RadCreatPersonActive.Size = new System.Drawing.Size(56, 20);
             this.RadCreatPersonActive.TabIndex = 0;
             this.RadCreatPersonActive.TabStop = true;
             this.RadCreatPersonActive.Text = "Aktiv";
@@ -644,31 +644,31 @@ namespace contact_manager
             this.Controls.Add(this.GrbPersonStatus);
             this.Controls.Add(this.CmdCreatPersonAbort);
             this.Controls.Add(this.CmdCreatPersonSave);
-            this.Controls.Add(this.TxtEmployeeCreatCompProcent);
+            this.Controls.Add(this.TxtPersonCreatCompProcent);
             this.Controls.Add(this.TxtPersonCreatCompName);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.TxtEmployeeCreatCompDepart);
+            this.Controls.Add(this.TxtPersonCreatCompDepart);
             this.Controls.Add(this.label19);
-            this.Controls.Add(this.TxtEmployeeCreatCompExitDate);
+            this.Controls.Add(this.TxtPersonCreatCompExitDate);
             this.Controls.Add(this.label20);
-            this.Controls.Add(this.TxtEmployeeCreatCompEntryDate);
+            this.Controls.Add(this.TxtPersonCreatCompEntryDate);
             this.Controls.Add(this.label21);
-            this.Controls.Add(this.TxtEmployeeCreatCompEmployNr);
+            this.Controls.Add(this.TxtPersonCreatCompEmployNr);
             this.Controls.Add(this.label22);
-            this.Controls.Add(this.TxtEmployeeCreatCompEmplLvl);
+            this.Controls.Add(this.TxtPersonCreatCompEmplLvl);
             this.Controls.Add(this.label23);
-            this.Controls.Add(this.TxtEmployeeCreatCompRole);
+            this.Controls.Add(this.TxtPersonCreatCompRole);
             this.Controls.Add(this.label24);
-            this.Controls.Add(this.TxtEmployeeCreatCompFax);
+            this.Controls.Add(this.TxtPersonCreatCompFax);
             this.Controls.Add(this.label25);
-            this.Controls.Add(this.TxtEmployeeCreatCompTel);
+            this.Controls.Add(this.TxtPersonCreatCompTel);
             this.Controls.Add(this.label26);
-            this.Controls.Add(this.TxtEmployeeCreatCompZipCode);
+            this.Controls.Add(this.TxtPersonCreatCompZipCode);
             this.Controls.Add(this.label27);
-            this.Controls.Add(this.TxtEmployeeCreatCompRes);
+            this.Controls.Add(this.TxtPersonCreatCompRes);
             this.Controls.Add(this.label28);
-            this.Controls.Add(this.TxtEmployeeCreatCompAddr);
+            this.Controls.Add(this.TxtPersonCreatCompAddr);
             this.Controls.Add(this.label29);
             this.Controls.Add(this.label30);
             this.Controls.Add(this.label16);
@@ -727,31 +727,31 @@ namespace contact_manager
         public System.Windows.Forms.Label label11;
         public System.Windows.Forms.Label label10;
         public System.Windows.Forms.Label label16;
-        public System.Windows.Forms.TextBox TxtEmployeeCreatCompProcent;
+        public System.Windows.Forms.TextBox TxtPersonCreatCompProcent;
         public System.Windows.Forms.TextBox TxtPersonCreatCompName;
         public System.Windows.Forms.Label label17;
         public System.Windows.Forms.Label label18;
-        public System.Windows.Forms.TextBox TxtEmployeeCreatCompDepart;
+        public System.Windows.Forms.TextBox TxtPersonCreatCompDepart;
         public System.Windows.Forms.Label label19;
-        public System.Windows.Forms.TextBox TxtEmployeeCreatCompExitDate;
+        public System.Windows.Forms.TextBox TxtPersonCreatCompExitDate;
         public System.Windows.Forms.Label label20;
-        public System.Windows.Forms.TextBox TxtEmployeeCreatCompEntryDate;
+        public System.Windows.Forms.TextBox TxtPersonCreatCompEntryDate;
         public System.Windows.Forms.Label label21;
-        public System.Windows.Forms.TextBox TxtEmployeeCreatCompEmployNr;
+        public System.Windows.Forms.TextBox TxtPersonCreatCompEmployNr;
         public System.Windows.Forms.Label label22;
-        public System.Windows.Forms.TextBox TxtEmployeeCreatCompEmplLvl;
+        public System.Windows.Forms.TextBox TxtPersonCreatCompEmplLvl;
         public System.Windows.Forms.Label label23;
-        public System.Windows.Forms.TextBox TxtEmployeeCreatCompRole;
+        public System.Windows.Forms.TextBox TxtPersonCreatCompRole;
         public System.Windows.Forms.Label label24;
-        public System.Windows.Forms.TextBox TxtEmployeeCreatCompFax;
+        public System.Windows.Forms.TextBox TxtPersonCreatCompFax;
         public System.Windows.Forms.Label label25;
-        public System.Windows.Forms.TextBox TxtEmployeeCreatCompTel;
+        public System.Windows.Forms.TextBox TxtPersonCreatCompTel;
         public System.Windows.Forms.Label label26;
-        public System.Windows.Forms.TextBox TxtEmployeeCreatCompZipCode;
+        public System.Windows.Forms.TextBox TxtPersonCreatCompZipCode;
         public System.Windows.Forms.Label label27;
-        public System.Windows.Forms.TextBox TxtEmployeeCreatCompRes;
+        public System.Windows.Forms.TextBox TxtPersonCreatCompRes;
         public System.Windows.Forms.Label label28;
-        public System.Windows.Forms.TextBox TxtEmployeeCreatCompAddr;
+        public System.Windows.Forms.TextBox TxtPersonCreatCompAddr;
         public System.Windows.Forms.Label label29;
         public System.Windows.Forms.Label label30;
         public System.Windows.Forms.Button CmdCreatPersonAbort;

@@ -61,10 +61,10 @@ namespace contact_manager
         //Method create new Person and add to file
         virtual public void addPerson(CreatePerson cp)
         {
-            StreamWriter sw = new StreamWriter("Person.txt", append: true);
-            Person p = new Person(cp);
-            sw.WriteLine(p);
-            sw.Close();
+            //StreamWriter sw = new StreamWriter("Person.txt", append: true);
+            //Person p = new Person(cp);
+            //sw.WriteLine(p);
+            //sw.Close();
         }
 
         //Method delete Person and remove from file and table
@@ -227,7 +227,7 @@ namespace contact_manager
         }
 
         //Method to read TXT file and turn data into Objects 
-        public static void TxtToObject()
+        virtual public void TxtToObject()
         {
             string line;
 
@@ -258,6 +258,7 @@ namespace contact_manager
                         Nationality = words[14],
                         AHVNumber = words[15],
                         Status = Convert.ToBoolean(words[16]),
+
                 });
                 }
 

@@ -15,7 +15,6 @@ namespace contact_manager
         public CreatePerson()
         {
             InitializeComponent();
-
             //Set default Value for Dropdown options
             CmbPersonCreatSalut.SelectedIndex = 1;
             CmbPersonCreatType.SelectedIndex = 1;
@@ -29,24 +28,30 @@ namespace contact_manager
                 case ("Mitarbeiter"):
                     Employee emp = new Employee(this);
                     emp.addPerson(this);
+                    Person.people.Clear();
+                    emp.TxtToObject();
+                    Dashboard.tbl.Clear();
+                    Dashboard.LoadPeople();
                     break;
 
                 case ("Kunde"):
                     Customer c = new Customer(this);
                     c.addPerson(this);
+                    Person.people.Clear();
+                    c.TxtToObject();
+                    Dashboard.tbl.Clear();
+                    Dashboard.LoadPeople();
                     break;
 
                 case ("Lernender"):
                     Apprentice a = new Apprentice(this);
                     a.addPerson(this);
+                    Person.people.Clear();
+                    a.TxtToObject();
+                    Dashboard.tbl.Clear();
+                    Dashboard.LoadPeople();
                     break;
             }
-
-            Person.people.Clear();
-            Person.TxtToObject();
-            Dashboard.tbl.Clear();
-            Dashboard.LoadPeople();
-
             this.Close();
         }
 

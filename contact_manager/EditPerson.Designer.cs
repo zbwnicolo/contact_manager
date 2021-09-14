@@ -30,36 +30,36 @@ namespace contact_manager
         private void InitializeComponent()
         {
             this.TxtInstanceID = new System.Windows.Forms.TextBox();
-            this.TxtEmployeeMgmtCompProcent = new System.Windows.Forms.TextBox();
+            this.TxtPersonMgmtCompProcent = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.RadPersonMgmtDeactiv = new System.Windows.Forms.RadioButton();
             this.RadPersonMgmtActive = new System.Windows.Forms.RadioButton();
-            this.TxtEmployeeMgmtCompName = new System.Windows.Forms.TextBox();
+            this.TxtPersonMgmtCompName = new System.Windows.Forms.TextBox();
             this.CmdPersonMgmtAbort = new System.Windows.Forms.Button();
             this.CmdPersonMgmtSave = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.TxtEmployeeMgmtCompDepart = new System.Windows.Forms.TextBox();
+            this.TxtPersonMgmtCompDepart = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.TxtEmployeeMgmtCompExitDate = new System.Windows.Forms.TextBox();
+            this.TxtPersonMgmtCompExitDate = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.TxtEmployeeMgmtCompEntryDate = new System.Windows.Forms.TextBox();
+            this.TxtPersonMgmtCompEntryDate = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.TxtEmployeeMgmtCompEmployNr = new System.Windows.Forms.TextBox();
+            this.TxtPersonMgmtCompEmployNr = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.TxtEmployeeMgmtCompEmplLvl = new System.Windows.Forms.TextBox();
+            this.TxtPersonMgmtCompEmplLvl = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.TxtEmployeeMgmtCompRole = new System.Windows.Forms.TextBox();
+            this.TxtPersonMgmtCompRole = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.TxtEmployeeMgmtCompFax = new System.Windows.Forms.TextBox();
+            this.TxtPersonMgmtCompFax = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.TxtPersonMgmtCompTel = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
-            this.TxtEmployeeMgmtCompZipCode = new System.Windows.Forms.TextBox();
+            this.TxtPersonMgmtCompZipCode = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
-            this.TxtEmployeeMgmtCompRes = new System.Windows.Forms.TextBox();
+            this.TxtPersonMgmtCompRes = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
-            this.TxtEmployeeMgmtCompAddr = new System.Windows.Forms.TextBox();
+            this.TxtPersonMgmtCompAddr = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.CmbPersonMgmtGend = new System.Windows.Forms.ComboBox();
@@ -106,12 +106,12 @@ namespace contact_manager
             this.TxtInstanceID.TabIndex = 194;
             this.TxtInstanceID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // TxtEmployeeMgmtCompProcent
+            // TxtPersonMgmtCompProcent
             // 
-            this.TxtEmployeeMgmtCompProcent.Location = new System.Drawing.Point(691, 118);
-            this.TxtEmployeeMgmtCompProcent.Name = "TxtEmployeeMgmtCompProcent";
-            this.TxtEmployeeMgmtCompProcent.Size = new System.Drawing.Size(137, 20);
-            this.TxtEmployeeMgmtCompProcent.TabIndex = 193;
+            this.TxtPersonMgmtCompProcent.Location = new System.Drawing.Point(691, 118);
+            this.TxtPersonMgmtCompProcent.Name = "TxtPersonMgmtCompProcent";
+            this.TxtPersonMgmtCompProcent.Size = new System.Drawing.Size(137, 20);
+            this.TxtPersonMgmtCompProcent.TabIndex = 193;
             // 
             // groupBox1
             // 
@@ -129,7 +129,7 @@ namespace contact_manager
             this.RadPersonMgmtDeactiv.AutoSize = true;
             this.RadPersonMgmtDeactiv.Location = new System.Drawing.Point(61, 45);
             this.RadPersonMgmtDeactiv.Name = "RadPersonMgmtDeactiv";
-            this.RadPersonMgmtDeactiv.Size = new System.Drawing.Size(76, 17);
+            this.RadPersonMgmtDeactiv.Size = new System.Drawing.Size(83, 20);
             this.RadPersonMgmtDeactiv.TabIndex = 71;
             this.RadPersonMgmtDeactiv.Text = "Deaktiviert";
             this.RadPersonMgmtDeactiv.UseVisualStyleBackColor = true;
@@ -140,18 +140,18 @@ namespace contact_manager
             this.RadPersonMgmtActive.Checked = true;
             this.RadPersonMgmtActive.Location = new System.Drawing.Point(6, 45);
             this.RadPersonMgmtActive.Name = "RadPersonMgmtActive";
-            this.RadPersonMgmtActive.Size = new System.Drawing.Size(49, 17);
+            this.RadPersonMgmtActive.Size = new System.Drawing.Size(56, 20);
             this.RadPersonMgmtActive.TabIndex = 70;
             this.RadPersonMgmtActive.TabStop = true;
             this.RadPersonMgmtActive.Text = "Aktiv";
             this.RadPersonMgmtActive.UseVisualStyleBackColor = true;
             // 
-            // TxtEmployeeMgmtCompName
+            // TxtPersonMgmtCompName
             // 
-            this.TxtEmployeeMgmtCompName.Location = new System.Drawing.Point(516, 67);
-            this.TxtEmployeeMgmtCompName.Name = "TxtEmployeeMgmtCompName";
-            this.TxtEmployeeMgmtCompName.Size = new System.Drawing.Size(137, 20);
-            this.TxtEmployeeMgmtCompName.TabIndex = 192;
+            this.TxtPersonMgmtCompName.Location = new System.Drawing.Point(516, 67);
+            this.TxtPersonMgmtCompName.Name = "TxtPersonMgmtCompName";
+            this.TxtPersonMgmtCompName.Size = new System.Drawing.Size(137, 20);
+            this.TxtPersonMgmtCompName.TabIndex = 192;
             // 
             // CmdPersonMgmtAbort
             // 
@@ -193,12 +193,12 @@ namespace contact_manager
             this.label17.TabIndex = 187;
             this.label17.Text = "Abteilung";
             // 
-            // TxtEmployeeMgmtCompDepart
+            // TxtPersonMgmtCompDepart
             // 
-            this.TxtEmployeeMgmtCompDepart.Location = new System.Drawing.Point(694, 67);
-            this.TxtEmployeeMgmtCompDepart.Name = "TxtEmployeeMgmtCompDepart";
-            this.TxtEmployeeMgmtCompDepart.Size = new System.Drawing.Size(137, 20);
-            this.TxtEmployeeMgmtCompDepart.TabIndex = 186;
+            this.TxtPersonMgmtCompDepart.Location = new System.Drawing.Point(694, 67);
+            this.TxtPersonMgmtCompDepart.Name = "TxtPersonMgmtCompDepart";
+            this.TxtPersonMgmtCompDepart.Size = new System.Drawing.Size(137, 20);
+            this.TxtPersonMgmtCompDepart.TabIndex = 186;
             // 
             // label18
             // 
@@ -209,12 +209,12 @@ namespace contact_manager
             this.label18.TabIndex = 185;
             this.label18.Text = "Austrittsdatum";
             // 
-            // TxtEmployeeMgmtCompExitDate
+            // TxtPersonMgmtCompExitDate
             // 
-            this.TxtEmployeeMgmtCompExitDate.Location = new System.Drawing.Point(691, 392);
-            this.TxtEmployeeMgmtCompExitDate.Name = "TxtEmployeeMgmtCompExitDate";
-            this.TxtEmployeeMgmtCompExitDate.Size = new System.Drawing.Size(137, 20);
-            this.TxtEmployeeMgmtCompExitDate.TabIndex = 184;
+            this.TxtPersonMgmtCompExitDate.Location = new System.Drawing.Point(691, 392);
+            this.TxtPersonMgmtCompExitDate.Name = "TxtPersonMgmtCompExitDate";
+            this.TxtPersonMgmtCompExitDate.Size = new System.Drawing.Size(137, 20);
+            this.TxtPersonMgmtCompExitDate.TabIndex = 184;
             // 
             // label19
             // 
@@ -225,12 +225,12 @@ namespace contact_manager
             this.label19.TabIndex = 183;
             this.label19.Text = "Eintrittsdatum";
             // 
-            // TxtEmployeeMgmtCompEntryDate
+            // TxtPersonMgmtCompEntryDate
             // 
-            this.TxtEmployeeMgmtCompEntryDate.Location = new System.Drawing.Point(691, 333);
-            this.TxtEmployeeMgmtCompEntryDate.Name = "TxtEmployeeMgmtCompEntryDate";
-            this.TxtEmployeeMgmtCompEntryDate.Size = new System.Drawing.Size(137, 20);
-            this.TxtEmployeeMgmtCompEntryDate.TabIndex = 182;
+            this.TxtPersonMgmtCompEntryDate.Location = new System.Drawing.Point(691, 333);
+            this.TxtPersonMgmtCompEntryDate.Name = "TxtPersonMgmtCompEntryDate";
+            this.TxtPersonMgmtCompEntryDate.Size = new System.Drawing.Size(137, 20);
+            this.TxtPersonMgmtCompEntryDate.TabIndex = 182;
             // 
             // label20
             // 
@@ -241,12 +241,12 @@ namespace contact_manager
             this.label20.TabIndex = 181;
             this.label20.Text = "Mitarbeiternummer";
             // 
-            // TxtEmployeeMgmtCompEmployNr
+            // TxtPersonMgmtCompEmployNr
             // 
-            this.TxtEmployeeMgmtCompEmployNr.Location = new System.Drawing.Point(691, 275);
-            this.TxtEmployeeMgmtCompEmployNr.Name = "TxtEmployeeMgmtCompEmployNr";
-            this.TxtEmployeeMgmtCompEmployNr.Size = new System.Drawing.Size(137, 20);
-            this.TxtEmployeeMgmtCompEmployNr.TabIndex = 180;
+            this.TxtPersonMgmtCompEmployNr.Location = new System.Drawing.Point(691, 275);
+            this.TxtPersonMgmtCompEmployNr.Name = "TxtPersonMgmtCompEmployNr";
+            this.TxtPersonMgmtCompEmployNr.Size = new System.Drawing.Size(137, 20);
+            this.TxtPersonMgmtCompEmployNr.TabIndex = 180;
             // 
             // label21
             // 
@@ -257,12 +257,12 @@ namespace contact_manager
             this.label21.TabIndex = 179;
             this.label21.Text = "Kaderstufe";
             // 
-            // TxtEmployeeMgmtCompEmplLvl
+            // TxtPersonMgmtCompEmplLvl
             // 
-            this.TxtEmployeeMgmtCompEmplLvl.Location = new System.Drawing.Point(691, 219);
-            this.TxtEmployeeMgmtCompEmplLvl.Name = "TxtEmployeeMgmtCompEmplLvl";
-            this.TxtEmployeeMgmtCompEmplLvl.Size = new System.Drawing.Size(137, 20);
-            this.TxtEmployeeMgmtCompEmplLvl.TabIndex = 178;
+            this.TxtPersonMgmtCompEmplLvl.Location = new System.Drawing.Point(691, 219);
+            this.TxtPersonMgmtCompEmplLvl.Name = "TxtPersonMgmtCompEmplLvl";
+            this.TxtPersonMgmtCompEmplLvl.Size = new System.Drawing.Size(137, 20);
+            this.TxtPersonMgmtCompEmplLvl.TabIndex = 178;
             // 
             // label22
             // 
@@ -273,12 +273,12 @@ namespace contact_manager
             this.label22.TabIndex = 177;
             this.label22.Text = "Rolle (Tätigkeitsbezeichnung";
             // 
-            // TxtEmployeeMgmtCompRole
+            // TxtPersonMgmtCompRole
             // 
-            this.TxtEmployeeMgmtCompRole.Location = new System.Drawing.Point(691, 165);
-            this.TxtEmployeeMgmtCompRole.Name = "TxtEmployeeMgmtCompRole";
-            this.TxtEmployeeMgmtCompRole.Size = new System.Drawing.Size(137, 20);
-            this.TxtEmployeeMgmtCompRole.TabIndex = 176;
+            this.TxtPersonMgmtCompRole.Location = new System.Drawing.Point(691, 165);
+            this.TxtPersonMgmtCompRole.Name = "TxtPersonMgmtCompRole";
+            this.TxtPersonMgmtCompRole.Size = new System.Drawing.Size(137, 20);
+            this.TxtPersonMgmtCompRole.TabIndex = 176;
             // 
             // label24
             // 
@@ -289,12 +289,12 @@ namespace contact_manager
             this.label24.TabIndex = 175;
             this.label24.Text = "Fax-Nummer (Unternehmen)";
             // 
-            // TxtEmployeeMgmtCompFax
+            // TxtPersonMgmtCompFax
             // 
-            this.TxtEmployeeMgmtCompFax.Location = new System.Drawing.Point(516, 333);
-            this.TxtEmployeeMgmtCompFax.Name = "TxtEmployeeMgmtCompFax";
-            this.TxtEmployeeMgmtCompFax.Size = new System.Drawing.Size(137, 20);
-            this.TxtEmployeeMgmtCompFax.TabIndex = 174;
+            this.TxtPersonMgmtCompFax.Location = new System.Drawing.Point(516, 333);
+            this.TxtPersonMgmtCompFax.Name = "TxtPersonMgmtCompFax";
+            this.TxtPersonMgmtCompFax.Size = new System.Drawing.Size(137, 20);
+            this.TxtPersonMgmtCompFax.TabIndex = 174;
             // 
             // label25
             // 
@@ -321,12 +321,12 @@ namespace contact_manager
             this.label26.TabIndex = 169;
             this.label26.Text = "PLZ (Unternehmen)";
             // 
-            // TxtEmployeeMgmtCompZipCode
+            // TxtPersonMgmtCompZipCode
             // 
-            this.TxtEmployeeMgmtCompZipCode.Location = new System.Drawing.Point(516, 219);
-            this.TxtEmployeeMgmtCompZipCode.Name = "TxtEmployeeMgmtCompZipCode";
-            this.TxtEmployeeMgmtCompZipCode.Size = new System.Drawing.Size(137, 20);
-            this.TxtEmployeeMgmtCompZipCode.TabIndex = 168;
+            this.TxtPersonMgmtCompZipCode.Location = new System.Drawing.Point(516, 219);
+            this.TxtPersonMgmtCompZipCode.Name = "TxtPersonMgmtCompZipCode";
+            this.TxtPersonMgmtCompZipCode.Size = new System.Drawing.Size(137, 20);
+            this.TxtPersonMgmtCompZipCode.TabIndex = 168;
             // 
             // label27
             // 
@@ -337,12 +337,12 @@ namespace contact_manager
             this.label27.TabIndex = 166;
             this.label27.Text = "Ort (Unternehmen)";
             // 
-            // TxtEmployeeMgmtCompRes
+            // TxtPersonMgmtCompRes
             // 
-            this.TxtEmployeeMgmtCompRes.Location = new System.Drawing.Point(516, 165);
-            this.TxtEmployeeMgmtCompRes.Name = "TxtEmployeeMgmtCompRes";
-            this.TxtEmployeeMgmtCompRes.Size = new System.Drawing.Size(137, 20);
-            this.TxtEmployeeMgmtCompRes.TabIndex = 165;
+            this.TxtPersonMgmtCompRes.Location = new System.Drawing.Point(516, 165);
+            this.TxtPersonMgmtCompRes.Name = "TxtPersonMgmtCompRes";
+            this.TxtPersonMgmtCompRes.Size = new System.Drawing.Size(137, 20);
+            this.TxtPersonMgmtCompRes.TabIndex = 165;
             // 
             // label28
             // 
@@ -353,12 +353,12 @@ namespace contact_manager
             this.label28.TabIndex = 163;
             this.label28.Text = "Adresse (Unternehmen)";
             // 
-            // TxtEmployeeMgmtCompAddr
+            // TxtPersonMgmtCompAddr
             // 
-            this.TxtEmployeeMgmtCompAddr.Location = new System.Drawing.Point(516, 118);
-            this.TxtEmployeeMgmtCompAddr.Name = "TxtEmployeeMgmtCompAddr";
-            this.TxtEmployeeMgmtCompAddr.Size = new System.Drawing.Size(137, 20);
-            this.TxtEmployeeMgmtCompAddr.TabIndex = 162;
+            this.TxtPersonMgmtCompAddr.Location = new System.Drawing.Point(516, 118);
+            this.TxtPersonMgmtCompAddr.Name = "TxtPersonMgmtCompAddr";
+            this.TxtPersonMgmtCompAddr.Size = new System.Drawing.Size(137, 20);
+            this.TxtPersonMgmtCompAddr.TabIndex = 162;
             // 
             // label29
             // 
@@ -657,34 +657,34 @@ namespace contact_manager
             this.Controls.Add(this.label23);
             this.Controls.Add(this.CmbPersonMgmtType);
             this.Controls.Add(this.TxtInstanceID);
-            this.Controls.Add(this.TxtEmployeeMgmtCompProcent);
+            this.Controls.Add(this.TxtPersonMgmtCompProcent);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.TxtEmployeeMgmtCompName);
+            this.Controls.Add(this.TxtPersonMgmtCompName);
             this.Controls.Add(this.CmdPersonMgmtAbort);
             this.Controls.Add(this.CmdPersonMgmtSave);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.TxtEmployeeMgmtCompDepart);
+            this.Controls.Add(this.TxtPersonMgmtCompDepart);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.TxtEmployeeMgmtCompExitDate);
+            this.Controls.Add(this.TxtPersonMgmtCompExitDate);
             this.Controls.Add(this.label19);
-            this.Controls.Add(this.TxtEmployeeMgmtCompEntryDate);
+            this.Controls.Add(this.TxtPersonMgmtCompEntryDate);
             this.Controls.Add(this.label20);
-            this.Controls.Add(this.TxtEmployeeMgmtCompEmployNr);
+            this.Controls.Add(this.TxtPersonMgmtCompEmployNr);
             this.Controls.Add(this.label21);
-            this.Controls.Add(this.TxtEmployeeMgmtCompEmplLvl);
+            this.Controls.Add(this.TxtPersonMgmtCompEmplLvl);
             this.Controls.Add(this.label22);
-            this.Controls.Add(this.TxtEmployeeMgmtCompRole);
+            this.Controls.Add(this.TxtPersonMgmtCompRole);
             this.Controls.Add(this.label24);
-            this.Controls.Add(this.TxtEmployeeMgmtCompFax);
+            this.Controls.Add(this.TxtPersonMgmtCompFax);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.TxtPersonMgmtCompTel);
             this.Controls.Add(this.label26);
-            this.Controls.Add(this.TxtEmployeeMgmtCompZipCode);
+            this.Controls.Add(this.TxtPersonMgmtCompZipCode);
             this.Controls.Add(this.label27);
-            this.Controls.Add(this.TxtEmployeeMgmtCompRes);
+            this.Controls.Add(this.TxtPersonMgmtCompRes);
             this.Controls.Add(this.label28);
-            this.Controls.Add(this.TxtEmployeeMgmtCompAddr);
+            this.Controls.Add(this.TxtPersonMgmtCompAddr);
             this.Controls.Add(this.label29);
             this.Controls.Add(this.label30);
             this.Controls.Add(this.CmbPersonMgmtGend);
@@ -717,7 +717,6 @@ namespace contact_manager
             this.Controls.Add(this.label1);
             this.Name = "EditPerson";
             this.Text = "EditPerson";
-            this.Load += new System.EventHandler(this.EditPerson_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -728,34 +727,34 @@ namespace contact_manager
         #endregion
 
         public System.Windows.Forms.TextBox TxtInstanceID;
-        public System.Windows.Forms.TextBox TxtEmployeeMgmtCompProcent;
+        public System.Windows.Forms.TextBox TxtPersonMgmtCompProcent;
         public System.Windows.Forms.GroupBox groupBox1;
-        public System.Windows.Forms.TextBox TxtEmployeeMgmtCompName;
+        public System.Windows.Forms.TextBox TxtPersonMgmtCompName;
         public System.Windows.Forms.Button CmdPersonMgmtAbort;
         public System.Windows.Forms.Button CmdPersonMgmtSave;
         public System.Windows.Forms.Label label16;
         public System.Windows.Forms.Label label17;
-        public System.Windows.Forms.TextBox TxtEmployeeMgmtCompDepart;
+        public System.Windows.Forms.TextBox TxtPersonMgmtCompDepart;
         public System.Windows.Forms.Label label18;
-        public System.Windows.Forms.TextBox TxtEmployeeMgmtCompExitDate;
+        public System.Windows.Forms.TextBox TxtPersonMgmtCompExitDate;
         public System.Windows.Forms.Label label19;
-        public System.Windows.Forms.TextBox TxtEmployeeMgmtCompEntryDate;
+        public System.Windows.Forms.TextBox TxtPersonMgmtCompEntryDate;
         public System.Windows.Forms.Label label20;
-        public System.Windows.Forms.TextBox TxtEmployeeMgmtCompEmployNr;
+        public System.Windows.Forms.TextBox TxtPersonMgmtCompEmployNr;
         public System.Windows.Forms.Label label21;
-        public System.Windows.Forms.TextBox TxtEmployeeMgmtCompEmplLvl;
+        public System.Windows.Forms.TextBox TxtPersonMgmtCompEmplLvl;
         public System.Windows.Forms.Label label22;
-        public System.Windows.Forms.TextBox TxtEmployeeMgmtCompRole;
+        public System.Windows.Forms.TextBox TxtPersonMgmtCompRole;
         public System.Windows.Forms.Label label24;
-        public System.Windows.Forms.TextBox TxtEmployeeMgmtCompFax;
+        public System.Windows.Forms.TextBox TxtPersonMgmtCompFax;
         public System.Windows.Forms.Label label25;
         public System.Windows.Forms.TextBox TxtPersonMgmtCompTel;
         public System.Windows.Forms.Label label26;
-        public System.Windows.Forms.TextBox TxtEmployeeMgmtCompZipCode;
+        public System.Windows.Forms.TextBox TxtPersonMgmtCompZipCode;
         public System.Windows.Forms.Label label27;
-        public System.Windows.Forms.TextBox TxtEmployeeMgmtCompRes;
+        public System.Windows.Forms.TextBox TxtPersonMgmtCompRes;
         public System.Windows.Forms.Label label28;
-        public System.Windows.Forms.TextBox TxtEmployeeMgmtCompAddr;
+        public System.Windows.Forms.TextBox TxtPersonMgmtCompAddr;
         public System.Windows.Forms.Label label29;
         public System.Windows.Forms.Label label30;
         public System.Windows.Forms.ComboBox CmbPersonMgmtGend;

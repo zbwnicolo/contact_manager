@@ -50,10 +50,5 @@ namespace contact_manager
         {
             this.Close();
         }
-
-        private void EditPerson_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
