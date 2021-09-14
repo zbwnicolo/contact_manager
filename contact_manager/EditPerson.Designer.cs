@@ -717,6 +717,7 @@ namespace contact_manager
             this.Controls.Add(this.label1);
             this.Name = "EditPerson";
             this.Text = "EditPerson";
+            this.Load += new System.EventHandler(this.EditPerson_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

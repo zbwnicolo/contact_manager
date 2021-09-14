@@ -195,6 +195,7 @@
             this.CmdComCustomer.TabIndex = 15;
             this.CmdComCustomer.Text = "Kommunikation";
             this.CmdComCustomer.UseVisualStyleBackColor = true;
+            this.CmdComCustomer.Click += new System.EventHandler(this.CmdComCustomer_Click);
             // 
             // CmbFilterCustomer
             // 

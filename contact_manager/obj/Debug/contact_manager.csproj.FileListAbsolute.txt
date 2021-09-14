@@ -91,3 +91,4 @@ C:\Users\joels\Documents\GitHub\contact_manager\contact_manager\obj\Debug\contac
 C:\Users\Arlind\Desktop\school\ContactManager\contact_manager\contact_manager\obj\Debug\contact_manager.CommunicationLog.resources
 C:\Users\Arlind\Desktop\school\ContactManager\contact_manager\contact_manager\obj\Debug\contact_manager.CreatePerson.resources
 C:\Users\Arlind\Desktop\school\ContactManager\contact_manager\contact_manager\obj\Debug\contact_manager.EditPerson.resources
+C:\Users\NicoloBächler\Documents\GitHub\contact_manager\contact_manager\obj\Debug\contact_manager.EditPerson.resources

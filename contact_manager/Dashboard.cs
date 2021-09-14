@@ -112,5 +112,11 @@ namespace contact_manager
         {
             (DataGridEmployee.DataSource as DataTable).DefaultView.RowFilter = string.Format("Vorname LIKE '%{0}%' OR Nachname LIKE '%{0}%'", TxtSearchEmployee.Text);
         }
+
+        private void CmdComCustomer_Click(object sender, EventArgs e)
+        {
+            CommunicationLog File = new CommunicationLog(this);
+            File.Show();
+        }
     }
 }

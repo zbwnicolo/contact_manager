@@ -35,18 +35,19 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.TxtInstanceID = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.DgvLogOutput = new System.Windows.Forms.DataGridView();
-            this.DgvTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DgvInput = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DtpLog = new System.Windows.Forms.DateTimePicker();
             this.CmdLogSend = new System.Windows.Forms.Button();
             this.TxtLogInput = new System.Windows.Forms.TextBox();
             this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.DgvTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DgvInput = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvLogOutput)).BeginInit();
             this.SuspendLayout();
@@ -54,6 +55,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.TxtInstanceID);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
@@ -63,6 +65,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(181, 639);
             this.panel1.TabIndex = 15;
+            // 
+            // TxtInstanceID
+            // 
+            this.TxtInstanceID.Location = new System.Drawing.Point(13, 595);
+            this.TxtInstanceID.Name = "TxtInstanceID";
+            this.TxtInstanceID.ReadOnly = true;
+            this.TxtInstanceID.Size = new System.Drawing.Size(154, 20);
+            this.TxtInstanceID.TabIndex = 4;
             // 
             // button3
             // 
@@ -138,17 +148,6 @@
             this.DgvLogOutput.Size = new System.Drawing.Size(966, 497);
             this.DgvLogOutput.TabIndex = 14;
             // 
-            // DgvTime
-            // 
-            this.DgvTime.FillWeight = 20F;
-            this.DgvTime.HeaderText = "Zeit";
-            this.DgvTime.Name = "DgvTime";
-            // 
-            // DgvInput
-            // 
-            this.DgvInput.HeaderText = "Input";
-            this.DgvInput.Name = "DgvInput";
-            // 
             // DtpLog
             // 
             this.DtpLog.Location = new System.Drawing.Point(187, 503);
@@ -164,6 +163,7 @@
             this.CmdLogSend.TabIndex = 12;
             this.CmdLogSend.Text = "Senden";
             this.CmdLogSend.UseVisualStyleBackColor = true;
+            this.CmdLogSend.Click += new System.EventHandler(this.CmdLogSend_Click_1);
             // 
             // TxtLogInput
             // 
@@ -172,6 +172,17 @@
             this.TxtLogInput.Name = "TxtLogInput";
             this.TxtLogInput.Size = new System.Drawing.Size(861, 95);
             this.TxtLogInput.TabIndex = 11;
+            // 
+            // DgvTime
+            // 
+            this.DgvTime.FillWeight = 25F;
+            this.DgvTime.HeaderText = "Zeit";
+            this.DgvTime.Name = "DgvTime";
+            // 
+            // DgvInput
+            // 
+            this.DgvInput.HeaderText = "Input";
+            this.DgvInput.Name = "DgvInput";
             // 
             // CommunicationLog
             // 
@@ -186,6 +197,7 @@
             this.Name = "CommunicationLog";
             this.Text = "CommunicationLog";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvLogOutput)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -201,11 +213,12 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.DataGridView DgvLogOutput;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DgvTime;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DgvInput;
         private System.Windows.Forms.DateTimePicker DtpLog;
         private System.Windows.Forms.Button CmdLogSend;
         private System.Windows.Forms.TextBox TxtLogInput;
         private System.Windows.Forms.Timer timer3;
+        private System.Windows.Forms.TextBox TxtInstanceID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DgvTime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DgvInput;
     }
 }
