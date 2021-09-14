@@ -1,1 +1,0 @@
-01d75a43-1667-42c9-b3d0-30d68af33f71,Kunde,Frau,Dr,Nicolo,Bächler,H14,9014,St. Gallen,,0787996787,12.09.2021 00:00:00,Männlich,,CH,,True,

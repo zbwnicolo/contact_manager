@@ -10,18 +10,17 @@ namespace contact_manager
     class Customer : Person
     {
         public string customerType;
+        public static List<Customer> customer = new List<Customer>();
 
 
-        public Customer(CreatePerson cp) : base()
+        public Customer(CreatePerson cp) : base(cp)
         {
-            this.CustomerID = Guid.NewGuid();
-            this.CustomerType = cp.TxtPersonCreatCompAddr.Text;
+            this.CustomerType = cp.TxtPersonCreatAddr.Text;
         }
         public Customer()
         {
 
         }
-        public Guid CustomerID { get; private set; }
         public string CustomerType
         {
             get { return customerType; }
@@ -29,7 +28,7 @@ namespace contact_manager
         }
         public override void addPerson(CreatePerson cp)
         {
-            StreamWriter sw = new StreamWriter("Person.txt", append: true);
+            StreamWriter sw = new StreamWriter("Customer.txt", append: true);
             Customer c = new Customer(cp);
             sw.WriteLine(c);
             sw.Close();
@@ -42,14 +41,31 @@ namespace contact_manager
             if (new FileInfo("Person.txt").Length != 0)
             {
                 // Read the file and display it line by line.
-                System.IO.StreamReader file = new System.IO.StreamReader("Person.txt");
+                System.IO.StreamReader file = new System.IO.StreamReader("Customer.txt");
                 while ((line = file.ReadLine()) != null)
                 {
                     string[] words = line.Split(',');
-                    Person.people.Add(new Customer
+                    Customer.customer.Add(new Customer
                     {
-                        CustomerID = Guid.Parse(words[0]),
-                        CustomerType = (words[29]),
+                        CustomerType = (words[0]),
+                        InstanceID = Guid.Parse(words[1]),
+                        Type = (words[2]),
+                        Salutation = words[3],
+                        Title = words[4],
+                        FirstName = words[5],
+                        LastName = words[6],
+                        Street = words[7],
+                        Postcode = words[8],
+                        Place = words[9],
+                        PhoneNumberPriv = words[10],
+                        PhoneNumberMobile = words[11],
+                        Birthday = Convert.ToDateTime(words[12]),
+                        Gender = words[13],
+                        Email = words[14],
+                        Nationality = words[15],
+                        AHVNumber = words[16],
+                        Status = Convert.ToBoolean(words[17]),
+
                     });
                 }
 

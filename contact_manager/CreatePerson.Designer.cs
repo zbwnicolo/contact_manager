@@ -65,9 +65,7 @@ namespace contact_manager
             this.label18 = new System.Windows.Forms.Label();
             this.TxtPersonCreatCompDepart = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.TxtPersonCreatCompExitDate = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.TxtPersonCreatCompEntryDate = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.TxtPersonCreatCompEmployNr = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
@@ -92,6 +90,8 @@ namespace contact_manager
             this.RadCreatPersonDeactiv = new System.Windows.Forms.RadioButton();
             this.RadCreatPersonActive = new System.Windows.Forms.RadioButton();
             this.TxtPersonCreatBirth = new System.Windows.Forms.DateTimePicker();
+            this.TxtPersonCreatCompEntryDate = new System.Windows.Forms.DateTimePicker();
+            this.TxtPersonCreatCompExitDate = new System.Windows.Forms.DateTimePicker();
             this.GrbPersonStatus.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -402,13 +402,6 @@ namespace contact_manager
             this.label19.TabIndex = 215;
             this.label19.Text = "Austrittsdatum";
             // 
-            // TxtPersonCreatCompExitDate
-            // 
-            this.TxtPersonCreatCompExitDate.Location = new System.Drawing.Point(757, 386);
-            this.TxtPersonCreatCompExitDate.Name = "TxtPersonCreatCompExitDate";
-            this.TxtPersonCreatCompExitDate.Size = new System.Drawing.Size(137, 20);
-            this.TxtPersonCreatCompExitDate.TabIndex = 27;
-            // 
             // label20
             // 
             this.label20.AutoSize = true;
@@ -417,13 +410,6 @@ namespace contact_manager
             this.label20.Size = new System.Drawing.Size(70, 13);
             this.label20.TabIndex = 214;
             this.label20.Text = "Eintrittsdatum";
-            // 
-            // TxtPersonCreatCompEntryDate
-            // 
-            this.TxtPersonCreatCompEntryDate.Location = new System.Drawing.Point(757, 327);
-            this.TxtPersonCreatCompEntryDate.Name = "TxtPersonCreatCompEntryDate";
-            this.TxtPersonCreatCompEntryDate.Size = new System.Drawing.Size(137, 20);
-            this.TxtPersonCreatCompEntryDate.TabIndex = 26;
             // 
             // label21
             // 
@@ -608,7 +594,7 @@ namespace contact_manager
             this.RadCreatPersonDeactiv.AutoSize = true;
             this.RadCreatPersonDeactiv.Location = new System.Drawing.Point(109, 49);
             this.RadCreatPersonDeactiv.Name = "RadCreatPersonDeactiv";
-            this.RadCreatPersonDeactiv.Size = new System.Drawing.Size(64, 20);
+            this.RadCreatPersonDeactiv.Size = new System.Drawing.Size(57, 17);
             this.RadCreatPersonDeactiv.TabIndex = 1;
             this.RadCreatPersonDeactiv.Text = "Inaktiv";
             this.RadCreatPersonDeactiv.UseVisualStyleBackColor = true;
@@ -619,7 +605,7 @@ namespace contact_manager
             this.RadCreatPersonActive.Checked = true;
             this.RadCreatPersonActive.Location = new System.Drawing.Point(6, 49);
             this.RadCreatPersonActive.Name = "RadCreatPersonActive";
-            this.RadCreatPersonActive.Size = new System.Drawing.Size(56, 20);
+            this.RadCreatPersonActive.Size = new System.Drawing.Size(49, 17);
             this.RadCreatPersonActive.TabIndex = 0;
             this.RadCreatPersonActive.TabStop = true;
             this.RadCreatPersonActive.Text = "Aktiv";
@@ -635,11 +621,31 @@ namespace contact_manager
             this.TxtPersonCreatBirth.TabIndex = 219;
             this.TxtPersonCreatBirth.Value = new System.DateTime(2021, 9, 12, 0, 0, 0, 0);
             // 
+            // TxtPersonCreatCompEntryDate
+            // 
+            this.TxtPersonCreatCompEntryDate.CustomFormat = "dd/MM/yyyy";
+            this.TxtPersonCreatCompEntryDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TxtPersonCreatCompEntryDate.Location = new System.Drawing.Point(757, 327);
+            this.TxtPersonCreatCompEntryDate.Name = "TxtPersonCreatCompEntryDate";
+            this.TxtPersonCreatCompEntryDate.Size = new System.Drawing.Size(137, 20);
+            this.TxtPersonCreatCompEntryDate.TabIndex = 220;
+            // 
+            // TxtPersonCreatCompExitDate
+            // 
+            this.TxtPersonCreatCompExitDate.CustomFormat = "dd/MM/yyyy";
+            this.TxtPersonCreatCompExitDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TxtPersonCreatCompExitDate.Location = new System.Drawing.Point(757, 387);
+            this.TxtPersonCreatCompExitDate.Name = "TxtPersonCreatCompExitDate";
+            this.TxtPersonCreatCompExitDate.Size = new System.Drawing.Size(137, 20);
+            this.TxtPersonCreatCompExitDate.TabIndex = 221;
+            // 
             // CreatePerson
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(949, 561);
+            this.Controls.Add(this.TxtPersonCreatCompExitDate);
+            this.Controls.Add(this.TxtPersonCreatCompEntryDate);
             this.Controls.Add(this.TxtPersonCreatBirth);
             this.Controls.Add(this.GrbPersonStatus);
             this.Controls.Add(this.CmdCreatPersonAbort);
@@ -650,9 +656,7 @@ namespace contact_manager
             this.Controls.Add(this.label18);
             this.Controls.Add(this.TxtPersonCreatCompDepart);
             this.Controls.Add(this.label19);
-            this.Controls.Add(this.TxtPersonCreatCompExitDate);
             this.Controls.Add(this.label20);
-            this.Controls.Add(this.TxtPersonCreatCompEntryDate);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.TxtPersonCreatCompEmployNr);
             this.Controls.Add(this.label22);
@@ -733,9 +737,7 @@ namespace contact_manager
         public System.Windows.Forms.Label label18;
         public System.Windows.Forms.TextBox TxtPersonCreatCompDepart;
         public System.Windows.Forms.Label label19;
-        public System.Windows.Forms.TextBox TxtPersonCreatCompExitDate;
         public System.Windows.Forms.Label label20;
-        public System.Windows.Forms.TextBox TxtPersonCreatCompEntryDate;
         public System.Windows.Forms.Label label21;
         public System.Windows.Forms.TextBox TxtPersonCreatCompEmployNr;
         public System.Windows.Forms.Label label22;
@@ -774,5 +776,7 @@ namespace contact_manager
         public System.Windows.Forms.RadioButton RadCreatPersonDeactiv;
         public System.Windows.Forms.RadioButton RadCreatPersonActive;
         public System.Windows.Forms.DateTimePicker TxtPersonCreatBirth;
+        public System.Windows.Forms.DateTimePicker TxtPersonCreatCompEntryDate;
+        public System.Windows.Forms.DateTimePicker TxtPersonCreatCompExitDate;
     }
 }

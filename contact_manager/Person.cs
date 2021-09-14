@@ -28,7 +28,7 @@ namespace contact_manager
         public string email;
         public string ahvNumber;
         public Boolean status;
-        public static List<Person> people = new List<Person>();
+        public static List<Person> employee = new List<Person>();
         private PropertyInfo[] _PropertyInfos = null;
 
         //Constructor class Person
@@ -73,17 +73,17 @@ namespace contact_manager
             string id = db.DataGridEmployee.SelectedRows[0].Cells[0].Value.ToString();
 
             //Loop through all Persons and compare IDs with selected ID
-            for (int i = people.Count - 1; i >= 0; i--)
+            for (int i = employee.Count - 1; i >= 0; i--)
             {
-                if (Convert.ToString(people[i].InstanceID) == id)
+                if (Convert.ToString(employee[i].InstanceID) == id)
                 {
-                    people.RemoveAt(i);
+                    employee.RemoveAt(i);
                 }
             }
 
             //write remaining Persons into file
             StreamWriter sw = new StreamWriter("Person.txt");
-            foreach (var person in people)
+            foreach (var person in employee)
             {
                 sw.WriteLine(person);
             }
@@ -97,7 +97,7 @@ namespace contact_manager
             string id = ep.TxtInstanceID.Text;
 
             //Find person with selected ID and assign new values to object
-            var obj = people.FirstOrDefault(x => Convert.ToString(x.InstanceID) == id);
+            var obj = employee.FirstOrDefault(x => Convert.ToString(x.InstanceID) == id);
 
             if (obj != null)
             {
@@ -120,14 +120,14 @@ namespace contact_manager
 
             //write new list of Persons into file
             StreamWriter sw = new StreamWriter("Person.txt");
-            foreach (var person in people)
+            foreach (var person in employee)
             {
                 sw.WriteLine(person);
             }
             sw.Close();
 
         }
-        public Guid InstanceID { get; private set; }
+        public Guid InstanceID { get; set; }
         public string Type
         {
             get { return type; }
@@ -239,7 +239,7 @@ namespace contact_manager
                 while ((line = file.ReadLine()) != null)
                 {
                     string[] words = line.Split(',');
-                    Person.people.Add(new Person
+                    Person.employee.Add(new Person
                     {
                         InstanceID = Guid.Parse(words[0]),
                         Type = (words[1]),

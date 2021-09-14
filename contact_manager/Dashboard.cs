@@ -77,20 +77,54 @@ namespace contact_manager
         //Load specified data of Persons into table
         public static DataTable LoadPeople()
         {
-            foreach (Person person in Person.people)
+            foreach (Employee employee in Employee.employee)
             {
-                tbl.Rows.Add(new object[] { 
-                    person.InstanceID,
-                    person.type,
-                    person.salutation,
-                    person.title,
-                    person.firstName,
-                    person.lastName,
-                    person.street,
-                    person.postcode,
-                    person.place,
-                    person.phoneNumberPriv,
-                    person.status
+                tbl.Rows.Add(new object[] {
+                    employee.InstanceID,
+                    employee.type,
+                    employee.salutation,
+                    employee.title,
+                    employee.firstName,
+                    employee.lastName,
+                    employee.street,
+                    employee.postcode,
+                    employee.place,
+                    employee.phoneNumberPriv,
+                    employee.status
+                });
+            }
+
+            foreach (Customer customer in Customer.customer)
+            {
+                tbl.Rows.Add(new object[] {
+                    customer.InstanceID,
+                    customer.type,
+                    customer.salutation,
+                    customer.title,
+                    customer.firstName,
+                    customer.lastName,
+                    customer.street,
+                    customer.postcode,
+                    customer.place,
+                    customer.phoneNumberPriv,
+                    customer.status
+                });
+            }
+
+            foreach (Apprentice apprentice in Apprentice.apprentice)
+            {
+                tbl.Rows.Add(new object[] {
+                    apprentice.InstanceID,
+                    apprentice.type,
+                    apprentice.salutation,
+                    apprentice.title,
+                    apprentice.firstName,
+                    apprentice.lastName,
+                    apprentice.street,
+                    apprentice.postcode,
+                    apprentice.place,
+                    apprentice.phoneNumberPriv,
+                    apprentice.status
                 });
             }
 

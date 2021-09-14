@@ -21,6 +21,7 @@ namespace contact_manager
         public string companyPostcode;
         public string phoneNumberWork;
         public string faxNumer;
+        public static List<Employee> employee = new List<Employee>();
 
         public Employee(CreatePerson cp) : base()
         {
@@ -46,7 +47,7 @@ namespace contact_manager
 
         public override void addPerson(CreatePerson cp)
         {
-            StreamWriter sw = new StreamWriter("Person.txt", append: true);
+            StreamWriter sw = new StreamWriter("Employee.txt", append: true);
             Employee e = new Employee(cp);
             sw.WriteLine(e);
             sw.Close();
@@ -59,11 +60,11 @@ namespace contact_manager
             if (new FileInfo("Person.txt").Length != 0)
             {
                 // Read the file and display it line by line.
-                System.IO.StreamReader file = new System.IO.StreamReader("Person.txt");
+                System.IO.StreamReader file = new System.IO.StreamReader("Employee.txt");
                 while ((line = file.ReadLine()) != null)
                 {
                     string[] words = line.Split(',');
-                    Employee.people.Add(new Employee
+                    Employee.employee.Add(new Employee
                     {
                         EmployeeID = Guid.Parse(words[0]),
                         Department = (words[17]),

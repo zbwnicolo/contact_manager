@@ -54,18 +54,6 @@
     <Compile Include="CommunicationLog.designer.cs">
       <DependentUpon>CommunicationLog.cs</DependentUpon>
     </Compile>
-    <Compile Include="CreateCustomer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CreateCustomer.designer.cs">
-      <DependentUpon>CreateCustomer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CreateEmployee.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CreateEmployee.Designer.cs">
-      <DependentUpon>CreateEmployee.cs</DependentUpon>
-    </Compile>
     <Compile Include="CreatePerson.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,18 +66,6 @@
     </Compile>
     <Compile Include="Dashboard.designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EditCustomer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EditCustomer.designer.cs">
-      <DependentUpon>EditCustomer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EditEmployee.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EditEmployee.designer.cs">
-      <DependentUpon>EditEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="EditPerson.cs">
       <SubType>Form</SubType>
@@ -104,23 +80,11 @@
     <EmbeddedResource Include="CommunicationLog.resx">
       <DependentUpon>CommunicationLog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CreateCustomer.resx">
-      <DependentUpon>CreateCustomer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CreateEmployee.resx">
-      <DependentUpon>CreateEmployee.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CreatePerson.resx">
       <DependentUpon>CreatePerson.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EditCustomer.resx">
-      <DependentUpon>EditCustomer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EditEmployee.resx">
-      <DependentUpon>EditEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditPerson.resx">
       <DependentUpon>EditPerson.cs</DependentUpon>

@@ -28,7 +28,7 @@ namespace contact_manager
                 case ("Mitarbeiter"):
                     Employee emp = new Employee(this);
                     emp.addPerson(this);
-                    Person.people.Clear();
+                    Employee.employee.Clear();
                     emp.TxtToObject();
                     Dashboard.tbl.Clear();
                     Dashboard.LoadPeople();
@@ -37,7 +37,7 @@ namespace contact_manager
                 case ("Kunde"):
                     Customer c = new Customer(this);
                     c.addPerson(this);
-                    Person.people.Clear();
+                    Customer.customer.Clear();
                     c.TxtToObject();
                     Dashboard.tbl.Clear();
                     Dashboard.LoadPeople();
@@ -46,7 +46,7 @@ namespace contact_manager
                 case ("Lernender"):
                     Apprentice a = new Apprentice(this);
                     a.addPerson(this);
-                    Person.people.Clear();
+                    Apprentice.apprentice.Clear();
                     a.TxtToObject();
                     Dashboard.tbl.Clear();
                     Dashboard.LoadPeople();

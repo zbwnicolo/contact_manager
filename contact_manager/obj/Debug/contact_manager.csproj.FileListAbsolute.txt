@@ -57,11 +57,7 @@ C:\Users\Arlind\Desktop\school\ContactManager\contact_manager\contact_manager\bi
 C:\Users\Arlind\Desktop\school\ContactManager\contact_manager\contact_manager\bin\Debug\contact_manager.exe
 C:\Users\Arlind\Desktop\school\ContactManager\contact_manager\contact_manager\bin\Debug\contact_manager.pdb
 C:\Users\Arlind\Desktop\school\ContactManager\contact_manager\contact_manager\obj\Debug\contact_manager.csproj.AssemblyReference.cache
-C:\Users\Arlind\Desktop\school\ContactManager\contact_manager\contact_manager\obj\Debug\contact_manager.CreateCustomer.resources
-C:\Users\Arlind\Desktop\school\ContactManager\contact_manager\contact_manager\obj\Debug\contact_manager.CreateEmployee.resources
 C:\Users\Arlind\Desktop\school\ContactManager\contact_manager\contact_manager\obj\Debug\contact_manager.Dashboard.resources
-C:\Users\Arlind\Desktop\school\ContactManager\contact_manager\contact_manager\obj\Debug\contact_manager.EditCustomer.resources
-C:\Users\Arlind\Desktop\school\ContactManager\contact_manager\contact_manager\obj\Debug\contact_manager.EditEmployee.resources
 C:\Users\Arlind\Desktop\school\ContactManager\contact_manager\contact_manager\obj\Debug\contact_manager.Properties.Resources.resources
 C:\Users\Arlind\Desktop\school\ContactManager\contact_manager\contact_manager\obj\Debug\contact_manager.csproj.GenerateResource.cache
 C:\Users\Arlind\Desktop\school\ContactManager\contact_manager\contact_manager\obj\Debug\contact_manager.csproj.CoreCompileInputs.cache

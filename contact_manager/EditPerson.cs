@@ -17,7 +17,7 @@ namespace contact_manager
             InitializeComponent();
 
             string id = db.DataGridEmployee.SelectedRows[0].Cells[0].Value + string.Empty;
-            var item = Person.people.FirstOrDefault(o => Convert.ToString(o.InstanceID) == id);
+            var item = Person.employee.FirstOrDefault(o => Convert.ToString(o.InstanceID) == id);
             TxtInstanceID.Text = id;
             Console.WriteLine(item);
 
