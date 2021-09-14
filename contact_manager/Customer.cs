@@ -38,7 +38,7 @@ namespace contact_manager
             string line;
 
             //Check if file is empty
-            if (new FileInfo("Person.txt").Length != 0)
+            if (new FileInfo("Customer.txt").Length != 0)
             {
                 // Read the file and display it line by line.
                 System.IO.StreamReader file = new System.IO.StreamReader("Customer.txt");

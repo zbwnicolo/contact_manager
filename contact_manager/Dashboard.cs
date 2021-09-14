@@ -19,8 +19,12 @@ namespace contact_manager
         public Dashboard()
         {
             InitializeComponent();
-            Person p = new Person();
-            p.TxtToObject();
+            Customer c = new Customer();
+            Employee e = new Employee();
+            Apprentice a = new Apprentice();
+            c.TxtToObject();
+            e.TxtToObject();
+            a.TxtToObject();
         }
 
         private void CmdCreateEmployee_Click(object sender, EventArgs e)

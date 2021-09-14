@@ -23,13 +23,12 @@ namespace contact_manager
         public string faxNumer;
         public static List<Employee> employee = new List<Employee>();
 
-        public Employee(CreatePerson cp) : base()
+        public Employee(CreatePerson cp) : base(cp)
         {
-            this.EmployeeID = Guid.NewGuid();
             this.Department = cp.TxtPersonCreatCompDepart.Text;
             this.Role = cp.TxtPersonCreatCompRole.Text;
-            this.EmploymentLevel = Convert.ToInt32(cp.TxtPersonCreatCompEmplLvl.Text);
-            this.ManagementLevel = cp.TxtPersonCreatCompProcent.Text;
+            this.EmploymentLevel = Convert.ToInt32(cp.TxtPersonCreatCompProcent.Text);
+            this.ManagementLevel = cp.TxtPersonCreatCompEmplLvl.Text;
             this.EntryDate = Convert.ToDateTime(cp.TxtPersonCreatCompEntryDate.Text);
             this.ExitDate = Convert.ToDateTime(cp.TxtPersonCreatCompExitDate.Text);
             this.AHVNumber = cp.TxtPersonCreatAhv.Text;
@@ -57,7 +56,7 @@ namespace contact_manager
             string line;
 
             //Check if file is empty
-            if (new FileInfo("Person.txt").Length != 0)
+            if (new FileInfo("Employee.txt").Length != 0)
             {
                 // Read the file and display it line by line.
                 System.IO.StreamReader file = new System.IO.StreamReader("Employee.txt");
@@ -66,26 +65,41 @@ namespace contact_manager
                     string[] words = line.Split(',');
                     Employee.employee.Add(new Employee
                     {
-                        EmployeeID = Guid.Parse(words[0]),
-                        Department = (words[17]),
-                        Role = (words[18]),
-                        EmploymentLevel = Convert.ToInt32((words[19])),
-                        ManagementLevel = (words[20]),
-                        EntryDate = Convert.ToDateTime((words[21])),
-                        ExitDate = Convert.ToDateTime((words[22])),
-                        CompanyName = (words[23]),
-                        CompanyStreet = (words[24]),
-                        CompanyPlace = (words[25]),
-                        CompanyPostcode = (words[26]),
-                        PhoneNumberWork = (words[27]),
-                        FaxNumber = (words[28]),
+                        Department = (words[0]),
+                        Role = (words[1]),
+                        EmploymentLevel = Convert.ToInt32((words[2])),
+                        ManagementLevel = (words[3]),
+                        EntryDate = Convert.ToDateTime((words[4])),
+                        ExitDate = Convert.ToDateTime((words[5])),
+                        CompanyName = (words[6]),
+                        CompanyStreet = (words[7]),
+                        CompanyPlace = (words[8]),
+                        CompanyPostcode = (words[9]),
+                        PhoneNumberWork = (words[10]),
+                        FaxNumber = (words[11]),
+                        InstanceID = Guid.Parse(words[12]),
+                        Type = (words[13]),
+                        Salutation = words[14],
+                        Title = words[15],
+                        FirstName = words[16],
+                        LastName = words[17],
+                        Street = words[18],
+                        Postcode = words[19],
+                        Place = words[20],
+                        PhoneNumberPriv = words[21],
+                        PhoneNumberMobile = words[22],
+                        Birthday = Convert.ToDateTime(words[23]),
+                        Gender = words[24],
+                        Email = words[25],
+                        Nationality = words[26],
+                        AHVNumber = words[27],
+                        Status = Convert.ToBoolean(words[28]),
                     });
                 }
 
                 file.Close();
             }
         }
-        public Guid EmployeeID { get; private set; }
         public string Department
         {
             get { return department; }
