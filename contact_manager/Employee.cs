@@ -27,7 +27,7 @@ namespace contact_manager
         {
             this.Department = cp.TxtPersonCreatCompDepart.Text;
             this.Role = cp.TxtPersonCreatCompRole.Text;
-            this.EmploymentLevel = Convert.ToInt32(cp.TxtPersonCreatCompProcent.Text);
+            this.EmploymentLevel = Convert.ToInt32(cp.NumPersonCreatCompProcent.Text);
             this.ManagementLevel = cp.TxtPersonCreatCompEmplLvl.Text;
             this.EntryDate = Convert.ToDateTime(cp.TxtPersonCreatCompEntryDate.Text);
             this.ExitDate = Convert.ToDateTime(cp.TxtPersonCreatCompExitDate.Text);
@@ -76,13 +76,24 @@ namespace contact_manager
                 obj.email = ep.TxtPersonMgmtMailPriv.Text;
                 obj.ahvNumber = ep.TxtPersonMgmtAhv.Text;
                 obj.status = ep.RadPersonMgmtActive.Checked;
+                obj.type = ep.CmbPersonMgmtType.Text;
+                
+                obj.companyName = ep.TxtPersonMgmtCompName.Text;
+                obj.companyStreet = ep.TxtPersonMgmtCompAddr.Text;
+                obj.companyPlace = ep.TxtPersonMgmtResid.Text;
+                obj.companyPostcode = ep.TxtPersonMgmtCompZipCode.Text;
+                obj.phoneNumberWork = ep.TxtPersonMgmtCompTel.Text;
+                obj.faxNumer = ep.TxtPersonMgmtCompFax.Text;
                 obj.department = ep.TxtPersonMgmtCompDepart.Text;
+                obj.employmentLevel = Convert.ToInt32(ep.NumPersonMgmtCompProcent.Value);
                 obj.role = ep.TxtPersonMgmtCompRole.Text;
-                obj.employmentLevel = Convert.ToInt32(ep.TxtPersonMgmtCompProcent.Text);
+                obj.managementLevel = ep.TxtPersonMgmtCompEmplLvl.Text;
+                obj.entryDate = Convert.ToDateTime(ep.DtpPersonMgmtCompEntryDate.Text);
+                obj.exitDate = Convert.ToDateTime(ep.DtpPersonMgmtCompExitDate.Text);
             }
 
             //write new list of Persons into file
-            StreamWriter sw = new StreamWriter("Person.txt");
+            StreamWriter sw = new StreamWriter("Employee.txt");
             foreach (var person in employee)
             {
                 sw.WriteLine(person);
@@ -104,7 +115,7 @@ namespace contact_manager
             }
 
             //write remaining Persons into file
-            StreamWriter sw = new StreamWriter("Person.txt");
+            StreamWriter sw = new StreamWriter("Employee.txt");
             foreach (var person in employee)
             {
                 sw.WriteLine(person);

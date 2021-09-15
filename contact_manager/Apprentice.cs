@@ -10,14 +10,14 @@ namespace contact_manager
     
     public class Apprentice : Employee
     {
-        public int yearApprenticeship;
+        public int yearsApprenticeship;
         public int currentYear;
         public static List<Apprentice> apprentice = new List<Apprentice>();
         public Apprentice(CreatePerson cp) :base(cp)
         {
             
-            this.YearsApprenticeship = Convert.ToInt32(cp.TxtPersonCreatYearsApprenticeship.Text);
-            this.CurrentYear = Convert.ToInt32(cp.TxtPersonCreaCurrentYear.Text);
+            this.YearsApprenticeship = Convert.ToInt32(cp.NumPersonCreatYearsApprenticeship.Text);
+            this.CurrentYear = Convert.ToInt32(cp.NumPersonCreaCurrentYear.Text);
         }
 
         public Apprentice()
@@ -26,8 +26,8 @@ namespace contact_manager
         }
         public int YearsApprenticeship
         {
-            get { return yearApprenticeship; }
-            set { yearApprenticeship = value; }
+            get { return yearsApprenticeship; }
+            set { yearsApprenticeship = value; }
         }
         public int CurrentYear
         {
@@ -39,6 +39,79 @@ namespace contact_manager
             StreamWriter sw = new StreamWriter("Apprentice.txt", append: true);
             Apprentice a = new Apprentice(cp);
             sw.WriteLine(a);
+            sw.Close();
+        }
+        public override void editPerson(EditPerson ep)
+        {
+            string id = ep.TxtInstanceID.Text;
+
+            //Find person with selected ID and assign new values to object
+            var obj = apprentice.FirstOrDefault(x => Convert.ToString(x.InstanceID) == id);
+
+            if (obj != null)
+            {
+                obj.salutation = ep.CmbDropPersonMgmtSalut.Text;
+                obj.title = ep.TxtPersonMgmtTitle.Text;
+                obj.firstName = ep.TxtPersonMgmtFirstn.Text;
+                obj.lastName = ep.TxtPersonMgmtLastn.Text;
+                obj.birthday = Convert.ToDateTime(ep.TxtPersonMgmtBirth.Text);
+                obj.phoneNumberPriv = ep.TxtPersonMgmtTel.Text;
+                obj.phoneNumberMobile = ep.TxtPersonMgmtMobile.Text;
+                obj.nationality = ep.TxtPersonMgmtNation.Text;
+                obj.gender = ep.CmbPersonMgmtGend.Text;
+                obj.street = ep.TxtPersonMgmtAddr.Text;
+                obj.place = ep.TxtPersonMgmtResid.Text;
+                obj.postcode = ep.TxtPersonMgmtZipcode.Text;
+                obj.email = ep.TxtPersonMgmtMailPriv.Text;
+                obj.ahvNumber = ep.TxtPersonMgmtAhv.Text;
+                obj.status = ep.RadPersonMgmtActive.Checked;
+                obj.type = ep.CmbPersonMgmtType.Text;
+
+                obj.companyName = ep.TxtPersonMgmtCompName.Text;
+                obj.companyStreet = ep.TxtPersonMgmtCompAddr.Text;
+                obj.companyPlace = ep.TxtPersonMgmtResid.Text;
+                obj.companyPostcode = ep.TxtPersonMgmtCompZipCode.Text;
+                obj.phoneNumberWork = ep.TxtPersonMgmtCompTel.Text;
+                obj.faxNumer = ep.TxtPersonMgmtCompFax.Text;
+                obj.department = ep.TxtPersonMgmtCompDepart.Text;
+                obj.employmentLevel = Convert.ToInt32(ep.NumPersonMgmtCompProcent.Value);
+                obj.role = ep.TxtPersonMgmtCompRole.Text;
+                obj.managementLevel = ep.TxtPersonMgmtCompEmplLvl.Text;
+                obj.entryDate = Convert.ToDateTime(ep.DtpPersonMgmtCompEntryDate.Text);
+                obj.exitDate = Convert.ToDateTime(ep.DtpPersonMgmtCompExitDate.Text);
+
+                obj.yearsApprenticeship = Convert.ToInt32(ep.NumPersonMgmtYearsApprenticeship.Value);
+                obj.currentYear = Convert.ToInt32(ep.NumPersonMgmtCurrentYear.Value);
+            }
+
+            //write new list of Persons into file
+            StreamWriter sw = new StreamWriter("Apprentice.txt");
+            foreach (var person in apprentice)
+            {
+                sw.WriteLine(person);
+            }
+            sw.Close();
+
+        }
+        public override void deletePerson(Dashboard db)
+        {
+            string id = db.DataGridEmployee.SelectedRows[0].Cells[0].Value.ToString();
+
+            //Loop through all Persons and compare IDs with selected ID
+            for (int i = apprentice.Count - 1; i >= 0; i--)
+            {
+                if (Convert.ToString(apprentice[i].InstanceID) == id)
+                {
+                    apprentice.RemoveAt(i);
+                }
+            }
+
+            //write remaining Persons into file
+            StreamWriter sw = new StreamWriter("Apprentice.txt");
+            foreach (var person in apprentice)
+            {
+                sw.WriteLine(person);
+            }
             sw.Close();
         }
         public override void TxtToObject()

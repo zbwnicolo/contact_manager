@@ -26,7 +26,6 @@ namespace contact_manager
                     var eitem = Employee.employee.FirstOrDefault(o => Convert.ToString(o.InstanceID) == id);
 
                     TxtInstanceID.Text = id;
-                    CmbPersonMgmtType.Text = eitem.type;
                     CmbDropPersonMgmtSalut.Text = eitem.salutation;
                     TxtPersonMgmtTitle.Text = eitem.title;
                     TxtPersonMgmtFirstn.Text = eitem.firstName;
@@ -41,6 +40,19 @@ namespace contact_manager
                     TxtPersonMgmtZipcode.Text = eitem.postcode;
                     TxtPersonMgmtMailPriv.Text = eitem.email;
                     TxtPersonMgmtAhv.Text = eitem.ahvNumber;
+                    CmbPersonMgmtType.Text = eitem.type;
+                    TxtPersonMgmtCompName.Text = eitem.companyName;
+                    TxtPersonMgmtCompAddr.Text = eitem.companyStreet;
+                    TxtPersonMgmtResid.Text = eitem.place;
+                    TxtPersonMgmtCompZipCode.Text = eitem.postcode;
+                    TxtPersonMgmtCompTel.Text = eitem.phoneNumberWork;
+                    TxtPersonMgmtCompFax.Text = eitem.faxNumer;
+                    TxtPersonMgmtCompDepart.Text = eitem.department;
+                    NumPersonMgmtCompProcent.Value = eitem.employmentLevel;
+                    TxtPersonMgmtCompRole.Text = eitem.role;
+                    TxtPersonMgmtCompEmplLvl.Text = eitem.managementLevel;
+                    DtpPersonMgmtCompEntryDate.Text = Convert.ToString(eitem.entryDate);
+                    DtpPersonMgmtCompExitDate.Text = Convert.ToString(eitem.exitDate);
                 }
             }
             else if(type == "Kunde")
@@ -64,6 +76,7 @@ namespace contact_manager
                     TxtPersonMgmtZipcode.Text = citem.postcode;
                     TxtPersonMgmtMailPriv.Text = citem.email;
                     TxtPersonMgmtAhv.Text = citem.ahvNumber;
+                    TxtPersonMgmtCustomerType.Text = citem.customerType;
                 }
             }
             else
@@ -87,14 +100,23 @@ namespace contact_manager
                     TxtPersonMgmtZipcode.Text = aitem.postcode;
                     TxtPersonMgmtMailPriv.Text = aitem.email;
                     TxtPersonMgmtAhv.Text = aitem.ahvNumber;
-                }
-                
-            }
-            
-            
-            
+                    TxtPersonMgmtCompName.Text = aitem.companyName;
+                    TxtPersonMgmtCompAddr.Text = aitem.companyStreet;
+                    TxtPersonMgmtResid.Text = aitem.place;
+                    TxtPersonMgmtCompZipCode.Text = aitem.postcode;
+                    TxtPersonMgmtCompTel.Text = aitem.phoneNumberWork;
+                    TxtPersonMgmtCompFax.Text = aitem.faxNumer;
+                    TxtPersonMgmtCompDepart.Text = aitem.department;
+                    NumPersonMgmtCompProcent.Value = aitem.employmentLevel;
+                    TxtPersonMgmtCompRole.Text = aitem.role;
+                    TxtPersonMgmtCompEmplLvl.Text = aitem.managementLevel;
+                    DtpPersonMgmtCompEntryDate.Text = Convert.ToString(aitem.entryDate);
+                    DtpPersonMgmtCompExitDate.Text = Convert.ToString (aitem.exitDate);
+                    NumPersonMgmtCurrentYear.Value = Convert.ToInt32(aitem.currentYear);
+                    NumPersonMgmtYearsApprenticeship.Value = Convert.ToInt32(aitem.yearsApprenticeship);
 
-            
+                }
+            }
         }
 
         private void CmdPersonMgmtSave_Click(object sender, EventArgs e)

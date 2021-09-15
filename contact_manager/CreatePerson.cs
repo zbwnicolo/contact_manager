@@ -65,18 +65,18 @@ namespace contact_manager
             switch (this.CmbPersonCreatType.Text)
             {
                 case ("Mitarbeiter"):
-                    TxtPersonCreatYearsApprenticeship.Visible = false;
-                    TxtPersonCreaCurrentYear.Visible = false;
+                    NumPersonCreatYearsApprenticeship.Visible = false;
+                    NumPersonCreaCurrentYear.Visible = false;
                     break;
 
                 case ("Kunde"):
-                    TxtPersonCreatYearsApprenticeship.Visible = false;
-                    TxtPersonCreaCurrentYear.Visible = false;
+                    NumPersonCreatYearsApprenticeship.Visible = false;
+                    NumPersonCreaCurrentYear.Visible = false;
                     break;
 
                 case ("Lernender"):
-                    TxtPersonCreatYearsApprenticeship.Visible = true;
-                    TxtPersonCreaCurrentYear.Visible = true;
+                    NumPersonCreatYearsApprenticeship.Visible = true;
+                    NumPersonCreaCurrentYear.Visible = true;
                     break;
             }
         }

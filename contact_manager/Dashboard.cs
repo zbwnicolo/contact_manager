@@ -137,6 +137,25 @@ namespace contact_manager
 
         private void CmdDeleteEmployee_Click(object sender, EventArgs e)
         {
+            string id = DataGridEmployee.SelectedRows[0].Cells[0].Value + string.Empty;
+            string type = DataGridEmployee.SelectedRows[0].Cells[1].Value + string.Empty;
+
+            if (type == "Mitarbeiter")
+            {
+                Employee employee = new Employee();
+                employee.deletePerson(this);
+            }
+            else if (type == "Kunde")
+            {
+                Customer customer = new Customer();
+                customer.deletePerson(this);
+            }
+            else
+            {
+                Apprentice apprentice = new Apprentice();
+                apprentice.deletePerson(this);
+
+            }
             //Person.deletePerson(this);
             Dashboard.tbl.Clear();
             Dashboard.LoadPeople();
@@ -156,6 +175,28 @@ namespace contact_manager
         {
             CommunicationLog File = new CommunicationLog(this);
             File.Show();
+        }
+
+        private void CmbFilterEmployee_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (CmbFilterEmployee.Text)
+            {
+                case ("Alle"):
+                    (DataGridEmployee.DataSource as DataTable).DefaultView.RowFilter = string.Format("Typ LIKE '%'", CmbFilterEmployee.Text);
+                    break;
+
+                case ("Mitarbeiter"):
+                    (DataGridEmployee.DataSource as DataTable).DefaultView.RowFilter = string.Format("Typ LIKE 'Mitarbeiter'", CmbFilterEmployee.Text);
+                    break;
+
+                case ("Kunde"):
+                    (DataGridEmployee.DataSource as DataTable).DefaultView.RowFilter = string.Format("Typ LIKE 'Kunde'", CmbFilterEmployee.Text);
+                    break;
+
+                case ("Lernender"):
+                    (DataGridEmployee.DataSource as DataTable).DefaultView.RowFilter = string.Format("Typ LIKE 'Lernender'", CmbFilterEmployee.Text);
+                    break;
+            }
         }
     }
 }

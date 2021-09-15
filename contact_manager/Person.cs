@@ -116,6 +116,7 @@ namespace contact_manager
                 obj.email = ep.TxtPersonMgmtMailPriv.Text;
                 obj.ahvNumber = ep.TxtPersonMgmtAhv.Text;
                 obj.status = ep.RadPersonMgmtActive.Checked;
+                obj.type = ep.CmbPersonMgmtType.Text;
             }
 
             //write new list of Persons into file
