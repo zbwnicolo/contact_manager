@@ -80,7 +80,7 @@ namespace contact_manager
                 
                 obj.companyName = ep.TxtPersonMgmtCompName.Text;
                 obj.companyStreet = ep.TxtPersonMgmtCompAddr.Text;
-                obj.companyPlace = ep.TxtPersonMgmtResid.Text;
+                obj.companyPlace = ep.TxtPersonMgmtCompRes.Text;
                 obj.companyPostcode = ep.TxtPersonMgmtCompZipCode.Text;
                 obj.phoneNumberWork = ep.TxtPersonMgmtCompTel.Text;
                 obj.faxNumer = ep.TxtPersonMgmtCompFax.Text;

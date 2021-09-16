@@ -21,6 +21,72 @@ namespace contact_manager
 
             if (type == "Mitarbeiter")
             {
+                LblMgmtPerson.Visible = true;
+
+                LblMgmtSalut.Visible = true;
+                CmbDropPersonMgmtSalut.Visible = true;
+                LblMgmtTitel.Visible = true;
+                TxtPersonMgmtTitle.Visible = true;
+                LblMgmtFirstn.Visible = true;
+                TxtPersonMgmtFirstn.Visible = true;
+                LblMgmtLastn.Visible = true;
+                TxtPersonMgmtLastn.Visible = true;
+                LblMgmtBirth.Visible = true;
+                TxtPersonMgmtBirth.Visible = true;
+                LblMgmtTelPriv.Visible = true;
+                TxtPersonMgmtMailPriv.Visible = true;
+                LblMgmtTelMobile.Visible = true;
+                TxtPersonMgmtMobile.Visible = true;
+                LblMgmtNation.Visible = true;
+                TxtPersonMgmtNation.Visible = true;
+                LblMgmtGender.Visible = true;
+                CmbPersonMgmtGend.Visible = true;
+                LblMgmtAddr.Visible = true;
+                TxtPersonMgmtAddr.Visible = true;
+                LblMgmtPlace.Visible = true;
+                TxtPersonMgmtResid.Visible = true;
+                LblMgmtPlz.Visible = true;
+                TxtPersonMgmtZipcode.Visible = true;
+                LblMgmtMail.Visible = true;
+                TxtPersonMgmtMailPriv.Visible = true;
+                LblMgmtAHV.Visible = true;
+                TxtPersonMgmtAhv.Visible = true;
+
+                LblMgmtCusType.Visible = false;
+                CmbPersonMgmtCustomerType.Visible = false;
+
+                LblMgmtComp.Visible = true;
+
+                LblMgmtCompName.Visible = true;
+                TxtPersonMgmtCompName.Visible = true;
+                LblMgmtCompAddr.Visible = true;
+                TxtPersonMgmtCompAddr.Visible = true;
+                LblMgmtCompPlace.Visible = true;
+                TxtPersonMgmtCompRes.Visible = true;
+                LblMgmtCompPlz.Visible = true;
+                TxtPersonMgmtCompZipCode.Visible = true;
+                LblMgmtCompTel.Visible = true;
+                TxtPersonMgmtCompTel.Visible = true;
+                LblMgmtCompFax.Visible = true;
+                TxtPersonMgmtCompFax.Visible = true;
+                LblMgmtDep.Visible = true;
+                TxtPersonMgmtCompDepart.Visible = true;
+                LblMgmtEmployLvl.Visible = true;
+                NumPersonMgmtCompProcent.Visible = true;
+                LblMgmtRole.Visible = true;
+                TxtPersonMgmtCompRole.Visible = true;
+                LblMgmtMgmtLvl.Visible = true;
+                TxtPersonMgmtCompEmplLvl.Visible = true;
+                LblMgmtEntryDate.Visible = true;
+                DtpPersonMgmtCompEntryDate.Visible = true;
+                LblMgmtExitDate.Visible = true;
+                DtpPersonMgmtCompExitDate.Visible = true;
+
+                LblMgmtAppYear.Visible = false;
+                NumPersonMgmtYearsApprenticeship.Visible = false;
+                LblMgmtAppCurrentYear.Visible = false;
+                NumPersonMgmtCurrentYear.Visible = false;
+
                 foreach (Employee employee in Employee.employee)
                 {
                     var eitem = Employee.employee.FirstOrDefault(o => Convert.ToString(o.InstanceID) == id);
@@ -43,8 +109,8 @@ namespace contact_manager
                     CmbPersonMgmtType.Text = eitem.type;
                     TxtPersonMgmtCompName.Text = eitem.companyName;
                     TxtPersonMgmtCompAddr.Text = eitem.companyStreet;
-                    TxtPersonMgmtResid.Text = eitem.place;
-                    TxtPersonMgmtCompZipCode.Text = eitem.postcode;
+                    TxtPersonMgmtCompRes.Text = eitem.companyPlace;
+                    TxtPersonMgmtCompZipCode.Text = eitem.companyPostcode;
                     TxtPersonMgmtCompTel.Text = eitem.phoneNumberWork;
                     TxtPersonMgmtCompFax.Text = eitem.faxNumer;
                     TxtPersonMgmtCompDepart.Text = eitem.department;
@@ -57,6 +123,72 @@ namespace contact_manager
             }
             else if(type == "Kunde")
             {
+                LblMgmtPerson.Visible = true;
+
+                LblMgmtSalut.Visible = true;
+                CmbDropPersonMgmtSalut.Visible = true;
+                LblMgmtTitel.Visible = true;
+                TxtPersonMgmtTitle.Visible = true;
+                LblMgmtFirstn.Visible = true;
+                TxtPersonMgmtFirstn.Visible = true;
+                LblMgmtLastn.Visible = true;
+                TxtPersonMgmtLastn.Visible = true;
+                LblMgmtBirth.Visible = true;
+                TxtPersonMgmtBirth.Visible = true;
+                LblMgmtTelPriv.Visible = true;
+                TxtPersonMgmtMailPriv.Visible = true;
+                LblMgmtTelMobile.Visible = true;
+                TxtPersonMgmtMobile.Visible = true;
+                LblMgmtNation.Visible = true;
+                TxtPersonMgmtNation.Visible = true;
+                LblMgmtGender.Visible = true;
+                CmbPersonMgmtGend.Visible = true;
+                LblMgmtAddr.Visible = true;
+                TxtPersonMgmtAddr.Visible = true;
+                LblMgmtPlace.Visible = true;
+                TxtPersonMgmtResid.Visible = true;
+                LblMgmtPlz.Visible = true;
+                TxtPersonMgmtZipcode.Visible = true;
+                LblMgmtMail.Visible = true;
+                TxtPersonMgmtMailPriv.Visible = true;
+                LblMgmtAHV.Visible = true;
+                TxtPersonMgmtAhv.Visible = true;
+
+                LblMgmtCusType.Visible = true;
+                CmbPersonMgmtCustomerType.Visible = true;
+
+                LblMgmtComp.Visible = false;
+
+                LblMgmtCompName.Visible = false;
+                TxtPersonMgmtCompName.Visible = false;
+                LblMgmtCompAddr.Visible = false;
+                TxtPersonMgmtCompAddr.Visible = false;
+                LblMgmtCompPlace.Visible = false;
+                TxtPersonMgmtCompRes.Visible = false;
+                LblMgmtCompPlz.Visible = false;
+                TxtPersonMgmtCompZipCode.Visible = false;
+                LblMgmtCompTel.Visible = false;
+                TxtPersonMgmtCompTel.Visible = false;
+                LblMgmtCompFax.Visible = false;
+                TxtPersonMgmtCompFax.Visible = false;
+                LblMgmtDep.Visible = false;
+                TxtPersonMgmtCompDepart.Visible = false;
+                LblMgmtEmployLvl.Visible = false;
+                NumPersonMgmtCompProcent.Visible = false;
+                LblMgmtRole.Visible = false;
+                TxtPersonMgmtCompRole.Visible = false;
+                LblMgmtMgmtLvl.Visible = false;
+                TxtPersonMgmtCompEmplLvl.Visible = false;
+                LblMgmtEntryDate.Visible = false;
+                DtpPersonMgmtCompEntryDate.Visible = false;
+                LblMgmtExitDate.Visible = false;
+                DtpPersonMgmtCompExitDate.Visible = false;
+
+                LblMgmtAppYear.Visible = false;
+                NumPersonMgmtYearsApprenticeship.Visible = false;
+                LblMgmtAppCurrentYear.Visible = false;
+                NumPersonMgmtCurrentYear.Visible = false;
+
                 foreach (Customer customer in Customer.customer)
                 {
                     var citem = Customer.customer.FirstOrDefault(o => Convert.ToString(o.InstanceID) == id);
@@ -76,11 +208,77 @@ namespace contact_manager
                     TxtPersonMgmtZipcode.Text = citem.postcode;
                     TxtPersonMgmtMailPriv.Text = citem.email;
                     TxtPersonMgmtAhv.Text = citem.ahvNumber;
-                    TxtPersonMgmtCustomerType.Text = citem.customerType;
+                    CmbPersonMgmtCustomerType.Text = citem.customerType;
                 }
             }
             else
             {
+                LblMgmtPerson.Visible = true;
+
+                LblMgmtSalut.Visible = true;
+                CmbDropPersonMgmtSalut.Visible = true;
+                LblMgmtTitel.Visible = true;
+                TxtPersonMgmtTitle.Visible = true;
+                LblMgmtFirstn.Visible = true;
+                TxtPersonMgmtFirstn.Visible = true;
+                LblMgmtLastn.Visible = true;
+                TxtPersonMgmtLastn.Visible = true;
+                LblMgmtBirth.Visible = true;
+                TxtPersonMgmtBirth.Visible = true;
+                LblMgmtTelPriv.Visible = true;
+                TxtPersonMgmtMailPriv.Visible = true;
+                LblMgmtTelMobile.Visible = true;
+                TxtPersonMgmtMobile.Visible = true;
+                LblMgmtNation.Visible = true;
+                TxtPersonMgmtNation.Visible = true;
+                LblMgmtGender.Visible = true;
+                CmbPersonMgmtGend.Visible = true;
+                LblMgmtAddr.Visible = true;
+                TxtPersonMgmtAddr.Visible = true;
+                LblMgmtPlace.Visible = true;
+                TxtPersonMgmtResid.Visible = true;
+                LblMgmtPlz.Visible = true;
+                TxtPersonMgmtZipcode.Visible = true;
+                LblMgmtMail.Visible = true;
+                TxtPersonMgmtMailPriv.Visible = true;
+                LblMgmtAHV.Visible = true;
+                TxtPersonMgmtAhv.Visible = true;
+
+                LblMgmtCusType.Visible = false;
+                CmbPersonMgmtCustomerType.Visible = false;
+
+                LblMgmtComp.Visible = true;
+
+                LblMgmtCompName.Visible = true;
+                TxtPersonMgmtCompName.Visible = true;
+                LblMgmtCompAddr.Visible = true;
+                TxtPersonMgmtCompAddr.Visible = true;
+                LblMgmtCompPlace.Visible = true;
+                TxtPersonMgmtCompRes.Visible = true;
+                LblMgmtCompPlz.Visible = true;
+                TxtPersonMgmtCompZipCode.Visible = true;
+                LblMgmtCompTel.Visible = true;
+                TxtPersonMgmtCompTel.Visible = true;
+                LblMgmtCompFax.Visible = true;
+                TxtPersonMgmtCompFax.Visible = true;
+                LblMgmtDep.Visible = true;
+                TxtPersonMgmtCompDepart.Visible = true;
+                LblMgmtEmployLvl.Visible = true;
+                NumPersonMgmtCompProcent.Visible = true;
+                LblMgmtRole.Visible = true;
+                TxtPersonMgmtCompRole.Visible = true;
+                LblMgmtMgmtLvl.Visible = true;
+                TxtPersonMgmtCompEmplLvl.Visible = true;
+                LblMgmtEntryDate.Visible = true;
+                DtpPersonMgmtCompEntryDate.Visible = true;
+                LblMgmtExitDate.Visible = true;
+                DtpPersonMgmtCompExitDate.Visible = true;
+
+                LblMgmtAppYear.Visible = true;
+                NumPersonMgmtYearsApprenticeship.Visible = true;
+                LblMgmtAppCurrentYear.Visible = true;
+                NumPersonMgmtCurrentYear.Visible = true;
+
                 foreach (Apprentice apprentice in Apprentice.apprentice)
                 {
                     var aitem = Apprentice.apprentice.FirstOrDefault(o => Convert.ToString(o.InstanceID) == id);
@@ -102,8 +300,8 @@ namespace contact_manager
                     TxtPersonMgmtAhv.Text = aitem.ahvNumber;
                     TxtPersonMgmtCompName.Text = aitem.companyName;
                     TxtPersonMgmtCompAddr.Text = aitem.companyStreet;
-                    TxtPersonMgmtResid.Text = aitem.place;
-                    TxtPersonMgmtCompZipCode.Text = aitem.postcode;
+                    TxtPersonMgmtCompRes.Text = aitem.companyPlace;
+                    TxtPersonMgmtCompZipCode.Text = aitem.companyPostcode;
                     TxtPersonMgmtCompTel.Text = aitem.phoneNumberWork;
                     TxtPersonMgmtCompFax.Text = aitem.faxNumer;
                     TxtPersonMgmtCompDepart.Text = aitem.department;

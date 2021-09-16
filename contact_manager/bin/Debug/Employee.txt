@@ -1,3 +1,1 @@
-,,55,,14.09.2021 00:00:00,14.09.2021 00:00:00,,,,,,,6050f079-0703-4620-a163-a34c86fa6f05,Mitarbeiter,Herr,lko,hkl,ujghjkl,,,,hjkl,hlk,12.09.2021 00:00:00,Männlich,,jh,,False,
-,,0,dsfsdf,14.09.2021 00:00:00,14.09.2021 00:00:00,,fsdfggdfgdf,sfdgsdfg,sdfgsfd,079,,5b2d9f1b-e974-4ba6-8ef4-355abafb5b2b,Mitarbeiter,Frau,dfsgdf,fdgsdg,gsdsfgsdf,sfgsdfg,sdfgsfd,sfdgsdfg,fdsgsfd,fdsgfdsgdfsg,12.09.2021 00:00:00,Männlich,fgsdsfg,fdgsfdfdgs,sfdgsdfg,True,
-,,1,,14.09.2021 00:00:00,14.09.2021 00:00:00,,,,,,,91aacd66-316d-40cf-a610-d547bca0d24e,Mitarbeiter,Frau,,,,,,,,,12.09.2021 00:00:00,Männlich,,,,True,
+System Engineering,System Engineer,1,keine,16.03.2021 00:00:00,10.05.2022 00:00:00,Weibel/IT,Harfenberg 2,Kirchberg,9533,0719139900,0719139910,52d263b6-683b-48ea-9310-490f87fad653,Mitarbeiter,Herr,Dr,Joel,Sutter,Sidwaldstrasse 32,9652,Neu St.Johann,0719139900,0788001067,30.01.2000 00:00:00,Männlich,joel.sutter@outlook.com,CH,756.9999.9999.99,True,

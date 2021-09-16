@@ -29,6 +29,7 @@ namespace contact_manager
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.TxtLoginUsername = new System.Windows.Forms.TextBox();
             this.TxtLoginPassword = new System.Windows.Forms.TextBox();
             this.CmdLoginLogin = new System.Windows.Forms.Button();
@@ -36,18 +37,19 @@ namespace contact_manager
             this.CmdLoginExit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // TxtLoginUsername
             // 
-            this.TxtLoginUsername.Location = new System.Drawing.Point(216, 12);
+            this.TxtLoginUsername.Location = new System.Drawing.Point(357, 159);
             this.TxtLoginUsername.Name = "TxtLoginUsername";
             this.TxtLoginUsername.Size = new System.Drawing.Size(207, 26);
             this.TxtLoginUsername.TabIndex = 0;
             // 
             // TxtLoginPassword
             // 
-            this.TxtLoginPassword.Location = new System.Drawing.Point(216, 73);
+            this.TxtLoginPassword.Location = new System.Drawing.Point(357, 220);
             this.TxtLoginPassword.Name = "TxtLoginPassword";
             this.TxtLoginPassword.Size = new System.Drawing.Size(207, 26);
             this.TxtLoginPassword.TabIndex = 1;
@@ -86,7 +88,7 @@ namespace contact_manager
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(4, 9);
+            this.label1.Location = new System.Drawing.Point(145, 156);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(206, 36);
             this.label1.TabIndex = 5;
@@ -96,17 +98,28 @@ namespace contact_manager
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 63);
+            this.label2.Location = new System.Drawing.Point(153, 210);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(138, 36);
             this.label2.TabIndex = 6;
             this.label2.Text = "Passwort";
+            // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel2.Location = new System.Drawing.Point(13, 14);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(232, 91);
+            this.panel2.TabIndex = 7;
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CmdLoginExit);
@@ -131,5 +144,6 @@ namespace contact_manager
         private System.Windows.Forms.Button CmdLoginExit;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel2;
     }
 }

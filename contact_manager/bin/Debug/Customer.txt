@@ -1,7 +1,1 @@
-,8f91e345-ff0e-4800-b0b2-bf32b11f3c16,Kunde,Frau,,,,,,,,,12/09/2021 00:00:00,Männlich,,,,True,
-,d7e5a2cb-a63b-49bd-abfc-b166cbd8f599,Kunde,Frau,,,,,,,,,12/09/2021 00:00:00,Männlich,,,,True,
-,6257f4e2-7d3c-407f-8fcc-8e3a9a96bda0,Kunde,Frau,,,,,,,,,12/09/2021 00:00:00,Männlich,,,,True,
-,2abc90b5-8505-4dea-ac5b-b16bd14a3cd7,Kunde,Frau,1324lk,h,jhjk,,,,lkj,hl,12/09/2021 00:00:00,Männlich,,hj,,True,
-,d7539a47-21bc-45ef-9109-304babd4ae37,Kunde,Frau,,,,,,,,,12/09/2021 00:00:00,Männlich,,,,True,
-,056c306d-2be2-43f6-b08a-03ee93ffe6ba,Kunde,Frau,,,,,,,,,12/09/2021 00:00:00,Männlich,,,,True,
-hgdfghd,be05d6a8-56a3-486c-857c-9fbcad7ad082,Kunde,Frau,hdfh,fghdgfh,hgdfhhdfgh,hgdfghd,hgdfgdfh,gdfhgfd,hgdfhd,dfghdhfg,12.09.2021 00:00:00,Männlich,gdfhdg,fdghgfd,hgdf,True,
+,a4d0911b-9ce6-45f8-a357-2173a6381df5,Kunde,Herr,Dr,Joel,Sutter,Sidwaldstrasse 32,9652,Neu St.Johann,0719139900,0788001067,30.01.2000 00:00:00,Männlich,joel.sutter@outlook.com,CH,756.9999.9999.99,False,

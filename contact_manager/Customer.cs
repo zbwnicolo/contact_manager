@@ -15,7 +15,7 @@ namespace contact_manager
 
         public Customer(CreatePerson cp) : base(cp)
         {
-            this.CustomerType = cp.TxtPersonCreatCustomerType.Text;
+            this.CustomerType = cp.CmbPersonCreatCustomerType.Text;
         }
         public Customer()
         {
@@ -59,7 +59,7 @@ namespace contact_manager
                 obj.status = ep.RadPersonMgmtActive.Checked;
                 obj.type = ep.CmbPersonMgmtType.Text;
 
-                obj.customerType = ep.TxtPersonMgmtCustomerType.Text;
+                obj.customerType = ep.CmbPersonMgmtCustomerType.Text;
             }
 
             //write new list of Persons into file
