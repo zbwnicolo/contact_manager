@@ -94,8 +94,10 @@
             this.DataGridEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridEmployee.Location = new System.Drawing.Point(12, 75);
             this.DataGridEmployee.Name = "DataGridEmployee";
+            this.DataGridEmployee.ReadOnly = true;
             this.DataGridEmployee.RowHeadersWidth = 62;
             this.DataGridEmployee.RowTemplate.Height = 28;
+            this.DataGridEmployee.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataGridEmployee.Size = new System.Drawing.Size(1772, 591);
             this.DataGridEmployee.TabIndex = 6;
             // 

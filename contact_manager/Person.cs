@@ -61,10 +61,7 @@ namespace contact_manager
         //Method create new Person and add to file
         virtual public void addPerson(CreatePerson cp)
         {
-            //StreamWriter sw = new StreamWriter("Person.txt", append: true);
-            //Person p = new Person(cp);
-            //sw.WriteLine(p);
-            //sw.Close();
+
         }
 
         //Method delete Person and remove from file and table

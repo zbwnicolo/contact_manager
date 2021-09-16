@@ -1,2 +1,0 @@
-,,55,,14.09.2021 00:00:00,14.09.2021 00:00:00,,,,,,,6050f079-0703-4620-a163-a34c86fa6f05,Mitarbeiter,Herr,lko,hkl,ujghjkl,,,,hjkl,hlk,12.09.2021 00:00:00,Männlich,,jh,,True,
-,,0,dsfsdf,14.09.2021 00:00:00,14.09.2021 00:00:00,,,sfdgsdfg,sdfgsfd,079,,5b2d9f1b-e974-4ba6-8ef4-355abafb5b2b,Mitarbeiter,Frau,dfsgdf,fdgsdg,gsdsfgsdf,sfgsdfg,sdfgsfd,sfdgsdfg,fdsgsfd,fdsgfdsgdfsg,12.09.2021 00:00:00,Männlich,fgsdsfg,fdgsfdfdgs,sfdgsdfg,True,

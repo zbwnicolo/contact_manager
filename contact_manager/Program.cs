@@ -16,10 +16,11 @@ namespace contact_manager
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Dashboard());
-
-            //person.Save("Test.xml");
-            //Person person = Person.LoadFromFile("Test.xml");
+            //Application.Run(new Dashboard());
+            var myLoginForm = new Login();
+            myLoginForm.Show();
+            Application.Run();
+            
 
 
 

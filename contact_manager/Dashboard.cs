@@ -61,7 +61,6 @@ namespace contact_manager
                 }
             }
         }
-
         private void CmdInfoEmployee_Click(object sender, EventArgs e)
         {
             // make sure user select at least 1 row 
@@ -163,7 +162,8 @@ namespace contact_manager
 
         private void CmdSaveExit_Click(object sender, EventArgs e)
         {
-            this.Close();        
+            this.Close();
+            Application.Exit();
         }
 
         private void TxtSearchEmployee_TextChanged(object sender, EventArgs e)
