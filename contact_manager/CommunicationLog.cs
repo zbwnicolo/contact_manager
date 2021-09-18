@@ -13,14 +13,16 @@ namespace contact_manager
 {
     public partial class CommunicationLog : Form
     {
-        public CommunicationLog(Dashboard db)
+        public CommunicationLog(EditPerson ep)
         {
             InitializeComponent();
 
-            string id = db.DataGridEmployee.SelectedRows[0].Cells[0].Value + string.Empty;
+            string id = ep.TxtInstanceID.Text;
             var item = Person.employee.FirstOrDefault(o => Convert.ToString(o.InstanceID) == id);
             TxtInstanceID.Text = id;
-            Console.WriteLine(item);
+
+            ComLog.ReadFromTxt(this);
+            
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -37,37 +39,16 @@ namespace contact_manager
             string datepicker = DtpLog.ToString();
 
             string path = "MyTest.txt";
-            if (!File.Exists(path))
-            {
-                // Create a file to write to.
-
-                {
-
-                    //sw.WriteLine("Hello");
-                    //sw.WriteLine("And");
-                    //sw.WriteLine("Welcome");
-
-                }
-            }
-
-            if (TxtLogInput.TextLength != 0)
-            {
-
-                string[] row = new string[] { "[" + DtpLog.Text + "]", TxtLogInput.Text };
+            
+                string[] row = new string[] { TxtInstanceID.Text, DtpLog.Text, TxtLogInput.Text };
                 DgvLogOutput.Rows.Add(row);
-                TxtLogInput.Clear();
 
-            }
-            else
+            using (TextWriter tw = new StreamWriter("ComLog.txt", append: true))
             {
-                MessageBox.Show("Das Input Feld dar nicht leer sein");
+                tw.WriteLine(TxtInstanceID.Text + ";" + DtpLog.Text + ";" + TxtLogInput.Text);
+                tw.Close();
             }
-
-
-            //new idea
-
-
-
+            TxtLogInput.Clear();
         }
     }
 }

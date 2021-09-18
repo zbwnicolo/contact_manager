@@ -352,5 +352,11 @@ namespace contact_manager
         {
             this.Close();
         }
+
+        private void CmdCommlog_Click(object sender, EventArgs e)
+        {
+            CommunicationLog Form = new CommunicationLog(this);
+            Form.Show();
+        }
     }
 }

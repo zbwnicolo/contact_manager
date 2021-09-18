@@ -1,1 +1,1 @@
-,a4d0911b-9ce6-45f8-a357-2173a6381df5,Kunde,Herr,Dr,Joel,Sutter,Sidwaldstrasse 32,9652,Neu St.Johann,0719139900,0788001067,30.01.2000 00:00:00,Männlich,joel.sutter@outlook.com,CH,756.9999.9999.99,False,
+,6fc1be1f-e857-478f-be7b-4b08a22533c9,Kunde,Frau,,,,,,,,,12.09.2021 00:00:00,Männlich,,,,False,
