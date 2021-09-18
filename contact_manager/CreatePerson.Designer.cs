@@ -736,6 +736,7 @@ namespace contact_manager
             // 
             // CmbPersonCreatCustomerType
             // 
+            this.CmbPersonCreatCustomerType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbPersonCreatCustomerType.FormattingEnabled = true;
             this.CmbPersonCreatCustomerType.Location = new System.Drawing.Point(586, 174);
             this.CmbPersonCreatCustomerType.Name = "CmbPersonCreatCustomerType";
@@ -815,6 +816,7 @@ namespace contact_manager
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "CreatePerson";
             this.Text = "CreatePerson";
+            this.Load += new System.EventHandler(this.CreatePerson_Load);
             this.GrbPersonStatus.ResumeLayout(false);
             this.GrbPersonStatus.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NumPersonCreatYearsApprenticeship)).EndInit();

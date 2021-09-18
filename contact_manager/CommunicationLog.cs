@@ -21,7 +21,7 @@ namespace contact_manager
             var item = Person.employee.FirstOrDefault(o => Convert.ToString(o.InstanceID) == id);
             TxtInstanceID.Text = id;
 
-            ComLog.ReadFromTxt(this);
+            
             
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -38,8 +38,6 @@ namespace contact_manager
         {
             string datepicker = DtpLog.ToString();
 
-            string path = "MyTest.txt";
-            
                 string[] row = new string[] { TxtInstanceID.Text, DtpLog.Text, TxtLogInput.Text };
                 DgvLogOutput.Rows.Add(row);
 
@@ -49,6 +47,14 @@ namespace contact_manager
                 tw.Close();
             }
             TxtLogInput.Clear();
+            DgvLogOutput.Rows.Clear();
+            DgvLogOutput.Refresh();
+            ComLog.ReadFromTxt(this);
+        }
+
+        private void CommunicationLog_Load(object sender, EventArgs e)
+        {
+            ComLog.ReadFromTxt(this);
         }
     }
 }

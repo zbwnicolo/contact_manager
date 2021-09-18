@@ -52,6 +52,9 @@ namespace contact_manager
                 LblMgmtAHV.Visible = true;
                 TxtPersonMgmtAhv.Visible = true;
 
+                LblMgmtType.Visible = false;
+                CmbPersonMgmtType.Visible = false;
+
                 LblMgmtCusType.Visible = false;
                 CmbPersonMgmtCustomerType.Visible = false;
 
@@ -154,8 +157,11 @@ namespace contact_manager
                 LblMgmtAHV.Visible = true;
                 TxtPersonMgmtAhv.Visible = true;
 
-                LblMgmtCusType.Visible = true;
-                CmbPersonMgmtCustomerType.Visible = true;
+                LblMgmtType.Visible = false;
+                CmbPersonMgmtType.Visible = false;
+
+                LblMgmtCusType.Visible = false;
+                CmbPersonMgmtCustomerType.Visible = false;
 
                 LblMgmtComp.Visible = false;
 
@@ -243,6 +249,9 @@ namespace contact_manager
                 TxtPersonMgmtMailPriv.Visible = true;
                 LblMgmtAHV.Visible = true;
                 TxtPersonMgmtAhv.Visible = true;
+
+                LblMgmtType.Visible = false;
+                CmbPersonMgmtType.Visible = false;
 
                 LblMgmtCusType.Visible = false;
                 CmbPersonMgmtCustomerType.Visible = false;
@@ -357,6 +366,11 @@ namespace contact_manager
         {
             CommunicationLog Form = new CommunicationLog(this);
             Form.Show();
+        }
+
+        private void EditPerson_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -10,7 +10,6 @@ namespace contact_manager
 {
     class ComLog
     {
-        public string txtid;
         public ComLog Datepicker { get; set; }
        
         //Aktueller Timestamp
@@ -26,8 +25,9 @@ namespace contact_manager
 
         public static void ReadFromTxt(CommunicationLog cl)
         {
+            bool customer = true;
             string instanceid = cl.TxtInstanceID.Text;
-            string txtid;
+
             List<string> ids = new List<string>();
 
             using(var sr = new StreamReader("ComLog.txt"))
@@ -40,20 +40,23 @@ namespace contact_manager
                     ids.Add(value[0]);
                 }
             }
-            
-            string[] lines = File.ReadAllLines("ComLog.txt");
-            string[] values;
 
-            for (int i = 0; i < lines.Length; i++)
+            if(customer == ids.Contains(instanceid))
             {
-                values = lines[i].ToString().Split(';');
-                string[] row = new string[values.Length];
+                string[] lines = File.ReadAllLines("ComLog.txt");
+                string[] values;
 
-                for(int j = 0; j < values.Length; j++)
+                for (int i = 0; i < lines.Length; i++)
                 {
-                    row[j] = values[j].Trim();
+                    values = lines[i].ToString().Split(';');
+                    string[] row = new string[values.Length];
+
+                    for (int j = 0; j < values.Length; j++)
+                    {
+                        row[j] = values[j].Trim();
+                    }
+                    cl.DgvLogOutput.Rows.Add(row);
                 }
-                cl.DgvLogOutput.Rows.Add(row);
             }
         }
     }

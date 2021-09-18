@@ -269,5 +269,10 @@ namespace contact_manager
                     break;
             }
         }
+
+        private void CreatePerson_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
