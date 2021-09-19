@@ -1,1 +1,1 @@
-Outdoor securety,,0,,19.09.2021 00:00:00,19.09.2021 00:00:00,HExagon,,,,,,a9720d7e-eb2e-4e5b-8c37-1f7369769af3,Mitarbeiter,Herr,,Mohammed,Mustafa,,,,,0787996787,07.09.2021 00:00:00,Männlich,,DE,,True,
+Outdoor securety,,0,,19.09.2021 00:00:00,19.09.2021 00:00:00,HExagon,,,,,,a9720d7e-eb2e-4e5b-8c37-1f7369769af3,Mitarbeiter,Herr,,Mohammed,Mustafa,,,,,0787996787,07.09.2021 00:00:00,Männlich,,DE,,False,

@@ -269,25 +269,5 @@ namespace contact_manager
                     break;
             }
         }
-
-        private void LblCreatType_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LblCreatCusType_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CmbPersonCreatCustomerType_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CreatePerson_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -54,13 +54,13 @@ namespace contact_manager
             DataGridEmployee.ClearSelection();
 
             //If status is inactive change row color to grey
-            foreach (DataGridViewRow row in DataGridEmployee.Rows)
+            /*foreach (DataGridViewRow row in DataGridEmployee.Rows)
             {
                 if (row.Cells[10].Value.ToString() == "False")
                 {
                     row.DefaultCellStyle.BackColor = Color.Gray;
                 }
-            }
+            }*/
         }
         private void CmdInfoEmployee_Click(object sender, EventArgs e)
         {
@@ -130,6 +130,15 @@ namespace contact_manager
                     apprentice.phoneNumberPriv,
                     apprentice.status
                 });
+            }
+
+            //If status is inactive change row color to grey
+            foreach (DataGridViewRow row in tbl.Rows)
+            {
+                if (row.Cells[10].Value.ToString() == "False")
+                {
+                    row.DefaultCellStyle.BackColor = Color.Gray;
+                }
             }
 
             return tbl;

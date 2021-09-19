@@ -297,7 +297,6 @@ namespace contact_manager
             this.LblCreatType.Size = new System.Drawing.Size(25, 13);
             this.LblCreatType.TabIndex = 150;
             this.LblCreatType.Text = "Typ";
-            this.LblCreatType.Click += new System.EventHandler(this.LblCreatType_Click);
             // 
             // LblCreatNation
             // 
@@ -666,7 +665,6 @@ namespace contact_manager
             this.LblCreatCusType.Size = new System.Drawing.Size(58, 13);
             this.LblCreatCusType.TabIndex = 229;
             this.LblCreatCusType.Text = "Kundentyp";
-            this.LblCreatCusType.Click += new System.EventHandler(this.LblCreatCusType_Click);
             // 
             // CmbPersonCreatCustomerType
             // 
@@ -681,7 +679,6 @@ namespace contact_manager
             this.CmbPersonCreatCustomerType.Name = "CmbPersonCreatCustomerType";
             this.CmbPersonCreatCustomerType.Size = new System.Drawing.Size(139, 21);
             this.CmbPersonCreatCustomerType.TabIndex = 230;
-            this.CmbPersonCreatCustomerType.SelectedIndexChanged += new System.EventHandler(this.CmbPersonCreatCustomerType_SelectedIndexChanged);
             // 
             // GbCreatComp
             // 
@@ -804,7 +801,6 @@ namespace contact_manager
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CreatePerson";
             this.Text = "Person Erstellen";
-            this.Load += new System.EventHandler(this.CreatePerson_Load);
             this.GrbPersonStatus.ResumeLayout(false);
             this.GrbPersonStatus.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NumPersonCreatYearsApprenticeship)).EndInit();

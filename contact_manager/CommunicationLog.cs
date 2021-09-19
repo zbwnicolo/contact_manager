@@ -16,13 +16,7 @@ namespace contact_manager
         public CommunicationLog(EditPerson ep)
         {
             InitializeComponent();
-
-            string id = ep.TxtInstanceID.Text;
-            var item = Person.employee.FirstOrDefault(o => Convert.ToString(o.InstanceID) == id);
-            TxtInstanceID.Text = id;
-
-            
-            
+            TxtInstanceID.Text = ep.TxtInstanceID.Text;
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

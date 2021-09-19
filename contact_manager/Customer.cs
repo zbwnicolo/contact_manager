@@ -42,6 +42,7 @@ namespace contact_manager
 
             if (obj != null)
             {
+                obj.customerType = ep.CmbPersonMgmtCustomerType.Text;
                 obj.salutation = ep.CmbDropPersonMgmtSalut.Text;
                 obj.title = ep.TxtPersonMgmtTitle.Text;
                 obj.firstName = ep.TxtPersonMgmtFirstn.Text;

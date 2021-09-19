@@ -23,6 +23,7 @@ namespace contact_manager
             get { return password; }
             set { password = value; }
         }
+        //Gets Credentials From TXT File
         public static void GetCredential()
         {
             string line;

@@ -25,38 +25,26 @@ namespace contact_manager
 
         public static void ReadFromTxt(CommunicationLog cl)
         {
-            bool customer = true;
+            string line;
             string instanceid = cl.TxtInstanceID.Text;
 
-            List<string> ids = new List<string>();
-
-            using(var sr = new StreamReader("ComLog.txt"))
+            //Check if file is empty
+            if (new FileInfo("ComLog.txt").Length != 0)
             {
-                while (!sr.EndOfStream)
+                // Read the file and display it line by line.
+                System.IO.StreamReader file = new System.IO.StreamReader("ComLog.txt");
+                while ((line = file.ReadLine()) != null)
                 {
-                    var line = sr.ReadLine();
-                    var value = line.Split(';');
-
-                    ids.Add(value[0]);
-                }
-            }
-
-            if(customer == ids.Contains(instanceid))
-            {
-                string[] lines = File.ReadAllLines("ComLog.txt");
-                string[] values;
-
-                for (int i = 0; i < lines.Length; i++)
-                {
-                    values = lines[i].ToString().Split(';');
-                    string[] row = new string[values.Length];
-
-                    for (int j = 0; j < values.Length; j++)
+                    string[] words = line.Split(';');
+                    Console.WriteLine(words[0]);
+                    if (words[0] == instanceid)
                     {
-                        row[j] = values[j].Trim();
+                        cl.DgvLogOutput.Rows.Add(words);
+
                     }
-                    cl.DgvLogOutput.Rows.Add(row);
                 }
+
+                file.Close();
             }
         }
     }

@@ -1,0 +1,16 @@
+Funktioiniert:
+
+▪ Erfassung von Mitarbeitern und Kunden
+▪ Mutieren von Mitarbeitern und Kunden
+▪ Aktivieren und deaktivieren von Mitarbeitern und Kunden
+▪ Löschen von Mitarbeitern und Kunden
+▪ Automatische Vergabe von Mitarbeiternummern(GUID)
+▪ Protokollieren von Notizen in Kundenkontakten inkl. Historie
+▪ Suchmöglichkeiten/Filter über alle gespeicherten Informationen
+▪ Automatisches Speichern des Datenstamms auf Festplatte \contact_manager\bin\Debug
+▪ Login mit  root/password
+▪ Dashboard
+
+Funktioniert nicht:
+▪ Import von CSV Datei
+▪ Mutationshistorie von Kundendaten

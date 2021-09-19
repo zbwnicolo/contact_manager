@@ -44,13 +44,13 @@ namespace contact_manager
                 double maxcount = 3;
                 double remain;
                 remain = maxcount - count;
-                MessageBox.Show("Wrong user name or password" + "\t" + remain + "" + "tries left");
+                MessageBox.Show("Falscher Benutzername oder Passwort" + "\t" + remain + "" + " versuche übrig");
                 TxtLoginPassword.Clear();
                 TxtLoginUsername.Clear();
                 TxtLoginUsername.Focus();
                 if (count == maxcount)
                 {
-                    MessageBox.Show("Max try exceeded.");
+                    MessageBox.Show("Maximale Anzahl Versuche überschritten. Programm wird geschlossen.");
                     Application.Exit();
                 }
 
