@@ -42,23 +42,26 @@ namespace contact_manager
             // 
             // TxtLoginUsername
             // 
-            this.TxtLoginUsername.Location = new System.Drawing.Point(357, 159);
+            this.TxtLoginUsername.Location = new System.Drawing.Point(238, 103);
+            this.TxtLoginUsername.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtLoginUsername.Name = "TxtLoginUsername";
-            this.TxtLoginUsername.Size = new System.Drawing.Size(207, 26);
+            this.TxtLoginUsername.Size = new System.Drawing.Size(139, 20);
             this.TxtLoginUsername.TabIndex = 0;
             // 
             // TxtLoginPassword
             // 
-            this.TxtLoginPassword.Location = new System.Drawing.Point(357, 220);
+            this.TxtLoginPassword.Location = new System.Drawing.Point(238, 143);
+            this.TxtLoginPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtLoginPassword.Name = "TxtLoginPassword";
-            this.TxtLoginPassword.Size = new System.Drawing.Size(207, 26);
+            this.TxtLoginPassword.Size = new System.Drawing.Size(139, 20);
             this.TxtLoginPassword.TabIndex = 1;
             // 
             // CmdLoginLogin
             // 
-            this.CmdLoginLogin.Location = new System.Drawing.Point(12, 392);
+            this.CmdLoginLogin.Location = new System.Drawing.Point(8, 255);
+            this.CmdLoginLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CmdLoginLogin.Name = "CmdLoginLogin";
-            this.CmdLoginLogin.Size = new System.Drawing.Size(155, 46);
+            this.CmdLoginLogin.Size = new System.Drawing.Size(103, 30);
             this.CmdLoginLogin.TabIndex = 2;
             this.CmdLoginLogin.Text = "Login";
             this.CmdLoginLogin.UseVisualStyleBackColor = true;
@@ -66,9 +69,10 @@ namespace contact_manager
             // 
             // CmdLoginReset
             // 
-            this.CmdLoginReset.Location = new System.Drawing.Point(306, 392);
+            this.CmdLoginReset.Location = new System.Drawing.Point(204, 255);
+            this.CmdLoginReset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CmdLoginReset.Name = "CmdLoginReset";
-            this.CmdLoginReset.Size = new System.Drawing.Size(157, 46);
+            this.CmdLoginReset.Size = new System.Drawing.Size(105, 30);
             this.CmdLoginReset.TabIndex = 3;
             this.CmdLoginReset.Text = "Reset";
             this.CmdLoginReset.UseVisualStyleBackColor = true;
@@ -76,9 +80,10 @@ namespace contact_manager
             // 
             // CmdLoginExit
             // 
-            this.CmdLoginExit.Location = new System.Drawing.Point(633, 392);
+            this.CmdLoginExit.Location = new System.Drawing.Point(422, 255);
+            this.CmdLoginExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CmdLoginExit.Name = "CmdLoginExit";
-            this.CmdLoginExit.Size = new System.Drawing.Size(155, 46);
+            this.CmdLoginExit.Size = new System.Drawing.Size(103, 30);
             this.CmdLoginExit.TabIndex = 4;
             this.CmdLoginExit.Text = "Exit";
             this.CmdLoginExit.UseVisualStyleBackColor = true;
@@ -88,9 +93,10 @@ namespace contact_manager
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(145, 156);
+            this.label1.Location = new System.Drawing.Point(97, 101);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(206, 36);
+            this.label1.Size = new System.Drawing.Size(139, 25);
             this.label1.TabIndex = 5;
             this.label1.Text = "Benutzername";
             // 
@@ -98,9 +104,10 @@ namespace contact_manager
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(153, 210);
+            this.label2.Location = new System.Drawing.Point(102, 136);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(138, 36);
+            this.label2.Size = new System.Drawing.Size(92, 25);
             this.label2.TabIndex = 6;
             this.label2.Text = "Passwort";
             // 
@@ -108,17 +115,16 @@ namespace contact_manager
             // 
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel2.Location = new System.Drawing.Point(13, 14);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel2.Location = new System.Drawing.Point(9, 9);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(232, 91);
+            this.panel2.Size = new System.Drawing.Size(155, 59);
             this.panel2.TabIndex = 7;
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(533, 292);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -127,6 +133,8 @@ namespace contact_manager
             this.Controls.Add(this.CmdLoginLogin);
             this.Controls.Add(this.TxtLoginPassword);
             this.Controls.Add(this.TxtLoginUsername);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Login";
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);

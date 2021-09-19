@@ -13,6 +13,7 @@ namespace contact_manager
 {
     public partial class Dashboard : Form
     {
+
         public static DataTable tbl = new DataTable();
 
         //Dashboard constructor

@@ -65,7 +65,7 @@ namespace contact_manager
             switch (this.CmbPersonCreatType.Text)
             {
                 case ("Mitarbeiter"):
-                    LblCreatPerson.Visible = true;
+                    GbCreatPerson.Visible = true;
                     
                     LblCreatSalut.Visible = true;
                     CmbPersonCreatSalut.Visible = true;
@@ -99,7 +99,7 @@ namespace contact_manager
                     LblCreatCusType.Visible = false;
                     CmbPersonCreatCustomerType.Visible = false;
 
-                    LblCreatComp.Visible = true;
+                    GbCreatComp.Visible = true;
 
                     LblCreatCompName.Visible = true;
                     TxtPersonCreatCompName.Visible = true;
@@ -133,7 +133,7 @@ namespace contact_manager
                     break;
 
                 case ("Kunde"):
-                    LblCreatPerson.Visible = true;
+                    GbCreatPerson.Visible = true;
 
                     LblCreatSalut.Visible = true;
                     CmbPersonCreatSalut.Visible = true;
@@ -167,7 +167,7 @@ namespace contact_manager
                     LblCreatCusType.Visible = true;
                     CmbPersonCreatCustomerType.Visible = true;
 
-                    LblCreatComp.Visible = false;
+                    GbCreatComp.Visible = false;
 
                     LblCreatCompName.Visible = false;
                     TxtPersonCreatCompName.Visible = false;
@@ -201,7 +201,7 @@ namespace contact_manager
                     break;
 
                 case ("Lernender"):
-                    LblCreatPerson.Visible = true;
+                    GbCreatPerson.Visible = true;
 
                     LblCreatSalut.Visible = true;
                     CmbPersonCreatSalut.Visible = true;
@@ -235,7 +235,7 @@ namespace contact_manager
                     LblCreatCusType.Visible = false;
                     CmbPersonCreatCustomerType.Visible = false;
 
-                    LblCreatComp.Visible = true;
+                    GbCreatComp.Visible = true;
 
                     LblCreatCompName.Visible = true;
                     TxtPersonCreatCompName.Visible = true;
@@ -268,6 +268,21 @@ namespace contact_manager
                     NumPersonCreaCurrentYear.Visible = true;
                     break;
             }
+        }
+
+        private void LblCreatType_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LblCreatCusType_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CmbPersonCreatCustomerType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void CreatePerson_Load(object sender, EventArgs e)

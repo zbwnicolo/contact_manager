@@ -56,5 +56,15 @@ namespace contact_manager
         {
             ComLog.ReadFromTxt(this);
         }
+
+        private void CmdCreatPersonAbort_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void CmdCreatPersonSave_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

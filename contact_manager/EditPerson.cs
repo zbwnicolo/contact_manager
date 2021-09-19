@@ -90,6 +90,9 @@ namespace contact_manager
                 LblMgmtAppCurrentYear.Visible = false;
                 NumPersonMgmtCurrentYear.Visible = false;
 
+                CmdCommlog.Visible = false;
+
+
                 foreach (Employee employee in Employee.employee)
                 {
                     var eitem = Employee.employee.FirstOrDefault(o => Convert.ToString(o.InstanceID) == id);
@@ -160,8 +163,10 @@ namespace contact_manager
                 LblMgmtType.Visible = false;
                 CmbPersonMgmtType.Visible = false;
 
-                LblMgmtCusType.Visible = false;
-                CmbPersonMgmtCustomerType.Visible = false;
+                LblMgmtCusType.Visible = true;
+                CmbPersonMgmtCustomerType.Visible = true;
+
+                CmdCommlog.Visible = true;
 
                 LblMgmtComp.Visible = false;
 
@@ -369,6 +374,26 @@ namespace contact_manager
         }
 
         private void EditPerson_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CmbPersonMgmtCustomerType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LblMgmtType_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CmbPersonMgmtType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LblMgmtCusType_Click(object sender, EventArgs e)
         {
 
         }

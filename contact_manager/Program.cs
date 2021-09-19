@@ -20,7 +20,7 @@ namespace contact_manager
             var myLoginForm = new Login();
             myLoginForm.Show();
             Application.Run();
-            
+
 
 
 
