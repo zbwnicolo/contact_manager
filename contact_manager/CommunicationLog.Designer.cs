@@ -30,11 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CommunicationLog));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.CmdCreatPersonSave = new System.Windows.Forms.Button();
             this.TxtInstanceID = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
@@ -46,7 +47,6 @@
             this.CmdLogSend = new System.Windows.Forms.Button();
             this.TxtLogInput = new System.Windows.Forms.TextBox();
             this.timer3 = new System.Windows.Forms.Timer(this.components);
-            this.CmdCreatPersonSave = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvLogOutput)).BeginInit();
             this.SuspendLayout();
@@ -62,6 +62,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(181, 639);
             this.panel1.TabIndex = 15;
+            // 
+            // CmdCreatPersonSave
+            // 
+            this.CmdCreatPersonSave.Location = new System.Drawing.Point(13, 561);
+            this.CmdCreatPersonSave.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.CmdCreatPersonSave.Name = "CmdCreatPersonSave";
+            this.CmdCreatPersonSave.Size = new System.Drawing.Size(155, 31);
+            this.CmdCreatPersonSave.TabIndex = 31;
+            this.CmdCreatPersonSave.Text = "Speichern u. Beenden";
+            this.CmdCreatPersonSave.UseVisualStyleBackColor = true;
+            this.CmdCreatPersonSave.Click += new System.EventHandler(this.CmdCreatPersonSave_Click);
             // 
             // TxtInstanceID
             // 
@@ -85,37 +96,38 @@
             this.DgvLogOutput.AllowUserToAddRows = false;
             this.DgvLogOutput.AllowUserToOrderColumns = true;
             this.DgvLogOutput.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvLogOutput.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvLogOutput.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DgvLogOutput.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvLogOutput.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.DgvTime,
             this.DgvInput});
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgvLogOutput.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgvLogOutput.DefaultCellStyle = dataGridViewCellStyle2;
             this.DgvLogOutput.Location = new System.Drawing.Point(187, 0);
             this.DgvLogOutput.Name = "DgvLogOutput";
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvLogOutput.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            this.DgvLogOutput.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvLogOutput.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.DgvLogOutput.RowHeadersWidth = 62;
             this.DgvLogOutput.Size = new System.Drawing.Size(966, 497);
             this.DgvLogOutput.TabIndex = 14;
@@ -125,6 +137,7 @@
             this.ID.HeaderText = "ID";
             this.ID.MinimumWidth = 8;
             this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
             this.ID.Visible = false;
             // 
             // DgvTime
@@ -133,12 +146,14 @@
             this.DgvTime.HeaderText = "Zeit";
             this.DgvTime.MinimumWidth = 8;
             this.DgvTime.Name = "DgvTime";
+            this.DgvTime.ReadOnly = true;
             // 
             // DgvInput
             // 
             this.DgvInput.HeaderText = "Input";
             this.DgvInput.MinimumWidth = 8;
             this.DgvInput.Name = "DgvInput";
+            this.DgvInput.ReadOnly = true;
             // 
             // DtpLog
             // 
@@ -164,17 +179,6 @@
             this.TxtLogInput.Name = "TxtLogInput";
             this.TxtLogInput.Size = new System.Drawing.Size(861, 95);
             this.TxtLogInput.TabIndex = 11;
-            // 
-            // CmdCreatPersonSave
-            // 
-            this.CmdCreatPersonSave.Location = new System.Drawing.Point(13, 561);
-            this.CmdCreatPersonSave.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.CmdCreatPersonSave.Name = "CmdCreatPersonSave";
-            this.CmdCreatPersonSave.Size = new System.Drawing.Size(155, 31);
-            this.CmdCreatPersonSave.TabIndex = 31;
-            this.CmdCreatPersonSave.Text = "Speichern u. Beenden";
-            this.CmdCreatPersonSave.UseVisualStyleBackColor = true;
-            this.CmdCreatPersonSave.Click += new System.EventHandler(this.CmdCreatPersonSave_Click);
             // 
             // CommunicationLog
             // 

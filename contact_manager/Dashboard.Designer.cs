@@ -103,7 +103,6 @@
             this.DataGridEmployee.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataGridEmployee.Size = new System.Drawing.Size(986, 416);
             this.DataGridEmployee.TabIndex = 6;
-            this.DataGridEmployee.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.DataGridEmployee_RowsAdded);
             // 
             // CmbFilterEmployee
             // 

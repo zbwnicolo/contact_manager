@@ -51,7 +51,6 @@ namespace contact_manager
 
             DataGridEmployee.DataSource = tbl;
             LoadPeople();
-            ChangeColor();
             DataGridEmployee.ClearSelection();
         }
         private void CmdInfoEmployee_Click(object sender, EventArgs e)
@@ -125,17 +124,6 @@ namespace contact_manager
             return tbl;
         }
 
-        public void ChangeColor()
-        {
-            //If status is inactive change row color to grey
-            foreach (DataGridViewRow row in DataGridEmployee.Rows)
-            {
-                if (row.Cells[10].Value.ToString() == "False")
-                {
-                    row.DefaultCellStyle.BackColor = Color.Gray;
-                }
-            }
-        }
 
         //Method to Delete Person
         private void CmdDeleteEmployee_Click(object sender, EventArgs e)
@@ -196,11 +184,6 @@ namespace contact_manager
                     (DataGridEmployee.DataSource as DataTable).DefaultView.RowFilter = string.Format("Typ LIKE 'Lernender'", CmbFilterEmployee.Text);
                     break;
             }
-        }
-
-        private void DataGridEmployee_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
-        {
-            ChangeColor();
         }
     }
 }

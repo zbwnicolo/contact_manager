@@ -1,1 +1,1 @@
-0,0,,,0,,19/09/2021 00:00:00,19/09/2021 00:00:00,,,,,,,604cc7f3-b218-4ca4-bab3-ab788eb9a51c,Lernender,Frau,,,,,,,,,12/09/2021 00:00:00,Männlich,,,,False,
+3,2,IT,Systemengineer,0,Keine,19.09.2021 00:00:00,19.09.2021 00:00:00,Hexagon,Itrisstrasse 12,Uznach,9000,0787996787,,494a4dd9-aaa8-4191-a229-286616c4513e,Lernender,Herr,,Joel,Sutter,Davidstrasse 9,9000,Uznach,078 000 00 00,,12.09.2021 00:00:00,Männlich,j.sutter@gmail.com,IT,756.000.00.00,True,
