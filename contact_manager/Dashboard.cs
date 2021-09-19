@@ -51,16 +51,8 @@ namespace contact_manager
 
             DataGridEmployee.DataSource = tbl;
             LoadPeople();
+            ChangeColor();
             DataGridEmployee.ClearSelection();
-
-            //If status is inactive change row color to grey
-            /*foreach (DataGridViewRow row in DataGridEmployee.Rows)
-            {
-                if (row.Cells[10].Value.ToString() == "False")
-                {
-                    row.DefaultCellStyle.BackColor = Color.Gray;
-                }
-            }*/
         }
         private void CmdInfoEmployee_Click(object sender, EventArgs e)
         {
@@ -74,8 +66,6 @@ namespace contact_manager
             {
                 MessageBox.Show("Es muss mindestens eine Person ausgewählt werden!");
             }
-
-            
         }
  
         //Load specified data of Persons into table
@@ -132,18 +122,22 @@ namespace contact_manager
                 });
             }
 
+            return tbl;
+        }
+
+        public void ChangeColor()
+        {
             //If status is inactive change row color to grey
-            foreach (DataGridViewRow row in tbl.Rows)
+            foreach (DataGridViewRow row in DataGridEmployee.Rows)
             {
                 if (row.Cells[10].Value.ToString() == "False")
                 {
                     row.DefaultCellStyle.BackColor = Color.Gray;
                 }
             }
-
-            return tbl;
         }
 
+        //Method to Delete Person
         private void CmdDeleteEmployee_Click(object sender, EventArgs e)
         {
             string id = DataGridEmployee.SelectedRows[0].Cells[0].Value + string.Empty;
@@ -165,7 +159,6 @@ namespace contact_manager
                 apprentice.deletePerson(this);
 
             }
-            //Person.deletePerson(this);
             Dashboard.tbl.Clear();
             Dashboard.LoadPeople();
         }
@@ -176,11 +169,13 @@ namespace contact_manager
             Application.Exit();
         }
 
+        //Filter view in Dashboard based on User Input
         private void TxtSearchEmployee_TextChanged(object sender, EventArgs e)
         {
             (DataGridEmployee.DataSource as DataTable).DefaultView.RowFilter = string.Format("Vorname LIKE '%{0}%' OR Nachname LIKE '%{0}%'", TxtSearchEmployee.Text);
         }
 
+        //Set filter to search for Person type
         private void CmbFilterEmployee_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch (CmbFilterEmployee.Text)
@@ -201,6 +196,11 @@ namespace contact_manager
                     (DataGridEmployee.DataSource as DataTable).DefaultView.RowFilter = string.Format("Typ LIKE 'Lernender'", CmbFilterEmployee.Text);
                     break;
             }
+        }
+
+        private void DataGridEmployee_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            ChangeColor();
         }
     }
 }

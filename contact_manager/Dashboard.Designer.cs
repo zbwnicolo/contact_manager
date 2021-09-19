@@ -39,8 +39,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.TxtInstanceID = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.CmdSaveExit = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridEmployee)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -103,6 +103,7 @@
             this.DataGridEmployee.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataGridEmployee.Size = new System.Drawing.Size(986, 416);
             this.DataGridEmployee.TabIndex = 6;
+            this.DataGridEmployee.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.DataGridEmployee_RowsAdded);
             // 
             // CmbFilterEmployee
             // 
@@ -162,6 +163,17 @@
             this.panel2.Size = new System.Drawing.Size(155, 59);
             this.panel2.TabIndex = 0;
             // 
+            // CmdSaveExit
+            // 
+            this.CmdSaveExit.Location = new System.Drawing.Point(12, 445);
+            this.CmdSaveExit.Margin = new System.Windows.Forms.Padding(2);
+            this.CmdSaveExit.Name = "CmdSaveExit";
+            this.CmdSaveExit.Size = new System.Drawing.Size(155, 31);
+            this.CmdSaveExit.TabIndex = 17;
+            this.CmdSaveExit.Text = "Beenden";
+            this.CmdSaveExit.UseVisualStyleBackColor = true;
+            this.CmdSaveExit.Click += new System.EventHandler(this.CmdSaveExit_Click);
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.TxtSearchEmployee);
@@ -173,17 +185,6 @@
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Suche";
-            // 
-            // CmdSaveExit
-            // 
-            this.CmdSaveExit.Location = new System.Drawing.Point(12, 445);
-            this.CmdSaveExit.Margin = new System.Windows.Forms.Padding(2);
-            this.CmdSaveExit.Name = "CmdSaveExit";
-            this.CmdSaveExit.Size = new System.Drawing.Size(155, 31);
-            this.CmdSaveExit.TabIndex = 17;
-            this.CmdSaveExit.Text = "Beenden";
-            this.CmdSaveExit.UseVisualStyleBackColor = true;
-            this.CmdSaveExit.Click += new System.EventHandler(this.CmdSaveExit_Click);
             // 
             // Dashboard
             // 

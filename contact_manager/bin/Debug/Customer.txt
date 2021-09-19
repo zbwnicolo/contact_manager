@@ -1,2 +1,5 @@
-B-Kunde,ad28896b-0d00-4b1b-917c-c65109d5079a,Kunde,Frau,,Miriam,Mustermann,,,,,,12.09.2021 00:00:00,Männlich,,,,True,
-A-Kunde,d85fa396-eb90-494e-bb66-f96cc994fcdd,Kunde,Frau,,,,,,,,,12.09.2021 00:00:00,Männlich,,,,True,
+B-Kunde,ad28896b-0d00-4b1b-917c-c65109d5079a,Kunde,Frau,,Miriam,Mustermann,,,,,,12/09/2021 00:00:00,Männlich,,,,True,
+,e866151a-d92f-4d51-bb52-bc5502056ae5,Kunde,Frau,,,,,,,,,12/09/2021 00:00:00,Männlich,,,,False,
+,e4225246-721b-4795-b403-f7b280dd0bc0,Kunde,Frau,,,,,,,,,12/09/2021 00:00:00,Männlich,,,,True,
+,7c22d582-6edf-4293-b073-fb5bc564fe38,Kunde,Frau,,,,,,,,,12/09/2021 00:00:00,Männlich,,,,True,
+,5f6bdd6c-32f1-4fac-a196-6102e64dba40,Kunde,Frau,,,,,,,,,12/09/2021 00:00:00,Männlich,,,,False,
